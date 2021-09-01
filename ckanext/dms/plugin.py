@@ -11,7 +11,7 @@ log = logging.getLogger(__name__)
 
 class DmsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.IResourceController)
+    # plugins.implements(plugins.IResourceController)
 
     # IConfigurer
     def update_config(self, config_):
