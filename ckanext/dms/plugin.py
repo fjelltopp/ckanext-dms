@@ -28,7 +28,7 @@ class DmsPlugin(plugins.SingletonPlugin):
         new_fd['groups'] = plugins.toolkit._('Groups')
         new_fd['tags'] = plugins.toolkit._('Tags')
         new_fd['year'] = plugins.toolkit._('Year')
-        new_fd['formats'] = plugins.toolkit._('Formats')
+        new_fd['res_format'] = plugins.toolkit._('Formats')
         return new_fd
 
     # IResourceController
