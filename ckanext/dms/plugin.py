@@ -3,15 +3,29 @@ import logging
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+import ckan.lib.uploader as uploader
 import ckanext.blob_storage.helpers as blobstorage_helpers
 from giftless_client import LfsClient
 from werkzeug.datastructures import FileStorage as FlaskFileStorage
+from ckanext.dms.helpers import (
+    get_dataset_from_id
+)
 
 log = logging.getLogger(__name__)
 
 class DmsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.IResourceController)
+    # plugins.implements(plugins.IResourceController)
+    plugins.implements(plugins.ITemplateHelpers)
+
+    # ITemplateHelpers
+    def get_helpers(self):
+        return {
+            u'max_resource_size': uploader.get_max_resource_size,
+            u'get_dataset_from_id': get_dataset_from_id,
+            u'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
+        }
+
 
     # IConfigurer
     def update_config(self, config_):

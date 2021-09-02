@@ -1,14 +1,12 @@
-# dms-js:
-#   filter: rjsmin
-#   output: ckanext-dms/%(version)s-dms.js
-#   contents:
-#     - js/dms.js
-#   extra:
-#     preload:
-#       - base/main
+FileInputComponentStyles:
+    contents:
+        - FileInputComponent.css
+    output: dms/%(version)s_FileInputComponent.css
 
-# dms-css:
-#   filter: cssrewrite
-#   output: ckanext-dms/%(version)s-dms.css
-#   contents:
-#     - css/dms.css
+FileInputComponentScripts:
+    contents:
+        - frictionless-js.js
+        # TODO: replace with build/ once we have yarn working
+        #- build/FileInputComponent.js
+        - FileInputComponent.js
+    output: dms/%(version)s_FileInputComponent.js
