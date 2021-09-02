@@ -1,5 +1,6 @@
 import datetime
 import logging
+from collections import OrderedDict
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
@@ -17,6 +18,7 @@ class DmsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     # plugins.implements(plugins.IResourceController)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IFacets, inherit=True)
 
     # ITemplateHelpers
     def get_helpers(self):
@@ -26,12 +28,21 @@ class DmsPlugin(plugins.SingletonPlugin):
             u'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
         }
 
-
     # IConfigurer
     def update_config(self, config_):
         toolkit.add_template_directory(config_, "templates")
         toolkit.add_public_directory(config_, "public")
         toolkit.add_resource("assets", "dms")
+
+    # IFacets
+    def dataset_facets(self, facet_dict, package_type):
+        new_fd = OrderedDict()
+        new_fd['organization'] = plugins.toolkit._('Organizations')
+        new_fd['groups'] = plugins.toolkit._('Groups')
+        new_fd['tags'] = plugins.toolkit._('Tags')
+        new_fd['year'] = plugins.toolkit._('Year')
+        new_fd['formats'] = plugins.toolkit._('Formats')
+        return new_fd
 
     # IResourceController
     def before_create(self, context, resource):
