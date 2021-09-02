@@ -13,7 +13,7 @@ log = logging.getLogger(__name__)
 class DmsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets, inherit=True)
-    # plugins.implements(plugins.IResourceController)
+    plugins.implements(plugins.IResourceController, inherit=True)
 
     # IConfigurer
     def update_config(self, config_):
