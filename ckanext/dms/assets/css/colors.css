@@ -1,0 +1,142 @@
+/* This file overwrites colors from the base ckan theme */
+
+.main {
+    background-color: #f0e1c7;
+}
+
+
+/* convert all #005d7a to  cd8810 */
+
+.banner {
+    background: #cd8810;
+}
+
+.media-view:hover .banner,
+.media-view.hovered .banner {
+    background: #cd8810;
+}
+
+.homepage .module-search .module-content {
+    background: #cd8810;
+}
+
+.masthead,
+.site-footer {
+    background: #cd8810;
+}
+
+body {
+    background: #cd8810;
+}
+
+.media-view:hover,
+.media-view.hovered {
+    border-color: #cd8810;
+}
+
+
+/* convert all #003647 to #e59812 */
+
+.homepage .module-search .tags {
+    background-color: #e59812;
+}
+
+.account-masthead {
+    background: #e59812;
+}
+
+.masthead .navigation .nav-pills li a:hover,
+.site-footer .navigation .nav-pills li a:hover,
+.masthead .navigation .nav-pills li a:focus,
+.site-footer .navigation .nav-pills li a:focus,
+.masthead .navigation .nav-pills li.active a,
+.site-footer .navigation .nav-pills li.active a {
+    background-color: #e59812;
+}
+
+.masthead .btn-navbar-btn,
+.site-footer .btn-navbar-btn,
+.masthead .btn-navbar-btn:hover,
+.masthead .btn-navbar-btn:focus,
+.masthead .btn-navbar-btn:active,
+.masthead .btn-navbar-btn.active,
+.masthead .btn-navbar-btn.disabled,
+.masthead .btn-navbar-btn[disabled] {
+    background-color: #e59812;
+}
+
+
+/* convert all #00232e to #b6790e */
+
+.account-masthead .account ul li {
+    border-left: 1px solid #b6790e;
+}
+
+.account-masthead .account ul li a:hover {
+    background-color: #b6790e;
+}
+
+.account-masthead .account .notifications a span.badge {
+    background-color: #b6790e;
+}
+
+
+/* convert all #555555 to #f1b752 */
+
+.text-muted {
+    color: #f1b752;
+}
+
+caption {
+    color: #f1b752;
+}
+
+output {
+    color: #f1b752;
+}
+
+.form-control {
+    color: #f1b752;
+}
+
+.input-group-addon {
+    color: #f1b752;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    color: #f1b752;
+}
+
+.label-inverse {
+    background-color: #f1b752;
+}
+
+
+/* convert all #bfd7de to #fff */
+
+.account-masthead .account ul li a {
+    color: #fff;
+}
+
+.account-masthead .account .notifications a span.badge {
+    color: #fff;
+}
+
+
+/* convert all #CCDEE3 to #fff */
+
+.site-footer,
+.site-footer label,
+.site-footer small {
+    color: #fff;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+.attribution small {
+    color: #fff;
+}
