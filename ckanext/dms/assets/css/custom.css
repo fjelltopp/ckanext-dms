@@ -1,0 +1,55 @@
+/* This file overwrites css from the base ckan theme */
+
+.main,
+.hero {
+    background-image: none;
+}
+
+/* .masthead .logo img,
+.site-footer .logo img {
+    background: #ffffff;
+    border-radius: 3px;
+    padding: 3px;
+} */
+
+@media (max-width: 1200px) {
+    .masthead, .site-footer {
+        border-bottom: solid 5px #125fe5;
+    }
+}
+
+.masthead .logo img,
+.site-footer .logo img {
+    background-color: white;
+    padding: 3px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+@media (min-width: 1200px) {
+    .masthead .logo img,
+    .site-footer .logo img {
+        max-width: 120px;
+        max-height: none;
+        margin-bottom: -100px;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    .homepage [role=main] {
+        padding: 0;
+    }
+}
+
+.homepage-thumbnail img{
+    max-width: 100%;
+    margin: auto;
+    border-radius: 3px;
+}
+
+#HomepageBannerImage{
+    width: 100%;
+    border-radius: 3px;
+}
