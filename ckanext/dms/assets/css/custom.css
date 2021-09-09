@@ -1,55 +1,139 @@
 /* This file overwrites css from the base ckan theme */
 
+
+/* helpers */
+.inline-block {
+	display: inline-block !important;
+}
+
+
+/* remove bar & replace with padding */
+.homepage [role=main] {
+	padding: 0;
+}
+
 .main,
 .hero {
-    background-image: none;
+	padding-top: 20px;
+	background-image: none;
 }
 
-/* .masthead .logo img,
-.site-footer .logo img {
-    background: #ffffff;
-    border-radius: 3px;
-    padding: 3px;
-} */
-
-@media (max-width: 1200px) {
-    .masthead, .site-footer {
-        border-bottom: solid 5px #125fe5;
-    }
+#NavbarBrandingContainer {
+	position: absolute;
+	margin-bottom: -50px;
 }
 
-.masthead .logo img,
-.site-footer .logo img {
-    background-color: white;
-    padding: 3px;
-    border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+#NavbarLogo {
+	background-color: white;
+	padding: 3px;
+	border-radius: 3px;
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+	height: 130px;
 }
 
-@media (min-width: 1200px) {
-    .masthead .logo img,
-    .site-footer .logo img {
-        max-width: 120px;
-        max-height: none;
-        margin-bottom: -100px;
-    }
+#NavbarHeadingContainer {
+	margin-left: 5px;
+}
+
+#NavbarHeading1,
+#NavbarHeading2 {
+	font-weight: normal;
+}
+
+#NavbarHeading1,
+#NavbarHeading1 :hover{
+	color: white;
+}
+
+#NavbarHeading2 {
+	color: #125fe5;
+}
+
+.fluid-white-bar {
+	background-color: white;
+	height: 80px;
+	border-bottom: solid 5px #125fe5;
 }
 
 
-
-@media (min-width: 992px) {
-    .homepage [role=main] {
-        padding: 0;
-    }
+/* mobile */
+@media only screen and (max-width: 768px) {
+	#NavbarHeadingContainer {
+		margin-top: 12px;
+	}
+	#NavbarLogo {
+		margin-top: -90px;
+	}
+	#NavbarHeading1,
+	#NavbarHeading2 {
+		font-size: 24px;
+		padding: 5px;
+		border-radius: 3px;
+	}
+	#NavbarHeading2 {
+		background-color: white;
+	}
+	.masthead .navbar-collapse {
+		margin-top: 140px;
+	}
 }
 
-.homepage-thumbnail img{
-    max-width: 100%;
-    margin: auto;
-    border-radius: 3px;
+
+/* tablet */
+@media only screen and (min-width: 768px) {
+	#NavbarHeadingContainer {
+		margin-top: 28px;
+	}
+	#NavbarLogo {
+		margin-top: -55px;
+	}
+	#NavbarHeading1,
+	#NavbarHeading2 {
+		font-size: 18px;
+	}
+	.nav>li>a {
+		padding: 5px 7.5px;
+	}
 }
 
-#HomepageBannerImage{
-    width: 100%;
-    border-radius: 3px;
+
+/* medium devices */
+@media only screen and (min-width: 992px) {
+	#NavbarHeadingContainer {
+		margin-top: 33px;
+	}
+	#NavbarLogo {
+		margin-top: -70px;
+	}
+	#NavbarHeading1,
+	#NavbarHeading2 {
+		font-size: 18px;
+	}
+	.nav>li>a {
+		padding: 5px 7.5px;
+	}
+	.masthead .site-search input {
+		margin-top: -5px;
+	}
+}
+
+
+/* desktop */
+@media only screen and (min-width: 1200px) {
+	#NavbarHeadingContainer {
+		margin-top: 30px;
+	}
+	#NavbarLogo {
+		margin-top: -80px;
+	}
+	#NavbarHeading1,
+	#NavbarHeading2 {
+		font-size: 24px;
+	}
+	.nav>li>a {
+		padding: 10px 15px;
+	}
+	.masthead .site-search input {
+		margin-top: 0;
+	}
 }

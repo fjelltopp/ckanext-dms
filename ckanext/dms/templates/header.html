@@ -1,16 +1,26 @@
 {% ckan_extends %}
 
-{% block header_logo %}  
-  {{ super() }}
-  <a class="no-hover-highlight" href="{{ h.url_for('home.index') }}">
-    <div class="hidden-md hidden-sm hidden-xs">
-      <h1 class="navbar-title">Department of HIV & AIDS</h1>
+{% block header_logo %}
+<div id="NavbarBrandingContainer">
+  <div class="inline-block">
+    <a href="{{ h.url_for('home.index') }}">
+      <img
+        id="NavbarLogo"
+        src="{{ h.url_for_static_or_external(g.site_logo) }}"
+        alt="{{ g.site_title }}"
+        title="{{ g.site_title }}"
+      />
+    </a>
+  </div>
+  <div class="inline-block">
+    <div id="NavbarHeadingContainer">
+      <a href="{{ h.url_for('home.index') }}">
+        <div><h1 id="NavbarHeading1">Department of HIV & AIDS</h1></div>
+        <div><h1 id="NavbarHeading2">Ministry of Health, Malawi</h1></div>
+      </a>
     </div>
-    <div class="hidden-lg navbar-title-md text-center">
-      <div class="first-line">Department of HIV & AIDS</div>
-      <div class="second-line">Ministry of Health, Malawi</div>
-    </div>
-  </a>
+  </div>
+</div>
 {% endblock %}
 
 {% block header_site_navigation_tabs %}
@@ -24,46 +34,5 @@
 
 {% block header_wrapper %}
   {{ super() }}
-  <div class="fluid-white-bar hidden-md hidden-sm hidden-xs">
-    <div class="container">
-        <a class="no-hover-highlight" href="{{ h.url_for('home.index') }}">
-          <h1 class="navbar-title">Ministry of Health, Malawi</h1>
-      </a>
-    </div>
-  </div>
-
-  <style>
-    .fluid-white-bar{
-      background-color: white;
-      height: 80px;
-      color: #125fe5;
-      border-bottom: solid 5px #125fe5;
-    }
-    .navbar-title{
-      font-size: 24px !important;
-      margin: 0 0 0 130px !important;
-      font-weight: normal !important;
-    }
-    .fluid-white-bar .navbar-title{
-      color: #125fe5;
-    }
-    .navbar-title-md{
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 5px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .navbar-title-md .second-line{
-      color: #125fe5;
-      background-color: white;
-      padding: 3px;
-      border-radius: 3px;
-      font-size: 15px;
-    }
-    .no-hover-highlight:hover{
-      text-decoration: none !important;
-    }
-  </style>
-
+  <div class="fluid-white-bar"></div>
 {% endblock %}
