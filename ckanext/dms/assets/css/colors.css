@@ -95,10 +95,6 @@ output {
     color: #f1b752;
 }
 
-.form-control {
-    color: #f1b752;
-}
-
 .input-group-addon {
     color: #f1b752;
 }
@@ -139,4 +135,24 @@ output {
 
 .attribution small {
     color: #fff;
+}
+
+/* other css color overwrites */
+
+a, .form-control {
+    color: #181208;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #785b29;
+}
+
+.btn-success{
+    background-image: -webkit-linear-gradient(top, #e59812 0%, #ac720e 100%);
+    background-image: -o-linear-gradient(top, #e59812 0%, #ac720e 100%);
+    background-image: linear-gradient(to bottom, #e59812 0%, #ac720e 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffe59812', endColorstr='#ffac720e', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #a36c0d;
 }
