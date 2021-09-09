@@ -6,7 +6,5 @@ FileInputComponentStyles:
 FileInputComponentScripts:
     contents:
         - frictionless-js.js
-        # TODO: replace with build/ once we have yarn working
-        #- build/FileInputComponent.js
-        - FileInputComponent.js
+        - build/FileInputComponent.js
     output: dms/%(version)s_FileInputComponent.js
