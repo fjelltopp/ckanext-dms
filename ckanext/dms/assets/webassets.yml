@@ -1,11 +1,13 @@
-# dms-js:
-#   filter: rjsmin
-#   output: ckanext-dms/%(version)s-dms.js
-#   contents:
-#     - js/dms.js
-#   extra:
-#     preload:
-#       - base/main
+FileInputComponentStyles:
+    contents:
+        - FileInputComponent.css
+    output: dms/%(version)s_FileInputComponent.css
+
+FileInputComponentScripts:
+    contents:
+        - frictionless-js.js
+        - build/FileInputComponent.js
+    output: dms/%(version)s_FileInputComponent.js
 
 dms-theme:
   filter: cssrewrite
