@@ -16,9 +16,9 @@ log = logging.getLogger(__name__)
 
 class DmsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
-    # plugins.implements(plugins.IResourceController)
-    plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IFacets, inherit=True)
+    plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IResourceController, inherit=True)
 
     # ITemplateHelpers
     def get_helpers(self):
@@ -41,7 +41,7 @@ class DmsPlugin(plugins.SingletonPlugin):
         new_fd['groups'] = plugins.toolkit._('Groups')
         new_fd['tags'] = plugins.toolkit._('Tags')
         new_fd['year'] = plugins.toolkit._('Year')
-        new_fd['formats'] = plugins.toolkit._('Formats')
+        new_fd['res_format'] = plugins.toolkit._('Formats')
         return new_fd
 
     # IResourceController

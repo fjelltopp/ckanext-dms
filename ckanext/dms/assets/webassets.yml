@@ -8,3 +8,11 @@ FileInputComponentScripts:
         - frictionless-js.js
         - build/FileInputComponent.js
     output: dms/%(version)s_FileInputComponent.js
+
+dms-theme:
+  filter: cssrewrite
+  output: ckanext-dms/%(version)s-dms.css
+  contents:
+    - css/bootstrap.css
+    - css/colors.css
+    - css/custom.css
