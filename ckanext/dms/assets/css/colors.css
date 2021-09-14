@@ -151,12 +151,24 @@ a:hover{
     color: #785b29;
 }
 
-.btn-primary, .btn-success {
+.btn-primary,
+.btn-success {
     background-image: -webkit-linear-gradient(top, #125fe5 0%, #0e47ac 100%);
     background-image: -o-linear-gradient(top, #125fe5 0%, #0e47ac 100%);
     background-image: linear-gradient(to bottom, #125fe5 0%, #0e47ac 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff125fe5', endColorstr='#ff0e47ac', GradientType=0);
     filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
     background-repeat: repeat-x;
+    border-color: #0d44a3;
+}
+
+.btn-primary:hover, .btn-primary:focus,
+.btn-success:hover, .btn-success:focus {
+    background-color: #125fe5;
+}
+
+.btn-primary:active, .btn-primary.active,
+.btn-success:active, .btn-success.active {
+    background-color: #125fe5;
     border-color: #0d44a3;
 }
