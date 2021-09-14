@@ -20,12 +20,14 @@ class CreateShortenedUrl(MethodView):
         url = post_body['url']
         get_shortened_url = _generate_random_string()
         # TODO: interact with database
+        # and return JSON of {'url_hash': 'xxxxxx'}
         return f'{get_shortened_url} should be used as the url_hash for {url}'
 
 
 class GetShortenedUrl(MethodView):
     def get(self, url_hash):
         # TODO: interact with database
+        # and replace with h.redirect
         return f'Searching database for Url with hash: {url_hash}'
 
 
