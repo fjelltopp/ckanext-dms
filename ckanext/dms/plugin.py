@@ -8,6 +8,7 @@ import ckan.lib.uploader as uploader
 import ckanext.blob_storage.helpers as blobstorage_helpers
 from giftless_client import LfsClient
 from werkzeug.datastructures import FileStorage as FlaskFileStorage
+from ckanext.dms.blueprints import blueprints
 from ckanext.dms.helpers import (
     get_dataset_from_id
 )
@@ -19,6 +20,7 @@ class DmsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IResourceController, inherit=True)
+    plugins.implements(plugins.IBlueprint)
 
     # ITemplateHelpers
     def get_helpers(self):
@@ -56,6 +58,10 @@ class DmsPlugin(plugins.SingletonPlugin):
             _giftless_upload(context, resource, current=current)
             _update_resource_last_modified_date(resource, current=current)
         return resource
+
+    # IBlueprint
+    def get_blueprint(self):
+        return blueprints
 
 
 def _giftless_upload(context, resource, current=None):
