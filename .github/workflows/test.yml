@@ -33,6 +33,8 @@ jobs:
     - name: Install requirements
       # Install any extra requirements your extension has here (dev requirements, other extensions etc)
       run: |
+        pip install -e "git+https://github.com/datopian/ckanext-authz-service@bd4c80f55a714c1117a0e130d07463e383c494c7#egg=ckanext-authz-service"
+        pip install -e "git+https://github.com/fjelltopp/ckanext-blob-storage@development#egg=ckanext-blob-storage"
         pip install -r requirements.txt
         pip install -r dev-requirements.txt
         pip install -e .
