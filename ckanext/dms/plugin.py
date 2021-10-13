@@ -37,8 +37,8 @@ class DmsPlugin(plugins.SingletonPlugin):
     # IFacets
     def dataset_facets(self, facet_dict, package_type):
         new_fd = OrderedDict()
-        new_fd['organization'] = plugins.toolkit._('Organizations')
         new_fd['groups'] = plugins.toolkit._('Groups')
+        new_fd['program_area'] = plugins.toolkit._('Program area')
         new_fd['tags'] = plugins.toolkit._('Tags')
         new_fd['year'] = plugins.toolkit._('Year')
         new_fd['res_format'] = plugins.toolkit._('Formats')
