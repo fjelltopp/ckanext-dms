@@ -34,9 +34,6 @@ export default function App({ loadingHtml, maxResourceSize, lfsServer, orgId, da
                     if (fileFormatField) fileFormatField.value = 'url';
                     return {
                         url_type: null,
-                        lfs_prefix: null,
-                        sha256: null,
-                        size: null,
                         // url field is handled by input field in UI
                     }
                 default:
