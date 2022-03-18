@@ -121,7 +121,3 @@ If ckanext-dms should be available on PyPI you can follow these steps to publish
 ## License
 
 [AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html)
-
-
-## Mofifying the CSS theme
-See https://gist.github.com/Manoj-nathwani/fd8e81f651197e9f716bf10313ebfba2
