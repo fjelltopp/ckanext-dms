@@ -30,16 +30,14 @@
           </div>
         </div>
         <div class="row row2">
-          <div class="col-md-6 col1">
-            {% block featured_group %}
-              {% snippet 'home/snippets/featured_group.html' %}
-            {% endblock %}
-          </div>
-          <div class="col-md-6 col2">
-            {% block featured_organization %}
-              {% snippet 'home/snippets/featured_organization.html' %}
-            {% endblock %}
-          </div>
+          {% set groups = h.get_featured_groups(count=10) %}
+          {% for group in groups %}
+            <div class="col-md-6">
+              <div class="box">
+                {% snippet 'snippets/group_item.html', group=group, truncate=50, truncate_title=35 %}
+              </div>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </div>
