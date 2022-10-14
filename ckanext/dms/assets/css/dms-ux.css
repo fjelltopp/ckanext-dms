@@ -2,6 +2,8 @@
     padding: 30px;
 }
 
+/* for debugging purpose */
+/*.ux * { border: 1px solid white; }*/
 
 
 .title_and_search_before_layout {
@@ -92,20 +94,64 @@
     letter-spacing: -0.03em;
 }
 
-.ux input {
-    position: absolute;
+.ux input, .ux button {
+    /*position: absolute;*/
     left: 0px;
     top: 32px;
-    width: 498px;
+    width: 100%;
     height: 48px;
-    border-radius: 4px;
-    /* e.g. environment */
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    /* identical to box height, or 143% */
-    /* A11y grey: text */
-    color: #757575;
 }
 
+.ux .search-form {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    border-bottom: 0px dotted #dddddd;
+}
+
+.ux .input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 498px;
+    margin-bottom: 0;
+}
+
+.ux .lens-btn{
+    border-collapse: collapse;
+    top: 32px;
+    left: 0px;
+    width: 5rem;
+    position: absolute;
+}
+
+/*.ux .fa-search {*/
+/*    color: #990005;*/
+/*}*/
+
+.ux .btn-default {
+    color: #990005;
+    border: none !important;
+    outline: none !important;
+}
+
+.ux .form-control, .ux .form-control:focus  {
+    border: none !important;
+    box-shadow: none;
+}
+
+.ux form{
+    margin-bottom: 16px; padding-bottom: 0px;
+}
+
+
+.ux a, .ux a:active, .ux a:hover , .ux a:visited {
+    color:#FFFFFF;
+    padding-top: 0px;
+    text-decoration: underline;
+}
+
+.ux .sublink {
+    position: absolute;
+    top: -16px;
+    left:0px;
+}
