@@ -1,14 +1,94 @@
 .ux {
     padding: 30px;
-
 }
+
+
 
 .title_and_search_before_layout {
     width: 100%;
     height: 416px;
     left: 0px;
     top: 0px;
-
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/web_piling_docs.png");
     background-size: cover;
+    color: #FFFFFF;
 }
+
+#above_big_title {
+    /* HIV, AIDS & Viral Hepititis */
+
+    width: 327px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    /* Reddish Light Grey */
+
+    color: #EDE8E8;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#below_big_title {
+    /*position: absolute;*/
+    width: 1020px;
+    height: 24px;
+    /* Omitted , due to padding */
+    /*left: 210px;*/
+    /*top: 160px;*/
+    /* Desktop / Paragraph */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    /* Reddish Light Grey */
+    color: #EDE8E8;
+}
+
+#search_field_label {
+    padding-top: 36px;
+    /* Search data */
+    width: 498px;
+    height: 36px;
+    /* Desktop/H2 */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    /* identical to box height, or 129% */
+    letter-spacing: -0.01em;
+    /* White */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.ux h1{
+    /*position: absolute;*/
+    width: 1020px;
+    height: 56px;
+
+
+    /*Omitted due to padding */
+    /*left: 210px;*/
+    /*top: 96px;*/
+    margin: 0px;
+
+    /* Desktop/Headline */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    /* identical to box height, or 117% */
+    letter-spacing: -0.03em;
+}
+
