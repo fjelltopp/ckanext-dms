@@ -18,8 +18,32 @@ body {
     font-size: 14px;
     line-height: 20px;
     color: #990005;
-    margin-top: -0.7rem;
+
 }
+
+/* browser based margin-top for logo and title : google chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    #NavbarHeadingContainer {
+        margin-top: 1rem;
+    }
+}
+
+/* Chrome version 22-28 */
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+#NavbarHeadingContainer { -chrome-:only a;
+margin-top: -0.7rem;
+);}
+}
+
+/* browser based margin-top for logo and title : firefox */
+@-moz-document url-prefix() {
+#NavbarHeadingContainer {
+    margin-top: -0.7rem;
+    }
+}
+
+
 
 #NavbarHeading1 {
     font-weight: 700;
