@@ -92,3 +92,20 @@
     letter-spacing: -0.03em;
 }
 
+.ux input {
+    position: absolute;
+    left: 0px;
+    top: 32px;
+    width: 498px;
+    height: 48px;
+    border-radius: 4px;
+    /* e.g. environment */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    /* A11y grey: text */
+    color: #757575;
+}
+
