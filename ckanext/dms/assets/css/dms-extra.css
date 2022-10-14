@@ -1,6 +1,7 @@
 body {
 
   background: #fff;
+  font-family: 'Inter' !important;
 }
 
 
@@ -16,25 +17,40 @@ body {
 }
 
 
+#NavbarHeadingContainer {
+    /* HIV, AIDS & Viral Hepititis Ministry of Health, Malawi */
+    width: 173px;
+    height: 40px;
+    left: 52px;
+    top: 0px;
+    /* appended to body */
+    /*font-family: 'Inter';*/
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #990005;
+}
+
 #NavbarHeading1 {
-    font-weight: bold;
-    /*font-size: 18px;*/
+    font-weight: 700;
+    font-size: 14px;
     line-height: 20px;
     color: #990005;
 }
 
 #NavbarHeading2 {
-    /*font-size: 18px;*/
-    line-height: 20px;
+    font-size: 14px;
     color: #212121;
-    padding-top: 2rem;
 }
 
 #NavbarLogo {
-    /*width: 100px;*/
-    /*height: 100px;*/
-    margin-top: -5rem ;
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
 }
+
 
 #main-navigation-toggle {
     margin-top: 2rem;
@@ -115,31 +131,44 @@ body {
 
 .masthead .nav > li > a{
 
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  /* identical to box height, or 143% */
-  text-align: right;
+    /* Categories */
+    /* Original - commented */
+    /*width: 76px;*/
+    /*height: 20px;*/
+    /* appended to body */
+    /*font-family: 'Inter';*/
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-align: right;
+    /* Primary Red */
+    color: #990005;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 
-  /* Primary Red */
-  color: #990005;
-
-
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
 .masthead .nav > li > a:hover{
-
-  color: #ffffff !important;
+  color: #FFFFFF;
   background-color: #990005;
 }
 
-.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
-  background-color: #b30006;
+.masthead .navigation .nav-pills li.active a {
+    background-color: #990005;
+}
+
+.masthead .navigation .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
+  background-color: #FFFFFF;
+  color: #212121;
+}
+
+.nav-pills li a:hover {
+    background-color: #990005;
+    color: #FFFFFF;
 }
 
 
