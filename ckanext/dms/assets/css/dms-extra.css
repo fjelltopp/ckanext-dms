@@ -1,0 +1,181 @@
+body {
+
+  background: #fff;
+}
+
+
+.account-masthead .account ul li {
+  border-left: 0px solid #00232e;
+}
+
+.list-unstyled { /* login / register header */
+  padding-top: 0.25em;
+  padding-bottom:0px;
+  margin: 0px;
+  list-style: none;
+}
+
+
+
+.account-masthead .account ul li a {
+  padding-top: 0.25em;
+  height: 23px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  text-align: right;
+
+  /* Primary Red */
+  color: #990005;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.account-masthead .account ul li a:hover {
+  color: #ffffff;
+  background-color: #990005;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+.account-masthead .account ul li a .btn {
+  vertical-align: 0px;
+  margin-left: 0px;
+}
+
+.account-masthead {
+
+  height: 32px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+
+  /* Reddish Light Grey */
+  background: #EDE8E8;
+
+
+}
+
+.masthead {
+
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+
+  /* White */
+  background: #FFFFFF !important;
+}
+
+.nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
+  background-color: #990005;
+}
+
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
+  background-color: #990005;
+}
+
+
+.masthead .nav > li > a{
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  text-align: right;
+
+  /* Primary Red */
+  color: #990005;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.masthead .nav > li > a:hover{
+
+  color: #ffffff !important;
+  background-color: #990005;
+}
+
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
+  background-color: #b30006;
+}
+
+
+.homepage .module-search .module-content {
+  background-color: #990005;
+}
+
+
+
+.site-footer {
+  background: #000000 url("../../../base/images/bg.png");
+  
+}
+
+
+.btn-primary {
+  background-color: #b30006;
+}
+
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #990005;
+  border-color: #ffffff;
+}
+
+
+.dataset-heading {
+	width: 1020px;
+	height: 24px;
+
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+
+	color: #990005;
+
+
+
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+}
+
+
+.dataset-heading a {
+  color: inherit;
+}
+
+
+.dataset-content div {
+	width: 100%;
+	height: 20px;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+
+	color: #757575 !important;
+
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 0;
+}
