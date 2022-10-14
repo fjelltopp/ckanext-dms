@@ -5,18 +5,6 @@ body {
 }
 
 
-.account-masthead .account ul li {
-  border-left: 0px solid #00232e;
-}
-
-.list-unstyled { /* login / register header */
-  padding-top: 0.25em;
-  padding-bottom:0px;
-  margin: 0px;
-  list-style: none;
-}
-
-
 #NavbarHeadingContainer {
     /* HIV, AIDS & Viral Hepititis Ministry of Health, Malawi */
     width: 173px;
@@ -30,6 +18,7 @@ body {
     font-size: 14px;
     line-height: 20px;
     color: #990005;
+    margin-top: -0.7rem;
 }
 
 #NavbarHeading1 {
@@ -52,34 +41,38 @@ body {
 }
 
 
-#main-navigation-toggle {
-    margin-top: 2rem;
+.fluid-white-bar {
+    height: 0px;
+    border-bottom: solid 0px #FFFFFF;
 }
 
-.fluid-white-bar {
-    background-color: white;
-    height: 80px;
-    border-bottom: solid 1px #990005;
+.account-masthead .account ul li {
+  border-left: 0px solid #00232e;
+}
+
+.list-unstyled { /* login / register header */
+  padding-top: 0.25em;
+  padding-bottom:0px;
+  margin: 0px;
+  list-style: none;
 }
 
 .account-masthead .account ul li a {
-  padding-top: 0.25em;
-  height: 23px;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  /* identical to box height, or 143% */
-  text-align: right;
-
-  /* Primary Red */
-  color: #990005;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+    /* ignored */
+    /*width: 41px;*/
+    height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-align: right;
+    /* Primary Red */
+    color: #990005;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 
