@@ -27,6 +27,10 @@ body {
     #NavbarHeadingContainer {
         margin-top: 1rem;
     }
+
+    #NavbarLogo{
+        margin-top: -5rem;
+    }
 }
 
 /* Chrome version 22-28 */
