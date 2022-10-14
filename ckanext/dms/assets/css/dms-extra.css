@@ -16,6 +16,35 @@ body {
 }
 
 
+#NavbarHeading1 {
+    font-weight: bold;
+    /*font-size: 18px;*/
+    line-height: 20px;
+    color: #990005;
+}
+
+#NavbarHeading2 {
+    /*font-size: 18px;*/
+    line-height: 20px;
+    color: #212121;
+    padding-top: 2rem;
+}
+
+#NavbarLogo {
+    /*width: 100px;*/
+    /*height: 100px;*/
+    margin-top: -5rem ;
+}
+
+#main-navigation-toggle {
+    margin-top: 2rem;
+}
+
+.fluid-white-bar {
+    background-color: white;
+    height: 80px;
+    border-bottom: solid 1px #990005;
+}
 
 .account-masthead .account ul li a {
   padding-top: 0.25em;
