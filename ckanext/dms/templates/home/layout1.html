@@ -2,11 +2,17 @@
     <div class="main hero">
 
     {#      section with piling documents #}
+    <div class="container-fluid title_and_search_before_layout">
+        <h1>Here</h1>
+    </div>
     <div class="container">
-      <div class="row">
-            <h1>With piling documents picture</h1>
+          <div class="row">
+            {% block title_and_search %}
+              {% snippet 'home/snippets/sections/title_and_search.html' %}
+            {% endblock %}
       </div>
     </div>
+
 
         {#      section with categories  #}
     <div class="container">
