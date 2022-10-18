@@ -1,3 +1,5 @@
+{% set username = c.userobj.name %}
+{% if not username %}
 <div class="ux">
     <div class="row redspec">
         <div class="row">
@@ -12,3 +14,4 @@
     </div>
 
 </div>
+{% endif %}
