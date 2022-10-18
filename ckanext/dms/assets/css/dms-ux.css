@@ -1,5 +1,6 @@
 .ux {
     padding: 30px;
+    font-style: normal;
 }
 
 /* for debugging purpose */
@@ -233,5 +234,117 @@
     /* identical to box height, or 143% */
     /* Dark text */
     color: #212121;
+
+}
+
+/* Recently updated */
+.recent_updates_title {
+
+    /* Recently updated */
+    width: 1020px;
+    height: 36px;
+    /* Desktop/H2 */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    /* identical to box height, or 129% */
+    letter-spacing: -0.01em;
+    /* Dark text */
+    color: #212121;
+
+    /* based on figma */
+    margin-top: 64px;
+    margin-bottom: 32px;
+}
+
+.transparent_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 324px;
+    height: 152px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-right: 24px !important;
+}
+
+.transparent_box div:first-child {
+    /* Item 1 */
+    /* Desktop/H3 */
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+    /* Primary Red */
+    color: #990005;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.transparent_box div:nth-child(2){
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    /* Dark text */
+    color: #212121;
+}
+
+.transparent_box div:nth-child(3){
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    /* A11y grey: text */
+    color: #757575;
+
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px 6px;
+    /*gap: 4px;*/
+    width: 90%;
+    height: 20px;
+    background: #E9F1ED;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px  ;
+}
+
+.view-all-btn, .view-all-btn:hover {
+    background: #212121;
+    border-radius: 4px;
+    width: 97px !important;
+    height: 48px !important;
+    margin-top: 46px;
+}
+
+.view-all-btn a {
+        /* View all */
+
+    position: absolute;
+    height: 24px;
+    left: 16px;
+    right: 16px;
+    top: calc(50% - 24px/2);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    color: #FFFFFF;
 
 }

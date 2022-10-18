@@ -173,6 +173,7 @@ def get_datasets_dict():
             # append everything to a list
             result.append(
                 {"title": dataset["title"],
+                 "name": dataset["name"],
                  "last_modified": (datetime.now() - last_modified).seconds // 3600,
                  "description": description,
                  "tags": tag_list,
@@ -180,9 +181,9 @@ def get_datasets_dict():
                  }
             )
 
-        result.sort(key=lambda item: item['last_modified'], reverse=True)
+        result.sort(key=lambda _item: item['last_modified'], reverse=True)
 
     except Exception as e:
         print("General errors : " + str(e))
 
-    return result
+    return result[:3]
