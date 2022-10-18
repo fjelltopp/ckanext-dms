@@ -1,16 +1,33 @@
 <div class="ux">
     <h2 class="row document_categories_title">Document categories</h2>
 {%  set group_size = h.groups_available() | length %}
-{% groups = h.groups_available() %}
+{% set groups = h.groups_available() %}
 <div class="row">
     {% for group in groups %}
+        {% set gTitle = group.title %}
+        {% if gTitle in ['Circular','Data','Guideline','Minutes','Monitoring Tool','Plan','Publication'] %}
     <div class="col-md-4 white_box">
         <div class="col-md-3">
-            <img class="white_box_icon" src="/images/circular.png" width="40" height="40"/>
+            {% if gTitle == 'Circular' %}
+                <img class="white_box_icon" src="/images/group_icon_circular.png" width="40" height="40"/>
+            {%  elif gTitle == 'Data' %}
+                <img class="white_box_icon" src="/images/group_icon_data.png" width="40" height="40"/>
+            {% elif gTitle == 'Guideline' %}
+                <img class="white_box_icon" src="/images/group_icon_guideline.png" width="40" height="40"/>
+            {% elif gTitle == 'Minutes' %}
+                <img class="white_box_icon" src="/images/group_icon_minutes.png" width="40" height="40"/>
+            {% elif gTitle == 'Monitoring Tool' %}
+                <img class="white_box_icon" src="/images/group_icon_monitoring.png" width="40" height="40"/>
+            {% elif gTitle == 'Plan' %}
+                <img class="white_box_icon" src="/images/group_icon_plan.png" width="40" height="40"/>
+            {% elif gTitle == 'Publication' %}
+                <img class="white_box_icon" src="/images/group_icon_publication.png" width="40" height="40"/>
+            {% endif %}
+
         </div>
         <div class="col-md-9">
             <div class="row white_box_title">
-                <a href="{{ h.url_for('/group/guideline') }}">Circular</a>
+                <a href="{{ h.url_for('/group/guideline') }}">{{ group.title }}</a>
             </div>
             <div class="row white_box_short_desc">
                 <p class="media-description">{{ h.markdown_extract(group.description, extract_length=20) }}</p>
@@ -18,6 +35,7 @@
 
         </div>
     </div>
+        {% endif %}
     {% endfor %}
 
 
