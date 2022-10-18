@@ -4,30 +4,30 @@
 {% set groups = h.groups_available() %}
 <div class="row">
     {% for group in groups %}
-        {% set gTitle = group.title %}
-        {% if gTitle in ['Circular','Data','Guideline','Minutes','Monitoring Tool','Plan','Publication'] %}
+        {% set gName = group.name %}
+        {% if gName in ['circular','data','guideline','minutes','monitoring tool','plan','publication'] %}
     <div class="col-md-4 white_box">
         <div class="col-md-3">
-            {% if gTitle == 'Circular' %}
+            {% if gName == 'circular' %}
                 <img class="white_box_icon" src="/images/group_icon_circular.png" width="40" height="40"/>
-            {%  elif gTitle == 'Data' %}
+            {%  elif gName == 'data' %}
                 <img class="white_box_icon" src="/images/group_icon_data.png" width="40" height="40"/>
-            {% elif gTitle == 'Guideline' %}
+            {% elif gName == 'guideline' %}
                 <img class="white_box_icon" src="/images/group_icon_guideline.png" width="40" height="40"/>
-            {% elif gTitle == 'Minutes' %}
+            {% elif gName == 'minutes' %}
                 <img class="white_box_icon" src="/images/group_icon_minutes.png" width="40" height="40"/>
-            {% elif gTitle == 'Monitoring Tool' %}
+            {% elif gName == 'monitoring tool' %}
                 <img class="white_box_icon" src="/images/group_icon_monitoring.png" width="40" height="40"/>
-            {% elif gTitle == 'Plan' %}
+            {% elif gName == 'plan' %}
                 <img class="white_box_icon" src="/images/group_icon_plan.png" width="40" height="40"/>
-            {% elif gTitle == 'Publication' %}
+            {% elif gName == 'publication' %}
                 <img class="white_box_icon" src="/images/group_icon_publication.png" width="40" height="40"/>
             {% endif %}
 
         </div>
         <div class="col-md-9">
             <div class="row white_box_title">
-                <a href="{{ h.url_for('/group/guideline') }}">{{ group.title }}</a>
+                <a href="{{ h.url_for('/group/' + group.name) }}">{{ group.title }}</a>
             </div>
             <div class="row white_box_short_desc">
                 <p class="media-description">{{ h.markdown_extract(group.description, extract_length=20) }}</p>

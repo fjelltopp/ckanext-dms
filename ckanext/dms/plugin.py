@@ -59,6 +59,9 @@ class DmsPlugin(plugins.SingletonPlugin):
             _update_resource_last_modified_date(resource, current=current)
         return resource
 
+    # def datasets_dict(self):
+    #     return {}
+
 
 def _giftless_upload(context, resource, current=None):
     attached_file = resource.pop('upload', None)
