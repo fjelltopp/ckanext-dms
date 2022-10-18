@@ -15,10 +15,14 @@
 
 
         {#      section with categories  #}
-    <div class="container">
-      <div class="row">
-            <h1>With icons and categories</h1>
-      </div>
+    <div class="container-fluid document_categories_background">
+        <div class="container">
+              <div class="row">
+            {% block document_categories %}
+            {% snippet 'home/snippets/sections/document_categories.html' %}
+            {% endblock %}
+              </div>
+        </div>
     </div>
 
         {#      recently updated  #}

@@ -13,7 +13,7 @@
     <p id="below_big_title">A platform for the MoH to share documentation and datasets with external partners.</p>
 </div>
 <div class="row">
-    <p id="search_field_label">Search {{ h.SI_number_span(stats.dataset_count) }} datasets:</p>
+    <h2 id="search_field_label">Search {{ h.SI_number_span(stats.dataset_count) }} datasets:</h2>
 </div>
 <div class="row">
     {% set placeholder = placeholder if placeholder else _('Search datasets...') %}
@@ -38,7 +38,7 @@
 </div>
 <div class="row">
     <div class="sublink">
-        <p>Or <a href="/page/group/">find data by category</a></p>
+        <p>Or <a class="small" href="/page/group/">find data by category</a></p>
     </div>
 
 </div>

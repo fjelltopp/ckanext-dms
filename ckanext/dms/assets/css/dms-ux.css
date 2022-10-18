@@ -5,7 +5,7 @@
 /* for debugging purpose */
 /*.ux * { border: 1px solid white; }*/
 
-
+/* TITLE AND SEARCH SECTION */
 .title_and_search_before_layout {
     width: 100%;
     height: 416px;
@@ -144,7 +144,7 @@
 }
 
 
-.ux a, .ux a:active, .ux a:hover , .ux a:visited {
+.ux a.small , .ux a.small:active, .ux a.small:hover , .ux a.small:visited {
     color:#FFFFFF;
     padding-top: 0px;
     text-decoration: underline;
@@ -154,4 +154,83 @@
     position: absolute;
     top: -16px;
     left:0px;
+}
+
+/* END TITLE AND SEARCH SECTION */
+
+/* DOCUMENT AND CATEGORIES */
+.document_categories_background {
+    height: 484px;
+    background: #E8E8E8;
+    /*transform: matrix(1, 0, 0, -1, 0, 0);*/
+}
+
+.ux > h2 {
+    /* Document categories */
+    /* Desktop/H2 */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    /* identical to box height, or 129% */
+    letter-spacing: -0.01em;
+    /* Dark text */
+    color: #212121;
+
+}
+
+.document_categories_title {
+    margin-bottom: 32px;
+}
+
+.white_box {
+    /* White */
+
+    background: #FFFFFF;
+    /* Card shadow */
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    width:324px;
+    height: 80px;
+    margin-right: 2rem;
+
+}
+
+.white_box_icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+
+.white_box_title {
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    /* Data */
+    width: 236px;
+    height: 24px;
+    /* Mobile/H3 */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    /* Primary Red */
+    color: #990005;
+}
+
+.white_box_short_desc {
+    /* Short description */
+    top:16px;
+    width: 236px;
+    height: 20px;
+    /* Mobile/Paragraph */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    /* Dark text */
+    color: #212121;
+
 }
