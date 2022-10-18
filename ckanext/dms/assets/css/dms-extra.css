@@ -263,4 +263,39 @@ margin-top: -0.7rem;
     background: #FFFFFF;
 }
 
+/* FOOTER */
+.horizontal {
+    display: inline-block;
+    margin-right: 24px;
+    /* Organisations */
+    height: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.horizontal a, .horizontal a:hover {
+    color: #FFFFFF !important;
+}
+
+.desc {
+    color: #FFFFFF;
+}
+
+.desc a, .desc a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.site-footer {
+    height: 124px;
+    margin-top: 64px;
+}
+
 
