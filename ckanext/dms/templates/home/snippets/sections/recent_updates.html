@@ -1,1 +1,4 @@
-{#{{  h.get_packages_list() }}#}
+{% set datasets = h.get_datasets_dict() %}
+{% for dataset in datasets %}
+{{ dataset  }}<br/>
+{% endfor %}
