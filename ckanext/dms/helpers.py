@@ -2,6 +2,9 @@ import ckan.logic as logic
 import ckan.model as model
 from ckan.common import c, request, is_flask_request
 
+# for datetime string conversion
+from datetime import datetime
+
 
 def get_dataset_from_id(id):
     context = {
@@ -63,8 +66,25 @@ def _facet_sort_function(facet_name, facet_items):
 
 def get_recently_updated():
     try:
-        datasets =  logic.get_action('package_search')(
+        return logic.get_action('package_search')(
             data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
     except Exception as e:
-        print("Some error getting recent updates : " + str(e))
         return []
+
+
+def get_time_diff_in_hours(datetime_str):
+    try:
+        last_modified = datetime.fromisoformat(datetime_str)
+        return (datetime.now() - last_modified).seconds // 3600
+    except:
+        pass
+    return ""
+
+def get_user_from_id(userid):
+    try:
+        user_show_action = logic.get_action('user_show')
+        user_info = user_show_action({"include_password_hash": False, "include_password_hash": False}, {"id": userid})
+        return user_info['fullname']
+    except:
+        pass
+    return ""
