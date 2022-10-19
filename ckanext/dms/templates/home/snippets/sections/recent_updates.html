@@ -1,23 +1,24 @@
-{% set datasets = h.get_datasets_dict() %}
-<div class="ux">
-    <h2 class="row recent_updates_title">Recently updated</h2>
-    <div class="row">
-        {% for dataset in datasets %}
-        <div class="col-md-4 transparent_box">
-            <div class="row"><a href="{{ h.url_for('/dataset/' + dataset.name) }}">{{ dataset.title }}</a></div>
-            <div class="row">{{ dataset.last_modified }} hours ago, {{ dataset.user }}</div>
-            <div class="row">{{ dataset.description }}</div>
-            <div class="row">
-                {% for tag in dataset.tags %}
-                <span class="col-md-1 tag">{{ tag }}</span>
-                {% endfor %}
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    <div class="row view-all-btn">
-        <a href="{{ h.url_for('/dataset') }}">View All</a>
-    </div>
-
+{#{{ h.get_recently_updated() }}#}
+{#{% set datasets = h.get_recently_updated() %}#}
+{#<div class="ux">#}
+{#    <h2 class="row recent_updates_title">Recently updated</h2>#}
+{#    <div class="row">#}
+{#        {% for dataset in datasets %}#}
+{#        <div class="col-md-4 transparent_box">#}
+{#            <div class="row"><a href="{{ h.url_for('/dataset/' + dataset.name) }}">{{ dataset.title }}</a></div>#}
+{#            <div class="row">{{ dataset.last_modified }} hours ago, {{ dataset.user }}</div>#}
+{#            <div class="row">{{ dataset.description }}</div>#}
+{#            <div class="row">#}
+{#                {% for tag in dataset.tags %}#}
+{#                <span class="col-md-1 tag">{{ tag }}</span>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        </div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#    <div class="row view-all-btn">#}
+{#        <a href="{{ h.url_for('/dataset') }}">View All</a>#}
+{#    </div>#}
+{##}
 {#    {{ h.recently_changed_packages_activity_stream(limit=4) }}#}
-</div>
+{#</div>#}

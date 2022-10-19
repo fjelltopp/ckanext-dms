@@ -8,6 +8,8 @@ import ckan.lib.uploader as uploader
 import ckanext.blob_storage.helpers as blobstorage_helpers
 from giftless_client import LfsClient
 from werkzeug.datastructures import FileStorage as FlaskFileStorage
+
+import ckanext.dms.helpers
 from ckanext.dms.helpers import (
     get_dataset_from_id, get_facet_items_dict
 )
@@ -27,7 +29,7 @@ class DmsPlugin(plugins.SingletonPlugin):
             u'get_dataset_from_id': get_dataset_from_id,
             u'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
             u'get_facet_items_dict': get_facet_items_dict,
-            u'get_datasets_dict': get_datasets_dict
+            u'get_recently_updated': ckanext.dms.helpers.get_recently_updated
         }
 
     # IConfigurer
@@ -133,57 +135,4 @@ def _get_upload_authz_token(context, dataset_name, org_name):
         raise toolkit.NotAuthorized(error)
     return authz_result['token']
 
-def get_datasets_dict():
-    from datetime import datetime
-    ds = toolkit.get_action('package_list')(
-        data_dict={'sort': 'last_modified desc', 'all_fields': True})
-    result = []
-    try:
-        for item in ds:
-            package_show_action = toolkit.get_action('package_show')
-            dataset = package_show_action(
-                {
-                    'ignore_auth': False
-                },
-                {'id': item}
-            )
 
-            tags = dataset["tags"]
-            tag_list = []
-            for tag in tags:
-                tag_list.append(tag['display_name'])
-
-            user = ""
-            last_modified = datetime.fromisoformat(dataset["resources"][0]["last_modified"])
-            description = ""
-            try:
-                description = dataset["notes"]
-            except:
-                pass
-            try:
-                # get username from id
-                userid = dataset["creator_user_id"]
-                user_show_action = toolkit.get_action('user_show')
-                user_info = user_show_action({"include_password_hash": False, "include_password_hash": False}, {"id": userid})
-                user = user_info['fullname']
-
-            except Exception as e:
-                print("User fetching error : " + str(e))
-
-            # append everything to a list
-            result.append(
-                {"title": dataset["title"],
-                 "name": dataset["name"],
-                 "last_modified": (datetime.now() - last_modified).seconds // 3600,
-                 "description": description,
-                 "tags": tag_list,
-                 "user": user
-                 }
-            )
-
-        result.sort(key=lambda _item: item['last_modified'], reverse=True)
-
-    except Exception as e:
-        print("General errors : " + str(e))
-
-    return result[:3]

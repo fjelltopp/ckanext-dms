@@ -60,3 +60,11 @@ def _facet_sort_function(facet_name, facet_items):
         # Default CKAN sort: Sort descendingly by count and ascendingly by case-sensitive display name
         facet_items.sort(key=lambda it: (-it['count'], it['display_name'].lower()))
     return facet_items
+
+def get_recently_updated():
+    try:
+        datasets =  logic.get_action('package_search')(
+            data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
+    except Exception as e:
+        print("Some error getting recent updates : " + str(e))
+        return []
