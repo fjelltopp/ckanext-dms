@@ -31,7 +31,8 @@ class DmsPlugin(plugins.SingletonPlugin):
             u'get_facet_items_dict': get_facet_items_dict,
             u'get_recently_updated': ckanext.dms.helpers.get_recently_updated,
             u'get_time_diff_in_hours': ckanext.dms.helpers.get_time_diff_in_hours,
-            u'get_user_from_id': ckanext.dms.helpers.get_user_from_id
+            u'get_user_from_id': ckanext.dms.helpers.get_user_from_id,
+            u'get_all_groups': ckanext.dms.helpers.get_all_groups
         }
 
     # IConfigurer

@@ -88,3 +88,11 @@ def get_user_from_id(userid):
     except:
         pass
     return ""
+
+def get_all_groups():
+    try:
+        return logic.get_action('group_list')(
+                data_dict={'sort': 'title asc', 'all_fields': True})
+    except:
+        pass
+    return ""
