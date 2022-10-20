@@ -1,17 +1,28 @@
 {% ckan_extends %}
 
 {% block footer_links %}
-  <li class="horizontal"><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About') }}</a></li>
-    {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
-  <li class="horizontal"><a href="{{ api_url }}">{{ _('DMS API') }}</a></li>
-  <li class="horizontal"><a href="https://hiv.health.gov.mw/">Department of HIV & AIDS</a><br />
+    <div class="d-none hidden-sm hidden-xs d-md-block">
+      <li class="horizontal"><a href="{{ h.url_for('/organization') }}">{{ _('Organisations') }}</a></li>
+        {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
+      <li class="horizontal"><a href="{{ api_url }}">{{ _('DMS API') }}</a></li>
+      <li class="horizontal"><a href="https://hiv.health.gov.mw/">Department of HIV & AIDS</a><br />
+    </div>
+    <div class="hidden-md hidden-lg">
+      <li class="vertical"><a href="{{ h.url_for('/organization') }}">{{ _('Organisations') }}</a></li>
+        {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
+      <li class="vertical"><a href="{{ api_url }}">{{ _('DMS API') }}</a></li>
+      <li class="vertical"><a href="https://hiv.health.gov.mw/">Department of HIV & AIDS</a><br />
+    </div>
 {% endblock %}
 
 {% block footer_links_ckan %}
-  <p class="desc">{% trans %}An open source <a class="hide-text" target="_blank" href="https://ckan.org/">
+
+     <p class="desc">{% trans %}An open source <a class="hide-text" target="_blank" href="https://ckan.org/">
     <strong>CKAN</strong></a> project, built for the MoH by
     <a class="hide-text" target="_blank" href="https://fjelltopp.org"><strong>Fjelltopp</strong></a>
     with generous funding from <a class="hide-text" target="_blank" href="https://www.unaids.org"><strong>UNAIDS</strong></a>.{% endtrans %}</p>
+
+
 {% endblock %}
 
 {% block footer_attribution %}

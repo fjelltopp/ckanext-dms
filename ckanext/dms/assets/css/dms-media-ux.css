@@ -308,7 +308,9 @@
         background: #E9F1ED;
         border-radius: 4px;
         margin-right: 10px;
-        margin-bottom: 10px  ;
+        margin-bottom: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
     }
 
     .view-all-btn, .view-all-btn:hover {
@@ -400,7 +402,7 @@
 
     }
 
-    .create_an_account_outer_btn a.sbtn, .create_an_account_outer_btn a.sbtn:hover {
+    .create_an_account_outer_btn a.bottom_subscribe_button, .create_an_account_outer_btn a.bottom_subscribe_button:hover {
         /* View all */
         position: absolute;
         height: 24px;
@@ -445,6 +447,7 @@
 
     .ux {
         padding: 30px;
+        /*margin-left: 30px;*/
         font-style: normal;
     }
 
@@ -511,7 +514,7 @@
         left: 0;
         top: 0;
 
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/medium_piling_documents.png");
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/small_piling_documents.png");
         color: #FFFFFF;
     }
 
@@ -713,22 +716,16 @@
     }
 
     .tag {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 2px 6px;
-
-        font-weight: 400;
-        font-size: 12px;
         line-height: 16px;
-
         /*gap: 4px;*/
         width: 90%;
         height: 20px;
         background: #E9F1ED;
         border-radius: 4px;
         margin-right: 10px;
-        margin-bottom: 10px  ;
+        margin-bottom: 10px ;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
     }
 
     .view-all-btn, .view-all-btn:hover {
@@ -822,7 +819,7 @@
 
     }
 
-    .create_an_account_outer_btn a.sbtn, .create_an_account_outer_btn a.sbtn:hover {
+    .create_an_account_outer_btn a.bottom_subscribe_button, .create_an_account_outer_btn a.bottom_subscribe_button:hover {
         /* View all */
         position: absolute;
         height: 24px;
@@ -856,6 +853,447 @@
     }
 
     .create_an_account_outer_btn span.login a, .create_an_account_outer_btn span.login a:hover {
+        color: #FFFFFF !important;
+        text-decoration: underline;
+    }
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+    .ux {
+
+        margin-left: -14px !important;
+        padding-left: 10% !important;
+        width: 375px;
+        /*margin-left: 30px;*/
+        font-style: normal;
+    }
+
+    .ux-sm {
+        margin-left: 0px !important;
+        padding: 10%;
+    }
+
+    .ux h1{
+            font-weight: 700;
+            font-size: 29px;
+            line-height: 36px;
+            color: #FFFFFF;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+    }
+
+    .ux > h2 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        color: #212121;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+
+}
+
+    #above_big_title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #EDE8E8;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    #below_big_title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #EDE8E8;
+        flex: none;
+        order: 2;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    #search_field_label {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        color: #FFFFFF;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    /* TITLE AND SEARCH SECTION */
+    .title_and_search_before_layout {
+        width: 100%;
+        height: 387px;
+        left: 0;
+        top: 0;
+
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/medium_piling_documents.png");
+        color: #FFFFFF;
+    }
+
+
+    .ux input, .ux button {
+        /*position: absolute;*/
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 48px;
+    }
+
+    .ux .search-form {
+        margin-bottom: 14px;
+        padding-bottom: 0;
+        border-bottom: 0 dotted #dddddd;
+    }
+
+    .ux .input-group .form-control {
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 285px;
+        margin-bottom: 0;
+    }
+
+    .ux .lens-btn{
+        border-collapse: collapse;
+        top: 0;
+        left: 0;
+        width: 5rem;
+        position: absolute;
+    }
+
+    .ux .btn-default {
+        color: #990005;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .ux .form-control, .ux .form-control:focus  {
+        border: none !important;
+        box-shadow: none;
+    }
+
+    .ux form{
+        margin-bottom: 14px; padding-bottom: 0;
+    }
+
+
+    .ux a.small , .ux a.small:active, .ux a.small:hover , .ux a.small:visited {
+        color:#FFFFFF;
+        padding-top: 0;
+        text-decoration: underline;
+    }
+
+    .ux .small_link_below_title {
+        position: absolute;
+        top: -14px;
+        left:0;
+    }
+
+    /*!* END TITLE AND SEARCH SECTION *!*/
+
+    /*    !* DOCUMENT AND CATEGORIES *!*/
+    .document_categories_background {
+        min-height: 692px;
+        background: #E8E8E8;
+        /*transform: matrix(1, 0, 0, -1, 0, 0);*/
+    }
+
+    .document_categories_title {
+        margin-bottom: 24px;
+    }
+
+    .white_box {
+        /* White */
+
+        background: #FFFFFF;
+        /* Card shadow */
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        width:95%;
+        padding-right: 5%;
+        height: 72px;
+        margin-right: 24px;
+        margin-bottom: 24px;
+
+    }
+
+    .white_box_icon {
+        position: absolute;
+        top: 16px;
+        left: 0;
+    }
+
+    .white_box_title {
+        position: absolute;
+        top: 16px;
+        left: 56px;
+        /* Data */
+        width: 236px;
+        height: 24px;
+        /* Mobile/H3 */
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        /* Primary Red */
+        color: #990005;
+    }
+
+    .white_box_short_desc {
+        /* Short description */
+        top:16px;
+        left: 56px;
+        width: 236px;
+        height: 20px;
+        /* Mobile/Paragraph */
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+        /* Dark text */
+        color: #212121;
+
+    }
+
+
+
+    /*!* Recently updated *!*/
+    .recent_updates_title {
+
+        /* Recently updated */
+        /* Desktop/H2 */
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        /* identical to box height, or 129% */
+        letter-spacing: -0.01em;
+        /* Dark text */
+        color: #212121;
+
+        /* based on figma */
+        margin-top: 37px;
+        margin-bottom: 24px;
+    }
+
+
+    .transparent_box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        width: 95%;
+        height: 136px;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+        margin-right: 24px !important;
+    }
+
+    .transparent_box div:first-child {
+        /* Item 1 */
+        /* Desktop/H3 */
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 133% */
+        /* Primary Red */
+        color: #990005;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+
+    }
+
+    .transparent_box div:nth-child(2){
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 143% */
+        /* Dark text */
+        color: #212121;
+    }
+
+    .transparent_box div:nth-child(3){
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        /* or 143% */
+        /* A11y grey: text */
+        color: #757575;
+
+    }
+
+    .tag {
+        line-height: 16px;
+        /*gap: 4px;*/
+        width: 90%;
+        height: 20px;
+        background: #E9F1ED;
+        border-radius: 4px;
+        margin-right: 10px;
+        margin-bottom: 10px  ;
+
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+/* Malawi Green */
+
+color: #056839;
+    }
+
+    .view-all-btn, .view-all-btn:hover {
+        background: #212121;
+        border-radius: 4px;
+        width: 110% !important;
+        height: 48px !important;
+        margin-top: 34px;
+        /*margin-right: 100px !important;*/
+        /*padding: 10%;*/
+
+
+    }
+
+    .view-all-btn a {
+
+        position: absolute;
+        height: 24px;
+        left: 16px;
+        right: 16px;
+        top: calc(50% - 24px/2);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        text-align: center;
+        color: #FFFFFF;
+
+    }
+
+    .site-footer {
+        height: 200px;
+        margin-top: 48px;
+    }
+
+
+    /* subscribe or login */
+    .red_background_box {
+        /* Rectangle 7 */
+        height: 300px;
+        /* Primary Red */
+        background: #990005;
+        border-radius: 4px;
+
+    }
+
+    .red_background_box div h2 {
+        /* Subscribe to updates */
+
+        position: absolute;
+        width: 324px;
+        height: 36px;
+        left: 36px;
+        top: 32px;
+
+        /* Desktop/H2 */
+        font-size: 20px;
+        line-height: 28px;
+        /* identical to box height, or 129% */
+        letter-spacing: -0.01em;
+
+        /* White */
+        color: #FFFFFF;
+    }
+
+    .subtext {
+        /* Create an account to receive notifications by email or SMS whenever new documents are posted. */
+        position: absolute;
+        left: 36px;
+        top: 84px;
+        /* Desktop / Paragraph */
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        width: 85%;
+        /* identical to box height, or 150% */
+
+        /* White */
+        color: #FFFFFF;
+    }
+
+
+
+    .create_an_account_outer_btn {
+        /* Rectangle 1 */
+        position: absolute;
+        width: 82%;
+
+        height: 48px;
+        left: 50px;
+        top: 108px;
+        /* Reddish Light Grey */
+        background: #EDE8E8;
+        border-radius: 4px;
+
+    }
+
+    .create_an_account_outer_btn a.bottom_subscribe_button, .create_an_account_outer_btn a.bottom_subscribe_button:hover {
+        /* View all */
+        position: absolute;
+        height: 24px;
+        left: 16px;
+        right: 16px;
+        top: calc(50% - 24px/2);
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        text-align: center;
+        /* Primary Red */
+        color: #990005;
+
+    }
+
+    .bottom_login_button{
+        position: absolute;
+        height: 19px;
+        left: 49px;
+        right: 49px;
+        top: 142px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height */
+
+        text-align: center;
+
+        color: #FFFFFF;
+
+    }
+
+    .bottom_login_button a, .bottom_login_button a:hover {
         color: #FFFFFF !important;
         text-decoration: underline;
     }

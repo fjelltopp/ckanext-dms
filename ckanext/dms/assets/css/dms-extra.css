@@ -280,7 +280,27 @@ margin-top: -0.7rem;
 
 }
 
+/* FOOTER */
+.vertical {
+    margin-right: 24px;
+    /* Organisations */
+    height: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
 .horizontal a, .horizontal a:hover {
+    color: #FFFFFF !important;
+}
+
+.vertical a, .vertical a:hover {
     color: #FFFFFF !important;
 }
 
@@ -302,4 +322,13 @@ margin-top: -0.7rem;
     color: #990005;
 }
 
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px 6px;
+    font-weight: 400;
+    font-size: 12px;
+}
 
