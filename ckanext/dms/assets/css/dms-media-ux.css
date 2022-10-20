@@ -443,12 +443,13 @@
 }
 
 /* for medium screens */
-@media only screen and (min-width: 380px) and (max-width: 850px) {
+@media only screen and (min-width: 375px) and (max-width: 850px) {
 
     .ux {
         padding: 30px;
         /*margin-left: 30px;*/
         font-style: normal;
+        width: 100%;
     }
 
     .ux h1{
@@ -755,7 +756,7 @@
     }
 
     .site-footer {
-        height: 113px;
+        height: 200px;
         margin-top: 48px;
     }
 
@@ -871,7 +872,7 @@
 
         margin-left: -14px !important;
         padding-left: 10% !important;
-        width: 375px;
+        width: 100%;
         /*margin-left: 30px;*/
         font-style: normal;
     }
@@ -1250,9 +1251,7 @@ color: #056839;
         /* Rectangle 1 */
         position: absolute;
         width: 82%;
-
         height: 48px;
-        left: 50px;
         top: 108px;
         /* Reddish Light Grey */
         background: #EDE8E8;
@@ -1281,9 +1280,9 @@ color: #056839;
     .bottom_login_button{
         position: absolute;
         height: 19px;
-        left: 49px;
+        left: 40%;
         right: 49px;
-        top: 142px;
+        top: 180px;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
