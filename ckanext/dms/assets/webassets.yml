@@ -17,3 +17,4 @@ dms-theme:
     - css/dms.css
     - css/dms-extra.css
     - css/dms-ux.css
+    - css/dms-media-ux.css
