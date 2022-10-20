@@ -443,7 +443,7 @@
 }
 
 /* for medium screens */
-@media only screen and (max-width: 850px) {
+@media only screen and (min-width: 380px) and (max-width: 850px) {
 
     .ux {
         padding: 30px;
@@ -835,24 +835,29 @@
 
     }
 
-    .create_an_account_outer_btn span.login{
-        /* View all */
+    .bottom_login_button {
+        /* or log in */
+
         position: absolute;
-        height: 24px;
-        left: 213px;
-        right: 16px;
-        width: 80px;
-        top: calc(50% - 24px/2);
-        font-weight: 700;
+        width: 61px;
+        height: 19px;
+        left: 282px;
+        top: 120px;
+
+        font-style: normal;
+        font-weight: 400;
         font-size: 16px;
-        line-height: 24px;
-        /* identical to box height, or 150% */
-        /* Primary Red */
+        line-height: 19px;
+        /* identical to box height */
+        text-align: center;
+
         color: #FFFFFF;
+
+
 
     }
 
-    .create_an_account_outer_btn span.login a, .create_an_account_outer_btn span.login a:hover {
+    .bottom_login_button a, .bottom_login_button a:hover {
         color: #FFFFFF !important;
         text-decoration: underline;
     }
@@ -860,7 +865,7 @@
 
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 379px) {
 
     .ux {
 
@@ -872,7 +877,7 @@
     }
 
     .ux-sm {
-        margin-left: 0px !important;
+        margin-left: 0 !important;
         padding: 10%;
     }
 
@@ -1262,8 +1267,6 @@ color: #056839;
         left: 16px;
         right: 16px;
         top: calc(50% - 24px/2);
-
-        font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
