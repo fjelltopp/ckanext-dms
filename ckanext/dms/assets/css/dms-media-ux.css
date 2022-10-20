@@ -338,6 +338,106 @@
 
     }
 
+
+
+    /* subscribe or login */
+    .red_background_box {
+        /* Rectangle 7 */
+        height: 204px;
+        /* Primary Red */
+        background: #990005;
+        border-radius: 4px;
+
+    }
+
+    .red_background_box div h2 {
+        /* Subscribe to updates */
+
+        position: absolute;
+        width: 324px;
+        height: 36px;
+        left: 36px;
+        top: 32px;
+
+        /* Desktop/H2 */
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        /* identical to box height, or 129% */
+        letter-spacing: -0.01em;
+
+        /* White */
+        color: #FFFFFF;
+    }
+
+    .subtext {
+        /* Create an account to receive notifications by email or SMS whenever new documents are posted. */
+        position: absolute;
+        left: 36px;
+        top: 84px;
+        /* Desktop / Paragraph */
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        /* White */
+        color: #FFFFFF;
+    }
+
+
+
+    .create_an_account_outer_btn {
+        /* Rectangle 1 */
+        position: absolute;
+        width: 176px;
+        height: 48px;
+        left: 36px;
+        top: 108px;
+        /* Reddish Light Grey */
+        background: #EDE8E8;
+        border-radius: 4px;
+
+    }
+
+    .create_an_account_outer_btn a.sbtn, .create_an_account_outer_btn a.sbtn:hover {
+        /* View all */
+        position: absolute;
+        height: 24px;
+        left: 16px;
+        right: 16px;
+        top: calc(50% - 24px/2);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        /* Primary Red */
+        color: #990005;
+
+    }
+
+    .create_an_account_outer_btn span.login{
+        /* View all */
+        position: absolute;
+        height: 24px;
+        left: 237px;
+        right: 16px;
+        width: 80px;
+        top: calc(50% - 24px/2);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        /* Primary Red */
+        color: #FFFFFF;
+
+    }
+
+    .create_an_account_outer_btn span.login a, .create_an_account_outer_btn span.login a:hover {
+        color: #FFFFFF !important;
+        text-decoration: underline;
+    }
+
 }
 
 /* for medium screens */
@@ -659,7 +759,106 @@
 
     .site-footer {
         height: 113px;
-        margin-top: 60px;
+        margin-top: 48px;
     }
+
+
+    /* subscribe or login */
+    .red_background_box {
+        /* Rectangle 7 */
+        height: 204px;
+        /* Primary Red */
+        background: #990005;
+        border-radius: 4px;
+
+    }
+
+    .red_background_box div h2 {
+        /* Subscribe to updates */
+
+        position: absolute;
+        width: 324px;
+        height: 36px;
+        left: 36px;
+        top: 32px;
+
+        /* Desktop/H2 */
+        font-size: 20px;
+        line-height: 28px;
+        /* identical to box height, or 129% */
+        letter-spacing: -0.01em;
+
+        /* White */
+        color: #FFFFFF;
+    }
+
+    .subtext {
+        /* Create an account to receive notifications by email or SMS whenever new documents are posted. */
+        position: absolute;
+        left: 36px;
+        top: 84px;
+        /* Desktop / Paragraph */
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 150% */
+
+        /* White */
+        color: #FFFFFF;
+    }
+
+
+
+    .create_an_account_outer_btn {
+        /* Rectangle 1 */
+        position: absolute;
+        width: 176px;
+        height: 48px;
+        left: 36px;
+        top: 108px;
+        /* Reddish Light Grey */
+        background: #EDE8E8;
+        border-radius: 4px;
+
+    }
+
+    .create_an_account_outer_btn a.sbtn, .create_an_account_outer_btn a.sbtn:hover {
+        /* View all */
+        position: absolute;
+        height: 24px;
+        left: 16px;
+        right: 16px;
+        top: calc(50% - 24px/2);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        /* Primary Red */
+        color: #990005;
+
+    }
+
+    .create_an_account_outer_btn span.login{
+        /* View all */
+        position: absolute;
+        height: 24px;
+        left: 213px;
+        right: 16px;
+        width: 80px;
+        top: calc(50% - 24px/2);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        /* Primary Red */
+        color: #FFFFFF;
+
+    }
+
+    .create_an_account_outer_btn span.login a, .create_an_account_outer_btn span.login a:hover {
+        color: #FFFFFF !important;
+        text-decoration: underline;
+    }
+
 
 }
