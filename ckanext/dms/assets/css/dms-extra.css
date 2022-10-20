@@ -8,10 +8,10 @@ body {
 
 #NavbarHeadingContainer {
     /* HIV, AIDS & Viral Hepititis Ministry of Health, Malawi */
-    width: 173px;
-    height: 40px;
-    left: 52px;
-    top: 0px;
+    width: 100%  ;
+    height: 100%;
+    /*left: 52px;*/
+    /*top: 0px;*/
     /* appended to body */
     /*font-family: 'Inter';*/
     font-style: normal;
@@ -333,3 +333,7 @@ margin-top: -0.7rem;
     font-size: 12px;
 }
 
+.navbar-toggle {
+    color: #990005;
+    /*background: #990005;*/
+}
