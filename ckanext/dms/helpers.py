@@ -72,14 +72,6 @@ def get_recently_updated():
         return []
 
 
-def get_time_diff_in_hours(datetime_str):
-    try:
-        last_modified = datetime.fromisoformat(datetime_str)
-        return (datetime.now() - last_modified).seconds // 3600
-    except:
-        pass
-    return ""
-
 def get_user_from_id(userid):
     try:
         user_show_action = logic.get_action('user_show')
