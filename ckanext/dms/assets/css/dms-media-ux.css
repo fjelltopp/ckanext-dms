@@ -598,10 +598,10 @@
         /* Card shadow */
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
         border-radius: 4px;
-        min-width:20%;
+        min-width:40%;
         height: 72px;
-        margin-right: 20px;
-        margin-bottom: 20px;
+        margin-right: 5%;
+        margin-bottom: 5%;
 
     }
 
@@ -677,7 +677,7 @@
         order: 0;
         align-self: stretch;
         flex-grow: 0;
-        margin-right: 24px !important;
+        margin-right: 2% !important;
     }
 
     .transparent_box div:first-child {
