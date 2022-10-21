@@ -1,30 +1,40 @@
 {% ckan_extends %}
+
+
+
 {% block group_list %}
+    {% if origin == 'homepage' %}
+    <div class="ux">
+    <h2 class="row document_categories_title">Document categories</h2>
 
-<div class="ux">
-<h2 class="row document_categories_title">Document categories</h2>
+    {% set groups = groups %}
+    <div class="row">
+        {% for group in groups %}
 
-{% set groups = groups %}
-<div class="row">
-    {% for group in groups %}
-
-    <div class="col-md-2 col-lg-3 col-sm-4 white_box">
-        <div class="col-md-3">
-        <img class="white_box_icon" src="{{ group.image_url }}" width="40" height="40"/>
-        </div>
-        <div class="col-md-9">
-            <div class="row white_box_title">
-                <a href="{{ h.url_for('/group/' + group.name) }}">{{ group.title }}</a>
+        <div class="col-md-2 col-lg-3 col-sm-4 white_box">
+            <div class="col-md-3">
+            <img class="white_box_icon" src="{{ group.image_url }}" width="40" height="40"/>
             </div>
-            <div class="row white_box_short_desc">
-                <p class="media-description">{{ h.markdown_extract(group.description, extract_length=20) }}</p>
-            </div>
+            <div class="col-md-9">
+                <div class="row white_box_title">
+                    <a href="{{ h.url_for('/group/' + group.name) }}">{{ group.title }}</a>
+                </div>
+                <div class="row white_box_short_desc">
+                    <p class="media-description">{{ h.markdown_extract(group.description, extract_length=20) }}</p>
+                </div>
 
+            </div>
         </div>
+        {% endfor %}
     </div>
+    </div>
+    {% else %}
+    <ul class="media-grid" data-module="media-grid">
+    {% block group_list_inner %}
+    {% for group in groups %}
+    {% snippet "group/snippets/group_item.html", group=group, position=loop.index %}
     {% endfor %}
-
-
-</div>
-</div>
+    {% endblock %}
+    </ul>
+    {% endif %}
 {% endblock %}
