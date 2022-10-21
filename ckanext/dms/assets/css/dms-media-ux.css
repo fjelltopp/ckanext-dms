@@ -1110,6 +1110,7 @@
         align-self: stretch;
         flex-grow: 0;
         margin-right: 24px !important;
+        margin-bottom: 5%;
     }
 
     .transparent_box div:first-child {
