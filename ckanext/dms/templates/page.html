@@ -1,0 +1,42 @@
+{%  ckan_extends %}
+
+{% set current_page = h.current_url() | replace('/', '') %}
+
+{% block secondary %}
+    {% if current_page != 'dataset' %}
+    <aside class="secondary col-sm-3">
+    {% block secondary_content %}{% endblock %}
+  </aside>
+    {% endif %}
+{% endblock %}
+
+{% block primary %}
+
+<div {% if current_page == 'dataset' %} class="primary col-sm-12 col-xs-12" {% else  %} class="primary col-sm-9 col-xs-12" {% endif %} role="main">
+    {% block primary_content %}
+      <article class="module">
+        {% block page_header %}
+          <header class="module-content page-header">
+            {% if self.content_action() | trim %}
+              <div class="content_action">
+                {% block content_action %}{% endblock %}
+              </div>
+            {% endif %}
+            <ul class="nav nav-tabs">
+              {% block content_primary_nav %}{% endblock %}
+            </ul>
+          </header>
+        {% endblock %}
+        <div class="module-content">
+          {% if self.page_primary_action() | trim %}
+            <div class="page_primary_action">
+              {% block page_primary_action %}{% endblock %}
+            </div>
+          {% endif %}
+          {% block primary_content_inner %}
+          {% endblock %}
+        </div>
+      </article>
+    {% endblock %}
+  </div>
+{% endblock %}
