@@ -65,26 +65,18 @@ def _facet_sort_function(facet_name, facet_items):
     return facet_items
 
 def get_recently_updated():
-    try:
-        return logic.get_action('package_search')(
-            data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
-    except Exception as e:
-        return []
+    return logic.get_action('package_search')(
+        data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
+
 
 
 def get_user_from_id(userid):
-    try:
-        user_show_action = logic.get_action('user_show')
-        user_info = user_show_action({"include_password_hash": False, "include_password_hash": False}, {"id": userid})
-        return user_info['fullname']
-    except:
-        pass
-    return ""
+    user_show_action = logic.get_action('user_show')
+    user_info = user_show_action({"include_password_hash": False, "include_password_hash": False}, {"id": userid})
+    return user_info['fullname']
+
 
 def get_all_groups():
-    try:
-        return logic.get_action('group_list')(
-                data_dict={'sort': 'title asc', 'all_fields': True})
-    except:
-        pass
-    return ""
+    return logic.get_action('group_list')(
+            data_dict={'sort': 'title asc', 'all_fields': True})
+
