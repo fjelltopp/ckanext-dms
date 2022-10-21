@@ -8,7 +8,7 @@
             <div class="row"><a href="{{ h.url_for('/dataset/' + dataset.name) }}">{{ dataset.title }}</a></div>
             {% set hours_modified = h.get_time_diff_in_hours(dataset.resources[0].last_modified) %}
             <div class="row">{{ h.get_time_diff_in_hours(dataset.resources[0].last_modified) }} {% if hours_modified <= 1 %} hour {%  else %} hours {% endif %}ago, {{ h.get_user_from_id(dataset.creator_user_id) }}</div>
-            <div class="row">{{ dataset.notes }}</div>
+            <div class="row">{{ h.markdown_extract(dataset.notes, extract_length=120) }}</div>
             <div class="row">
                 {% for tag in dataset.tags %}
                 <span class="col-md-1 tag">{{ tag.display_name }}</span>
