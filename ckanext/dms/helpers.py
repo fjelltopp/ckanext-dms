@@ -72,7 +72,7 @@ def get_recently_updated():
 
 def get_user_from_id(userid):
     user_show_action = logic.get_action('user_show')
-    user_info = user_show_action({"include_password_hash": False, "include_password_hash": False}, {"id": userid})
+    user_info = user_show_action({}, {"id": userid})
     return user_info['fullname']
 
 
