@@ -17,4 +17,5 @@ dms-theme:
     - css/dms.css
     - css/dms-extra.css
     - css/dms-homepage.css
+    - css/dms-group.css
     - css/dms-dataset.css

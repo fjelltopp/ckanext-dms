@@ -2,7 +2,9 @@
 
 {% block group_list %}
     <div class="ux">
-    <h2 class="row document_categories_title">Document categories</h2>
+    {% if origin == 'homepage' %}
+        <h2 class="row document_categories_title">Document categories</h2>
+    {% endif %}
     {% set groups = groups %}
     <div class="row">
         {% for group in groups %}

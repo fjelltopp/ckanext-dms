@@ -71,17 +71,6 @@ p {
 }
 
 /* TITLE AND SEARCH SECTION */
-.title_and_search_before_layout {
-    width: 100%;
-    min-height: 416px;
-    left: 0;
-    top: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/web_piling_docs.png");
-    background-size: cover;
-    color: #FFFFFF;
-}
-
-
 .ux input, .ux button {
     margin-top: 8px;
     left: 0;

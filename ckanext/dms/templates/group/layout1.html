@@ -2,41 +2,29 @@
     <div class="main hero">
 
     {#      section with piling documents #}
-    <div class="container-fluid navigation_section_background">
+    <div class="container-fluid navigation_section_background with-min-height">
         <div class="container">
               <div class="row">
-                {% block title_and_search %}
-                  {% snippet 'home/snippets/sections/title_and_search.html' %}
-                {% endblock %}
+                  <p class="navigation_title">Home / </p>
+                    <p class="navigation_subtitle">Categories</p>
           </div>
         </div>
     </div>
 
-
-
         {#      section with categories  #}
     <div class="container-fluid document_categories_background">
-        <div class="container">
+        <div class="container section-separator">
               <div class="row">
             {% block document_categories %}
-            {% snippet "group/snippets/group_list.html", groups=h.get_all_groups(), origin='homepage' %}
+            {% snippet "group/snippets/group_list.html", groups=h.get_all_groups(), origin='group' %}
             {% endblock %}
               </div>
         </div>
     </div>
 
-        {#      recently updated  #}
-    <div class="container-fluid">
-        <div class="container">
-          <div class="row">
-            {% snippet 'snippets/package_list.html', packages=h.get_recently_updated(), origin='homepage' %}
-          </div>
-        </div>
-    </div>
-
         {#      subscribe or login  #}
     <div class="container-fluid">
-     <div class="container">
+     <div class="container section-separator">
       <div class="row">
             {% snippet 'home/snippets/sections/subscribe_or_login.html' %}
       </div>

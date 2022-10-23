@@ -350,3 +350,28 @@ p.desc a {
 .navbar-toggle {
     color: #990005;
 }
+
+
+.navigation_section_background {
+    width: 100%;
+    /*min-height: 416px;*/
+    left: 0;
+    top: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/web_piling_docs.png");
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+    .navigation_section_background{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/medium_piling_documents.png");
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .navigation_section_background {
+        bbackground: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/small_piling_documents.png");
+        background-size: cover;
+    }
+}

@@ -1,0 +1,40 @@
+.section-separator {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.document_categories_title {
+    margin-bottom: 0px;
+}
+
+.document_categories_background {
+    min-height: 100%;
+    background: #E8E8E8;
+}
+
+.with-min-height {
+    min-height: 212px;
+}
+
+.navigation_title {
+    position: absolute;
+    top: 64px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    padding-left: 30px;
+}
+
+.navigation_subtitle {
+    position: absolute;
+    top: 104px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    padding-left: 30px;
+
+}
