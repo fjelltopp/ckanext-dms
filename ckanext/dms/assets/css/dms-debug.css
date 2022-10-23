@@ -9,7 +9,7 @@ p {
 }
 
 .ux * {
-    border: #0b4498 solid thin;
+    /*border: #0b4498 solid thin;*/
 }
 
 .ux h1{
@@ -166,8 +166,8 @@ p {
 
 .white_box_icon {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 1.3rem;
+    left: 1.25rem;
 }
 
 .white_box_title {
@@ -391,7 +391,7 @@ p {
     }
 }
 
-@media only screen  and (max-width: 375px)  {
+@media only screen  and (max-width: 390px)  {
     .create_an_account_outer_btn {
         width:100%;
     }
@@ -416,7 +416,7 @@ p {
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
     .ux {
         padding: 25px;
         font-style: normal;

@@ -325,24 +325,27 @@ p.desc a {
 }
 
 @media only screen and (max-width: 375px) {
-.site-footer {
-    height: 200px;
+    .site-footer {
+        min-height: 200px;
+    }
 }
+
+@media only screen and (max-width: 991px) {
+    .site-footer {
+        min-height: 150px;
+    }
+}
+
+@media only screen and (max-width: 689px) {
+    .site-footer {
+        min-height: 180px;
+    }
 }
 
 .btn-search .fa-search {
     color: #990005;
 }
 
-
-/*.tag {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    align-items: center;*/
-/*    padding: 2px 6px;*/
-/*    font-weight: 400;*/
-/*    font-size: 12px;*/
-/*}*/
 
 .navbar-toggle {
     color: #990005;
