@@ -13,10 +13,7 @@ p {
 }
 
 .ux h1{
-    width: 1020px;
-    height: 56px;
     margin: 0;
-    
     font-weight: 700;
     font-size: 48px;
     line-height: 56px;
@@ -50,9 +47,7 @@ p {
 }
 
 #below_big_title {
-    width: 1020px;
-    height: 24px;
-    
+    margin-top:8px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -98,13 +93,13 @@ p {
 .ux .search-form {
     padding-bottom: 16px;
     border-bottom: 0 dotted #dddddd;
+        max-width:85%;
 }
 
 .ux .input-group .form-control {
     position: relative;
     z-index: 2;
     float: left;
-    width: 498px;
     margin-bottom: 0;
 }
 
@@ -136,12 +131,15 @@ p {
     color:#FFFFFF;
     padding-top: 0;
     text-decoration: underline;
+    font-weight: 400;
+    font-size: 15.64px;
+    line-height: 19px;
 }
 
 .ux .small_link_below_title {
     top: 0;
     left:0;
-    padding-bottom: 64px;
+    padding-bottom: 32px;
 }
 
 /* END TITLE AND SEARCH SECTION */
@@ -319,7 +317,7 @@ p {
 
 .redh2title {
     font-weight: 700;
-    font-size: 28px !important;
+    font-size: 28px;
     line-height: 32px;
     letter-spacing: -0.01em;
     margin-top: 36px;
@@ -415,5 +413,38 @@ p {
         top: 60px;
         left: calc(42% - 24px/2);
         padding-bottom: 24px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .ux {
+        padding: 25px;
+        font-style: normal;
+    }
+    .ux h1{
+        width:100%;
+        height: inherit;
+        margin: 0;
+        font-weight: 700;
+        font-size: 29px !important;
+        line-height: 36px !important;
+        letter-spacing: -0.03em;
+        padding-right: 24px ;
+    }
+    .ux > h2 {
+        font-weight: 700;
+        font-size: 20px !important;
+        line-height: 28px;
+        letter-spacing: -0.01em;
+        color: #212121;
+        padding-right: 23px;
+    }
+    .redh2title {
+        font-size: 20px !important;
+        padding-bottom: 8px;
+    }
+    #search_field_label {
+        font-size: 20px;
+
     }
 }
