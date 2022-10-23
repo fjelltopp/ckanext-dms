@@ -19,24 +19,28 @@
         <div class="container">
               <div class="row">
             {% block document_categories %}
-            {% snippet 'home/snippets/sections/document_categories.html' %}
+            {% snippet "group/snippets/group_list.html", groups=h.get_all_groups(), origin='homepage' %}
             {% endblock %}
               </div>
         </div>
     </div>
 
         {#      recently updated  #}
-    <div class="container">
-      <div class="row">
-            {% snippet 'home/snippets/sections/recent_updates.html' %}
-      </div>
+    <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            {% snippet 'snippets/package_list.html', packages=h.get_recently_updated(), origin='homepage' %}
+          </div>
+        </div>
     </div>
 
         {#      subscribe or login  #}
-    <div class="container">
+    <div class="container-fluid">
+     <div class="container">
       <div class="row">
             {% snippet 'home/snippets/sections/subscribe_or_login.html' %}
       </div>
+    </div>
     </div>
 
 

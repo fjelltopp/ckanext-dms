@@ -1,21 +1,17 @@
 {% ckan_extends %}
 
-
-
 {% block group_list %}
-    {% if origin == 'homepage' %}
     <div class="ux">
     <h2 class="row document_categories_title">Document categories</h2>
-
     {% set groups = groups %}
     <div class="row">
         {% for group in groups %}
 
-        <div class="col-md-2 col-lg-3 col-sm-4 white_box">
-            <div class="col-md-3">
+        <div class="col-md-5 col-lg-3 col-sm-4 col-xs-12 white_box">
+            <div class="col-md-3 col-sm-2 col-xs-3">
             <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="media-image img-responsive white_box_icon" width="40" height="40">
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8 col-sm-8 col-xs-9">
                 <div class="row white_box_title">
                     <a href="{{ h.url_for('/group/' + group.name) }}">{{ group.title }}</a>
                 </div>
@@ -28,13 +24,4 @@
         {% endfor %}
     </div>
     </div>
-    {% else %}
-    <ul class="media-grid" data-module="media-grid">
-    {% block group_list_inner %}
-    {% for group in groups %}
-    {% snippet "group/snippets/group_item.html", group=group, position=loop.index %}
-    {% endfor %}
-    {% endblock %}
-    </ul>
-    {% endif %}
 {% endblock %}

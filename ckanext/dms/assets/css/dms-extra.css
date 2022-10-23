@@ -1,52 +1,48 @@
 body {
-
-  background: #fff;
-  font-family: 'Inter', sans-serif !important;
+    background: #fff;
+    font-family: 'Inter', sans-serif !important;
+    font-style: normal;
     margin:0;
 }
 
+#NavbarBrandingContainer {
+    top: 0;
+}
 
 #NavbarHeadingContainer {
-    /* HIV, AIDS & Viral Hepititis Ministry of Health, Malawi */
-    width: 100%  ;
-    height: 100%;
-    /*left: 52px;*/
-    /*top: 0px;*/
-    /* appended to body */
-    /*font-family: 'Inter';*/
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
     color: #990005;
+    margin-top: 0 !important;
 
 }
 
-/* browser based margin-top for logo and title : google chrome */
-@media screen and (-webkit-min-device-pixel-ratio:0)
-  and (min-resolution:.001dpcm) {
-    #NavbarHeadingContainer {
-        margin-top: 1rem;
-    }
+/*!* browser based margin-top for logo and title : google chrome *!*/
+/*@media screen and (-webkit-min-device-pixel-ratio:0)*/
+/*  and (min-resolution:.001dpcm) {*/
+/*    #NavbarHeadingContainer {*/
+/*        margin-top: 1rem;*/
+/*    }*/
 
-    #NavbarLogo{
-        margin-top: -5rem;
-    }
-}
+/*    #NavbarLogo{*/
+/*        margin-top: -5rem;*/
+/*    }*/
+/*}*/
 
-/* Chrome version 22-28 */
-@media screen and(-webkit-min-device-pixel-ratio:0) {
-#NavbarHeadingContainer { -chrome-:only a;
-margin-top: -0.7rem;
-);}
-}
+/*!* Chrome version 22-28 *!*/
+/*@media screen and(-webkit-min-device-pixel-ratio:0) {*/
+/*#NavbarHeadingContainer { -chrome-:only a;*/
+/*margin-top: -0.7rem;*/
+/*);}*/
+/*}*/
 
-/* browser based margin-top for logo and title : firefox */
-@-moz-document url-prefix() {
-#NavbarHeadingContainer {
-    margin-top: -0.7rem;
-    }
-}
+/*!* browser based margin-top for logo and title : firefox *!*/
+/*@-moz-document url-prefix() {*/
+/*#NavbarHeadingContainer {*/
+/*    margin-top: -0.7rem;*/
+/*    }*/
+/*}*/
 
 
 #NavbarHeading1 {
@@ -66,33 +62,40 @@ margin-top: -0.7rem;
     height: 40px;
     left: 0px;
     top: 0px;
+
+}
+
+@media only screen and (min-width: 1200px) {
+    #NavbarLogo {
+        margin-top: -50px !important;
+    }
 }
 
 
 .fluid-white-bar {
-    height: 0px;
+    height: 0;
     border-bottom: solid 0px #FFFFFF;
 }
 
 .account-masthead .account ul li {
-  border-left: 0px solid #00232e;
+  border-left: 0 solid #00232e;
 }
 
 .list-unstyled { /* login / register header */
-  padding-top: 0.25em;
-  padding-bottom:0px;
-  margin: 0px;
+  /*padding-top: 0.25em;*/
+  padding-bottom:0;
+  margin: 0;
   list-style: none;
 }
 
 .account-masthead .account ul li a {
     /* ignored */
     /*width: 41px;*/
-    height: 20px;
+    /*height: 20px;*/
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 20px;
+    /*line-height: 20px;*/
     /* identical to box height, or 143% */
     text-align: right;
     /* Primary Red */
@@ -201,7 +204,7 @@ margin-top: -0.7rem;
 
 .site-footer {
   background: #000000 url("../../../base/images/bg.png");
-  
+
 }
 
 
@@ -220,44 +223,41 @@ margin-top: -0.7rem;
 .dataset-heading {
 	width: 1020px;
 	height: 24px;
-
 	font-style: normal;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 24px;
-
 	color: #990005;
-
-
-
 	flex: none;
 	order: 0;
 	align-self: stretch;
 	flex-grow: 0;
 }
 
+/* FOR DATASETS - separate this from homepage CSS */
 
-.dataset-heading a {
-  color: inherit;
-}
+/*.dataset-heading a {*/
+/*  color: inherit;*/
+/*}*/
 
 
-.dataset-content div {
-	width: 100%;
-	height: 20px;
+/*.dataset-content div {*/
+/*	width: 100%;*/
+/*	height: 20px;*/
 
-	font-style: normal;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 20px;
+/*	font-style: normal;*/
+/*	font-weight: 400;*/
+/*	font-size: 14px;*/
+/*	line-height: 20px;*/
 
-	color: #757575 !important;
+/*	color: #757575 !important;*/
 
-	flex: none;
-	order: 1;
-	align-self: stretch;
-	flex-grow: 0;
-}
+/*	flex: none;*/
+/*	order: 1;*/
+/*	align-self: stretch;*/
+/*	flex-grow: 0;*/
+/*}*/
+/* FOR DATASETS */
 
 .main, .hero {
     padding-top: 0px;
@@ -305,9 +305,15 @@ margin-top: -0.7rem;
     color: #FFFFFF !important;
 }
 
-.desc {
+p.desc {
     color: #FFFFFF;
+    margin-top: 16px !important;
 }
+
+p.desc a {
+    text-decoration: underline;
+}
+
 
 .desc a, .desc a:hover {
     color: #FFFFFF;
@@ -316,7 +322,6 @@ margin-top: -0.7rem;
 
 .site-footer {
     height: 124px;
-    margin-top: 64px;
 }
 
 .btn-search .fa-search {
@@ -324,16 +329,15 @@ margin-top: -0.7rem;
 }
 
 
-.tag {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 2px 6px;
-    font-weight: 400;
-    font-size: 12px;
-}
+/*.tag {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    padding: 2px 6px;*/
+/*    font-weight: 400;*/
+/*    font-size: 12px;*/
+/*}*/
 
 .navbar-toggle {
     color: #990005;
-    /*background: #990005;*/
 }

@@ -1,12 +1,13 @@
 {% if not g.userobj %}
-<div class="ux ux-sm">
+<div class="ux">
     <div class="row red_background_box">
         <div class="row">
-            <h2>Subscribe to updates</h2>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h2 class="redh2title">Subscribe to updates</h2>
+                <p class="subtext">Create an account to receive notifications by email or SMS whenever new documents are posted.</p>
+            </div>
+
         </div>
-    <div class="row subtext">
-        Create an account to receive notifications by email or SMS whenever new documents are posted.
-    </div>
         <div class="row d-none hidden-sm hidden-xs d-md-block create_an_account_outer_btn">
             <a class="bottom_subscribe_button" href="{{ h.url_for("/user/register") }}">Create an account</a> <span class="login">or <a href="{{ h.url_for("/user/login") }}">log in</a></span>
         </div>
