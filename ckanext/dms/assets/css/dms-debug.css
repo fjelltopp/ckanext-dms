@@ -314,63 +314,60 @@ p {
     min-height: 204px;
     background: #990005;
     border-radius: 4px;
+    padding-left: 32px;
 }
 
 .redh2title {
     font-weight: 700;
     font-size: 28px !important;
-    line-height: 36px;
+    line-height: 32px;
     letter-spacing: -0.01em;
-    margin-left: 36px;
     margin-top: 36px;
     color: #FFFFFF;
 }
 
 .subtext {
-    margin-left: 36px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
+    padding-right: 30px;
 }
 
 
-
 .create_an_account_outer_btn {
-    position: absolute;
-    width: 176px;
-    height: 48px;
-    left: 36px;
-    top: 108px;
     background: #EDE8E8;
     border-radius: 4px;
+    margin-top: 24px;
+    width: 178px;
+    height: 40px;
+    margin-bottom: 32px;
 
 }
 
 .create_an_account_outer_btn a.bottom_subscribe_button, .create_an_account_outer_btn a.bottom_subscribe_button:hover {
-    position: absolute;
-    height: 24px;
-    left: 16px;
-    right: 16px;
-    top: calc(50% - 24px/2);
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     color: #990005;
+    position: absolute;
+    height: 24px;
+    left: 16px;
+    top: calc(50% - 24px/2);
 
 }
 
 .create_an_account_outer_btn span.login{
     position: absolute;
     height: 24px;
-    left: 237px;
     right: 16px;
-    width: 80px;
+    width: 100%;
     top: calc(50% - 24px/2);
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
+    padding-right: 24px;
 
 }
 
@@ -379,3 +376,44 @@ p {
     text-decoration: underline;
 }
 
+@media only screen and (min-width: 1200px) {
+.create_an_account_outer_btn span.login{
+        left: 237px;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+
+    .create_an_account_outer_btn span.login{
+        left: 234px;
+    }
+}
+@media only screen  and (min-width: 376px) and (max-width: 768px) {
+    .create_an_account_outer_btn span.login{
+        left: 234px;
+    }
+}
+
+@media only screen  and (max-width: 375px)  {
+    .create_an_account_outer_btn {
+        width:100%;
+    }
+    .create_an_account_outer_btn span.login{
+        left: 0px;
+        width: 100%;
+        top: calc(50% - 24px/2);
+    }
+    .create_an_account_outer_btn a.bottom_subscribe_button, .create_an_account_outer_btn a.bottom_subscribe_button:hover {
+        position: absolute;
+        height: 24px;
+        left: calc(30% - 24px/2);
+        top: calc(50% - 24px/2);
+    }
+    .red_background_box {
+        min-height: 325px;
+    }
+    .create_an_account_outer_btn span.login{
+        top: 60px;
+        left: calc(42% - 24px/2);
+        padding-bottom: 24px;
+    }
+}
