@@ -8,7 +8,7 @@
         {% for group in groups %}
 
         <div class="col-md-5 col-lg-3 col-sm-4 col-xs-12 white_box">
-            <div class="col-md-3 col-sm-2 col-xs-3">
+            <div class="col-sm-1 col-xs-1" style="margin-right: 10%;">
             <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="media-image img-responsive white_box_icon" width="40" height="40">
             </div>
             <div class="col-md-8 col-sm-8 col-xs-9">
