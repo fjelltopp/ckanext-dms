@@ -375,3 +375,7 @@ p.desc a {
         background-size: cover;
     }
 }
+
+.group-thumbnail {
+    margin-right: 10%;
+}
