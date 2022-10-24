@@ -3,8 +3,6 @@
 {%  set current_page = h.current_url() %}
 
 {% block styles %}
-    <h1>{{ current_page }}</h1>
-    <h1>{{  current_page.split('/') }}</h1>
     {{ super() }}
     {% asset 'dms/dms-theme' %}
     {% asset 'dms/dms-extra-theme' %}
