@@ -308,8 +308,9 @@ p.desc a {
 
 .site-footer {
     background: #000000 url("../../../base/images/bg.png");
-   left: 0;
-   bottom: 0;
-   width: 100%;
-    padding-left: 30px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-left: -10px;
+
 }
