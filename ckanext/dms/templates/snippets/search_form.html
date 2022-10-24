@@ -1,10 +1,10 @@
 {%  ckan_extends %}
 
-
+{%  set current_page = h.current_url() %}
 
 
 {% block search_input %}
-
+{% if 'dataset' in current_page %}
 <div class="input-group search-input-group container">
                 <div class="col-lg-8 col-md-8 col-sm-8" style="display: inline-block">
 
@@ -39,6 +39,7 @@
 
 
 </div>
+{% endif %}
 {% endblock %}
 
  {% block search_sortby %}
