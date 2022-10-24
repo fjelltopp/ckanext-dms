@@ -7,10 +7,11 @@
                 <div class="subtext">Create an account to receive notifications by email or SMS whenever new documents are posted.</div>
                 <div class="red_subscribe_or_login">
                     <a class="create_an_account_outer_btn" href="{{ h.url_for("/user/register") }}">Create an account</a>
-                    <span class="login_button hidden-xs">or <a href="{{ h.url_for("/user/login") }}">log in</a></span>
-                    <div class="login_button hidden-lg hidden-md hidden-sm">
+                    <span class="login_button for-bigger-screen">or <a href="{{ h.url_for("/user/login") }}">log in</a></span>
+                    <div class="login_button for-small-screen">
                         <span>or <a href="{{ h.url_for("/user/login") }}">log in</a></span>
                     </div>
+
 
                 </div>
 

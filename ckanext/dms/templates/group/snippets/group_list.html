@@ -11,14 +11,14 @@
         {% for group in groups %}
         <div class="col-lg-4 col-md-6 col-xs-12">
             <div class="white_box">
-                <div class="col-sm-1 col-xs-1 group-thumbnail">
-                <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="media-image img-responsive white_box_icon" width="40" height="40">
+                <div class="col-md-1 col-sm-1 col-xs-1 group-thumbnail">
+                <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="media-image white_box_icon">
                 </div>
                 <div class="col-md-8 col-sm-8 col-xs-9">
-                    <div class="row white_box_title">
+                    <div class="white_box_title">
                         <a href="{{ h.url_for('/group/' + group.name) }}">{{ group.title }}</a>
                     </div>
-                    <div class="row white_box_short_desc">
+                    <div class="white_box_short_desc">
                         <p class="media-description">{{ h.markdown_extract(group.description, extract_length=20) }}</p>
                     </div>
 
