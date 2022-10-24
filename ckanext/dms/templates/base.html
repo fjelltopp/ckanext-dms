@@ -1,6 +1,6 @@
 {% ckan_extends %}
 
-{%  set current_page = h.current_url() | replace("/", "") %}
+{%  set current_page = h.current_url() %}
 
 {% block styles %}
 
@@ -9,7 +9,7 @@
     {% asset 'dms/dms-extra-theme' %}
 
     {#    Load only if group page#}
-    {% if current_page == 'group' %}
+    {% if 'group' in current_page %}
         {% asset 'dms/dms-category-theme' %}
     {% endif %}
 
