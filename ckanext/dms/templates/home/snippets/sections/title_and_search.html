@@ -16,25 +16,7 @@
     <h2 id="search_field_label">Search {{ h.SI_number_span(stats.dataset_count) }} datasets:</h2>
 </div>
 <div class="row">
-    {% set placeholder = placeholder if placeholder else _('Search datasets...') %}
-    {% set sorting = sorting if sorting else [(_('Name Ascending'), 'name asc'), (_('Name Descending'), 'name desc')] %}
-    {% set search_class = search_class if search_class else 'search-giant' %}
-    {% set no_bottom_border = no_bottom_border if no_bottom_border else false %}
-    {% set form_id = form_id if form_id else false %}
-
-    <form {% if form_id %}id="{{ form_id }}" {% endif %}class="search-form{% if no_bottom_border %} no-bottom-border{% endif %}"  method="get" action="{% url_for 'dataset.search' %}">
-
-        <div class="input-group search-input-group col-md-7 col-sm-7 col-xs-12">
-          <input aria-label="{% block header_site_search_label %}{{ placeholder }}{% endblock %}" id="field-giant-search" type="text" class="form-control input-lg" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
-
-          <span class="input-group-btn">
-            <button class="btn btn-default btn-lg lens-btn" type="submit" value="search" aria-label="{{_('Submit')}}">
-              <i class="fa fa-search"></i>
-            </button>
-          </span>
-
-        </div>
-    </form>
+    {% snippet 'snippets/search_input.html' %}
 </div>
 <div class="row">
     <div class="small_link_below_title">
