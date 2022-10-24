@@ -7,9 +7,11 @@
 {% endblock %}
 
 {% block primary_content %}
+
   <section class="module">
     <div class="module-content">
       {% block page_primary_action %}
+
         {% if h.check_access('package_create') %}
           <div class="page_primary_action">
             {{ h.snippet ('snippets/add_dataset.html', dataset_type=dataset_type) }}
@@ -49,4 +51,5 @@
 
 
 {% block secondary_content %}
+    <h1>Welcome</h1>
 {% endblock %}

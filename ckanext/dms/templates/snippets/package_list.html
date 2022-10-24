@@ -4,7 +4,8 @@
     <h2 class="row recent_updates_title">Recently updated</h2>
     <div class="row">
         {% for dataset in packages %}
-        <div class="col-lg-3 col-md-3 col-sm-3 transparent_box">
+        <div class="col-lg-4 col-md-6 col-xs-12">
+        <div class="col-sm-12 col-xs-12 transparent_box">
             <div class="row"><a href="{{ h.url_for('/dataset/' + dataset.name) }}">{{ dataset.title }}</a></div>
             <div class="row">{{ h.time_ago_from_timestamp(dataset.resources[0].last_modified) }}, {{ h.get_user_from_id(dataset.creator_user_id) }}</div>
             <div class="row">{{ h.markdown_extract(dataset.notes, extract_length=120) }}</div>
@@ -14,11 +15,12 @@
                 {% endfor %}
             </div>
         </div>
+        </div>
+
         {% endfor %}
     </div>
     <div class="row view-all-btn">
         <a href="{{ h.url_for('/dataset') }}">View All</a>
-
     </div>
 </div>
 {% endblock %}
