@@ -1,7 +1,17 @@
 {% ckan_extends %}
 
+{%  set current_page = h.current_url() | replace("/", "") %}
+
 {% block styles %}
-  {{ super() }}
-  {% asset 'dms/dms-theme' %}
-  {% asset 'dms/dms-extra-theme' %}
+
+    {{ super() }}
+    {% asset 'dms/dms-theme' %}
+    {% asset 'dms/dms-extra-theme' %}
+
+    {#    Load only if group page#}
+    {% if current_page == 'group' %}
+        {% asset 'dms/dms-category-theme' %}
+    {% endif %}
+
+    {#    Load only if dataset pages#}
 {% endblock %}
