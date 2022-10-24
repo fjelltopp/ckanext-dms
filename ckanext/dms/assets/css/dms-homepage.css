@@ -95,11 +95,6 @@ p {
     position: absolute;
 }
 
-.ux .btn-default {
-    color: #990005;
-    border: none !important;
-    outline: none !important;
-}
 
 .ux .form-control, .ux .form-control:focus  {
     border: none !important;
@@ -424,3 +419,29 @@ p {
 
     }
 }
+
+* {
+    /*border: #1A7EA3 solid thin;*/
+}
+
+@media only screen and (max-width: 768px) {
+    .masthead .navbar-collapse {
+        margin-top: 0;
+    }
+    .search-form {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0px dotted #dddddd;
+    }
+    .search-input-group {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #mobile_menu {
+        display: none;
+    }
+}
+
+

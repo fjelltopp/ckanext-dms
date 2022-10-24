@@ -133,7 +133,7 @@ body {
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
-    text-align: right;
+
     color: #990005;
     flex: none;
     order: 1;
@@ -315,3 +315,15 @@ p.desc a {
     margin-top: 64px;
 
 }
+
+.big-search-form {
+    margin-top: 20px;
+}
+
+button i.fa-search {
+    color: #990005;
+    border: none !important;
+    outline: none !important;
+}
+
+

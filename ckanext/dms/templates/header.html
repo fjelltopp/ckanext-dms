@@ -23,13 +23,20 @@
 </div>
 {% endblock %}
 
+
 {% block header_site_navigation_tabs %}
-  {{ h.build_nav_main(
-    ('dataset.search', _('Datasets')),
-    ('group.index', _('Categories'))
-     ) }}
-    <li><a href="/pages/dhamis-analytics">DHAMIS Analytics Dashboard</a></li>
+
+    <div id="mobile_menu">
+        {% snippet 'snippets/search_input.html', placeholder='Search' %}
+    </div>
+
+    {{ h.build_nav_main(
+        ('dataset.search', _('Datasets')),
+        ('group.index', _('Categories'))
+         ) }}
+        <li><a href="/pages/dhamis-analytics">DHAMIS Analytics Dashboard</a></li>
 {% endblock %}
+
 
 {% block header_wrapper %}
   {{ super() }}
