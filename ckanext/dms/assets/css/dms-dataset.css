@@ -87,7 +87,7 @@
 }
 
 .input-group-btn {
-    width: fit-content; display: inline-block
+    width: fit-content !important; display: inline-block;
 }
 
 .input-lg {
@@ -97,6 +97,10 @@
 #field-order-by {
     max-width: 150px;
 }
-* {
-    /*border: #1A7EA3 solid thin;*/
+
+@media only screen and (max-width: 991px) {
+    #field-giant-search {
+        width:80%;
+    }
 }
+
