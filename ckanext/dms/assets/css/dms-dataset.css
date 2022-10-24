@@ -7,3 +7,68 @@
     width:0 !important;
     display: none !important;
 }
+
+.section-separator {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.document_categories_title {
+    margin-bottom: 0px;
+}
+
+.document_categories_background {
+    min-height: 100%;
+    background: #E8E8E8;
+}
+
+.with-min-height {
+    min-height: 212px;
+}
+
+.navigation_title {
+    margin-top: 4em;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    padding-left: 30px;
+}
+
+.navigation_subtitle {
+    margin-top: 16px;
+    /*padding-bottom: 64px;*/
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    padding-left: 30px;
+
+}
+
+.navigation_add {
+    margin-bottom: 3em;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    padding-left: 30px;
+
+}
+
+#dataset-search-form > h1 {
+    display: none;
+}
+
+.dataset-search-form, .search-form {
+    margin-bottom: 0px;
+    border-bottom: 0;
+}
+
+
+.packages-list-with-bottom-border {
+    margin-top:26px;
+    padding: 0;
+    border-bottom: 1px solid #dddddd;
+}

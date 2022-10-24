@@ -6,7 +6,7 @@
     {% endif %}
     <div class="row">
         {% for dataset in packages %}
-        <div {% if origin == 'homepage' %} class="col-lg-4 col-md-6 col-xs-12" {% else %} class="col-lg-12 col-md-12 col-xs-12" {% endif %}>
+        <div {% if origin == 'homepage' %} class="col-lg-4 col-md-6 col-xs-12" {% else %} class="col-lg-12 col-md-12 col-xs-12 packages-list-with-bottom-border" {% endif %}>
         <div class="col-sm-12 col-xs-12 transparent_box">
             <div class="row"><a href="{{ h.url_for('/dataset/' + dataset.name) }}">{{ dataset.title }}</a></div>
             <div class="row">{{ h.time_ago_from_timestamp(dataset.resources[0].last_modified) }}, {{ h.get_user_from_id(dataset.creator_user_id) }}</div>
