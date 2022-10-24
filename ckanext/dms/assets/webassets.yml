@@ -17,10 +17,16 @@ dms-theme:
     - css/dms.css
     - css/dms-extra.css
     - css/dms-homepage.css
-    - css/dms-dataset.css
 
 dms-category-theme:
   filter: cssrewrite
   output: ckanext-dms/%(version)s-dms-categories.css
   contents:
     - css/dms-group.css
+
+
+dms-dataset-theme:
+  filter: cssrewrite
+  output: ckanext-dms/%(version)s-dms-datasets.css
+  contents:
+    - css/dms-dataset.css

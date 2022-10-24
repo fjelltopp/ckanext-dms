@@ -14,4 +14,8 @@
     {% endif %}
 
     {#    Load only if dataset pages#}
+    {% if 'dataset' in current_page %}
+        {% asset 'dms/dms-dataset-theme' %}
+    {% endif %}
+
 {% endblock %}
