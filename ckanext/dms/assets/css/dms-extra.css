@@ -42,6 +42,17 @@ body {
 
 }
 
+@media only screen and (max-width: 768px) {
+    #NavbarHeading2 {
+        margin-top: -5px !important;
+    }
+
+    #NavbarLogo {
+        margin-top: -60px;
+        margin-left: 10px;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     #NavbarLogo {
         margin-top: -50px !important;
