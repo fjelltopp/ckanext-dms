@@ -6,38 +6,30 @@
 {% block search_input %}
 {% if 'dataset' in current_page %}
 <div class="input-group search-input-group container">
-                <div class="col-lg-8 col-md-8 col-sm-8" style="display: inline-block">
+        <div class="col-lg-8 col-md-8 col-sm-8" style="display: inline-block">
 
-                  <input aria-label="{% block header_site_search_label %}{{ placeholder }}{% endblock %}" id="field-giant-search" type="text" class="form-control input-lg input-md" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
-                  {% block search_input_button %}
+          <input aria-label="{% block header_site_search_label %}{{ placeholder }}{% endblock %}" id="field-giant-search" type="text" class="form-control input-lg input-md" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
+          {% block search_input_button %}
+          <span class="input-group-btn">
+            <button class="btn btn-default btn-lg" type="submit" value="search" aria-label="{{_('Submit')}}">
+              <i class="fa fa-search"></i>
+            </button>
+          </span>
+          {% endblock %}
+        </div>
 
-                  <span class="input-group-btn">
-                    <button class="btn btn-default btn-lg" type="submit" value="search" aria-label="{{_('Submit')}}">
-                      <i class="fa fa-search"></i>
-                    </button>
-                  </span>
-                  {% endblock %}
-                </div>
-
-                {% if sorting %}
-                    <div class="col-lg-4 col-md-4 col-sm-4" style="display: inline-block">
-                    <select id="field-order-by" name="sort" class="form-control form-control input-lg">
-                      {% for label, value in sorting %}
-                        {% if label and value %}
-                          <option value="{{ value }}"{% if sorting_selected == value %} selected="selected"{% endif %}>{{ label }}</option>
-                        {% endif %}
-                      {% endfor %}
-                    </select>
-                    {% block search_sortby_button %}
-                    <button class="btn btn-default js-hide" type="submit">{{ _('Go') }}</button>
-                    {% endblock %}
-
-                {% endif %}
+    {% if sorting %}
+        <div class="col-lg-4 col-md-4 col-sm-4" style="display: inline-block">
+        <select id="field-order-by" name="sort" class="form-control form-control input-lg">
+          {% for label, value in sorting %}
+            {% if label and value %}
+              <option value="{{ value }}"{% if sorting_selected == value %} selected="selected"{% endif %}>{{ label }}</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+    {% endif %}
 
     </div>
-
-
-
 </div>
 {% endif %}
 {% endblock %}

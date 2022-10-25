@@ -83,7 +83,7 @@
 }
 
 #field-giant-search {
-    width: 90%; min-width: 0; margin: 0; padding: 0;
+    width: 90%; min-width: 0; margin: 0; padding: inherit;
 }
 
 .input-group-btn {
@@ -97,6 +97,8 @@
 #field-order-by {
     max-width: 150px;
 }
+
+
 
 @media only screen and (max-width: 991px) {
     #field-giant-search {
