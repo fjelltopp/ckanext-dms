@@ -53,10 +53,7 @@
           (_('Last Modified'), 'metadata_modified desc'),
           (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
         %}
-        <div class="row">
-            <h2 class="col-md-8 col-xs-8">Search data</h2><h2 class="col-md-4 col-xs-4">{{ h.SI_number_span(stats.dataset_count) }} datasets found</h2>
-        </div>
-        <div class="row">
+        <div class="">
           {% snippet 'snippets/search_form.html', form_id='dataset-search-form', type=dataset_type, query=q, sorting=sorting, sorting_selected=sort_by_selected, count=page.item_count, placeholder=_('Search ' + dataset_type + 's') + '...', facets=facets, show_empty=request.params, error=query_error, fields=fields%}
         </div>
       {% endblock %}
