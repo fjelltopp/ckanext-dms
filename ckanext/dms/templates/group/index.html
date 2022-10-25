@@ -1,19 +1,38 @@
-{% extends "page.html" %}
-{% set homepage_style = ( g.homepage_style or '1' ) %}
-
-
-{% block subtitle %}{{ _("Welcome") }}{% endblock %}
-
-{% block maintag %}{% endblock %}
-{% block toolbar %}{% endblock %}
+{% ckan_extends %}
 
 {% block content %}
-  <div class="homepage layout-{{ homepage_style }}">
-    <div id="content" class="container">
-      {{ self.flash() }}
+    <div class="homepage layout-{{ homepage_style }}">
+        <div id="content" class="container">
+            {{ self.flash() }}
+        </div>
+        <div class="main hero">
+            <div class="promoted-background">
+                <div class="promoted">
+                    <div class="container">
+                        <p class="subtitle">Home / </p>
+                        <h1>Categories</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="document-categories">
+                <div class="container">
+                    {% if h.check_access('group_create') %}
+                        {% link_for _('Add Categories'), named_route=group_type+'.new', class_='btn btn-primary add-category', icon='plus-square' %}
+                    {% endif %}
+                    {% block document_categories %}
+                    {% snippet "group/snippets/group_list.html", groups=h.get_all_groups(), origin='group' %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="subscribe">
+              {% if not g.userobj %}
+              <div class="spacer"></div>
+              {% endif %}
+                <div class="container">
+                    {% snippet 'home/snippets/subscribe_to_updates.html' %}
+                </div>
+              }
+            </div>
+        </div>
     </div>
-    {% block primary_content %}
-      {% snippet "group/layout{0}.html".format(homepage_style), group_type=group_type+'.new' %}
-    {% endblock %}
-  </div>
 {% endblock %}

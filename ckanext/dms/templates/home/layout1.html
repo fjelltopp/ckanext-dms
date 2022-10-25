@@ -1,47 +1,30 @@
 <div role="main">
     <div class="main hero">
-
-    {#      section with piling documents #}
-    <div class="container-fluid navigation_section_background">
-        <div class="container">
-                {% block title_and_search %}
-                  {% snippet 'home/snippets/sections/title_and_search.html' %}
+        <div class="promoted-background">
+            <div class="container">
+                {% block promoted %}
+                    {% snippet 'home/snippets/promoted.html' %}
                 {% endblock %}
+            </div>
         </div>
-    </div>
-
-
-
-        {#      section with categories  #}
-    <div class="container-fluid document_categories_background">
+    <div class="document-categories">
         <div class="container">
-              <div class="row">
+            <h2>Document categories</h2>
             {% block document_categories %}
-            {% snippet "group/snippets/group_list.html", groups=h.get_all_groups(), origin='homepage' %}
+                {% snippet "group/snippets/group_list.html", groups=h.get_all_groups(), origin='homepage' %}
             {% endblock %}
-              </div>
         </div>
     </div>
-
-        {#      recently updated  #}
-    <div class="container-fluid">
+    <div class="recently-updated">
         <div class="container">
-          <div class="row">
-            {% snippet 'snippets/package_list.html', packages=h.get_recently_updated(), origin='homepage' %}
-          </div>
+            <h2>Recently updated</h2>
+            {% snippet 'home/snippets/recently_updated.html', packages=h.get_recently_updated(), origin='homepage' %}
+            <a class="view-all-btn" href="{{ h.url_for('/dataset') }}">View All</a>
         </div>
     </div>
-
-        {#      subscribe or login  #}
-    <div class="container-fluid">
-     <div class="container">
-      <div class="row">
-            {% snippet 'home/snippets/sections/subscribe_or_login.html' %}
-      </div>
+    <div class="subscribe">
+        <div class="container">
+            {% snippet 'home/snippets/subscribe_to_updates.html' %}
+        </div>
     </div>
-    </div>
-
-
-    </div>
-
-  </div>
+</div>

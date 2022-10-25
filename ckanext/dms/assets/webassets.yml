@@ -14,9 +14,9 @@ dms-theme:
   output: ckanext-dms/%(version)s-dms.css
   contents:
     - css/dms-main.css
+    - css/inter.css
     - css/dms.css
     - css/dms-extra.css
-    - css/dms-homepage.css
 
 dms-category-theme:
   filter: cssrewrite

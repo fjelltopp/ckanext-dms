@@ -16,7 +16,9 @@ from ckanext.dms.helpers import (
 
 log = logging.getLogger(__name__)
 
+
 class DmsPlugin(plugins.SingletonPlugin):
+
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.ITemplateHelpers)
@@ -136,5 +138,3 @@ def _get_upload_authz_token(context, dataset_name, org_name):
         log.error(error)
         raise toolkit.NotAuthorized(error)
     return authz_result['token']
-
-
