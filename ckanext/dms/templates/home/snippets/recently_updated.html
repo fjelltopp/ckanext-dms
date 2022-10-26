@@ -2,29 +2,7 @@
     <div class="row">
         {% for dataset in packages %}
             <div class="col-md-4 col-xs-12">
-                <div class="dataset">
-                    <div class="title"><a href="{{ h.url_for('/dataset/' + dataset.name) }}">{{ dataset.title }}</a></div>
-                    <div class="author">
-                        {{_('Created by')}} {{ h.get_user_from_id(dataset.creator_user_id) }}
-                    </div>
-                    <div class="modified">
-                        {{_('Modified')}} {{ h.time_ago_from_timestamp(dataset.resources[0].last_modified) }}
-                    </div>
-                    <div class="desc">{{ h.markdown_extract(dataset.notes, extract_length=120) }}</div>
-                    <div class="tags">
-                    {% if dataset.resources and not hide_resources %}
-                        <ul class="dataset-resources list-unstyled">
-                            {% for resource in h.dict_list_reduce(dataset.resources, 'format') %}
-                                <li class="tag">
-                                  <a href="{{ h.url_for(dataset.type ~ '.read', id=dataset.name) }}"
-                                     class="label"
-                                     data-format="{{ resource.lower() }}">{{ resource }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                    </div>
-                </div>
+                {% snippet 'snippets/package_item.html', package=dataset %}
             </div>
         {% endfor %}
     </div>

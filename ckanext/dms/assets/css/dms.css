@@ -355,7 +355,7 @@ p.small {
     height:  50px;
 }
 
-.tag{
+.dataset-resources li{
     padding: 2px 6px;
     background: #E9F1ED;
     border-radius: 4px;
@@ -366,7 +366,8 @@ p.small {
     border:  none;
 }
 
-.tag a.label {
+.dataset-resources li a.label,
+.dataset-resources li a.label:hover{
 	background-color:  transparent;
 	color: #056839;
 	padding:  0px;
@@ -400,47 +401,36 @@ a.tag:hover  {
     margin-top: 64px;
 }
 
-.recently-updated .dataset {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+.dataset-content {
     margin-right: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.recently-updated .dataset .title{
+.dataset-item{
+	list-style:  none;
+}
+
+.dataset-content .dataset-heading{
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
     color: #990005;
+    margin:  10px 0px;
 }
 
-.recently-updated .dataset .author{
+.dataset-content .author {
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
     color: #212121;
     margin-bottom: 0px;
 }
-.recently-updated .dataset .modified{
+.dataset-content .modified{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     color: #212121;
     margin-bottom: 12px;
-}
-
-.recently-updated .dataset .desc{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #757575;
-    margin-bottom: 14px;
-
 }
 
 .recently-updated .view-all-btn {
@@ -453,7 +443,7 @@ a.tag:hover  {
     color: #FFFFFF;
     background: #212121;
     border-radius: 4px;
-    margin-bottom: 64px;
+    margin: 48px 0px 64px;
 }
 
 .subscribe .highlight-box {
