@@ -521,7 +521,7 @@ a.tag:hover  {
 }
 .main, .hero {
 	min-height: 80vh;
-	padding-top: 20px;
+	padding-top: 32px;
 	padding-bottom: 64px;
     background: #FFFFFF;
 }
@@ -608,10 +608,6 @@ a.tag:hover  {
 #content{
 	padding-left: 30px;
 	padding-right: 30px;
-}
-
-.promoted-breadcrumbs{
-	margin-bottom: 32px;
 }
 
 .promoted-breadcrumbs .toolbar{
