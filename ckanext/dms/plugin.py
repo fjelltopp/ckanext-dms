@@ -8,13 +8,17 @@ import ckan.lib.uploader as uploader
 import ckanext.blob_storage.helpers as blobstorage_helpers
 from giftless_client import LfsClient
 from werkzeug.datastructures import FileStorage as FlaskFileStorage
+
+import ckanext.dms.helpers
 from ckanext.dms.helpers import (
     get_dataset_from_id, get_facet_items_dict
 )
 
 log = logging.getLogger(__name__)
 
+
 class DmsPlugin(plugins.SingletonPlugin):
+
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.ITemplateHelpers)
@@ -23,11 +27,13 @@ class DmsPlugin(plugins.SingletonPlugin):
     # ITemplateHelpers
     def get_helpers(self):
         return {
-            u'max_resource_size': uploader.get_max_resource_size,
-            u'get_dataset_from_id': get_dataset_from_id,
-            u'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
-            u'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
-            u'get_facet_items_dict': get_facet_items_dict
+            'max_resource_size': uploader.get_max_resource_size,
+            'get_dataset_from_id': get_dataset_from_id,
+            'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
+            'get_facet_items_dict': get_facet_items_dict,
+            'get_recently_updated': ckanext.dms.helpers.get_recently_updated,
+            'get_user_from_id': ckanext.dms.helpers.get_user_from_id,
+            'get_all_groups': ckanext.dms.helpers.get_all_groups
         }
 
     # IConfigurer
@@ -58,6 +64,8 @@ class DmsPlugin(plugins.SingletonPlugin):
             _giftless_upload(context, resource, current=current)
             _update_resource_last_modified_date(resource, current=current)
         return resource
+
+
 
 
 def _giftless_upload(context, resource, current=None):

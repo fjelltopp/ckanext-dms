@@ -2,6 +2,9 @@ import ckan.logic as logic
 import ckan.model as model
 from ckan.common import c, request, is_flask_request
 
+# for datetime string conversion
+from datetime import datetime
+
 
 def get_dataset_from_id(id):
     context = {
@@ -60,3 +63,20 @@ def _facet_sort_function(facet_name, facet_items):
         # Default CKAN sort: Sort descendingly by count and ascendingly by case-sensitive display name
         facet_items.sort(key=lambda it: (-it['count'], it['display_name'].lower()))
     return facet_items
+
+
+def get_recently_updated():
+    return logic.get_action('package_search')(
+        data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
+
+
+def get_user_from_id(userid):
+    user_show_action = logic.get_action('user_show')
+    user_info = user_show_action({}, {"id": userid})
+    return user_info['fullname']
+
+
+def get_all_groups():
+    return logic.get_action('group_list')(
+            data_dict={'sort': 'title asc', 'all_fields': True})
+

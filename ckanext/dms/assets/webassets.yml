@@ -13,5 +13,6 @@ dms-theme:
   filter: cssrewrite
   output: ckanext-dms/%(version)s-dms.css
   contents:
+    - css/inter.css
     - css/dms-main.css
     - css/dms.css

@@ -2,35 +2,35 @@
 
 {% block header_logo %}
 <div id="NavbarBrandingContainer">
-  <div class="inline-block">
-    <a href="{{ h.url_for('home.index') }}">
+  <a href="{{ h.url_for('home.index') }}">
       <img
         id="NavbarLogo"
         src="{{ h.url_for_static_or_external(g.site_logo) }}"
         alt="{{ g.site_title }}"
         title="{{ g.site_title }}"
       />
-    </a>
-  </div>
-  <div class="inline-block">
     <div id="NavbarHeadingContainer">
-      <a href="{{ h.url_for('home.index') }}">
-        <div><h1 id="NavbarHeading1">Department of HIV & AIDS</h1></div>
-        <div><h1 id="NavbarHeading2">Ministry of Health, Malawi</h1></div>
-      </a>
+        <div><h1 class="title">HIV, AIDS & Viral Hepititis</h1></div>
+        <div><h1 class="subtitle">Ministry of Health, Malawi</h1></div>
     </div>
-  </div>
+  </a>
 </div>
 {% endblock %}
 
+
 {% block header_site_navigation_tabs %}
-  {{ h.build_nav_main(
-    ('home.index', _('Home')),
-    ('dataset.search', _('Datasets')),
-    ('organization.index', _('Organizations')),
-    ('group.index', _('Groups')),
-    ('home.about', _('About')) ) }}
+
+    <div class="mobile-menu">
+        {% snippet 'snippets/search_input.html', placeholder='Search' %}
+    </div>
+
+    {{ h.build_nav_main(
+        ('dataset.search', _('Datasets')),
+        ('group.index', _('Categories'))
+         ) }}
+        <li><a href="/pages/dhamis-analytics">DHAMIS Analytics Dashboard</a></li>
 {% endblock %}
+
 
 {% block header_wrapper %}
   {{ super() }}
