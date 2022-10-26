@@ -1,26 +1,6 @@
 {% ckan_extends %}
 
-{%  set current_page = h.current_url() %}
-
 {% block styles %}
     {{ super() }}
     {% asset 'dms/dms-theme' %}
-    {% asset 'dms/dms-extra-theme' %}
-
-    {#    Load only if group page#}
-    {% if 'group' in current_page %}
-        {% asset 'dms/dms-category-theme' %}
-    {% endif %}
-
-    {#    Load only if dataset pages#}
-    {% if 'dataset' in current_page %}
-        {% if '?q=' in current_page  %}
-            {% asset 'dms/dms-dataset-theme' %}
-        {% endif %}
-        {%  if current_page == '/dataset/' %}
-            {% asset 'dms/dms-dataset-theme' %}
-        {% endif %}
-
-    {% endif %}
-
 {% endblock %}
