@@ -64,10 +64,10 @@ def _facet_sort_function(facet_name, facet_items):
         facet_items.sort(key=lambda it: (-it['count'], it['display_name'].lower()))
     return facet_items
 
+
 def get_recently_updated():
     return logic.get_action('package_search')(
         data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
-
 
 
 def get_user_from_id(userid):

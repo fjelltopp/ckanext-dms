@@ -231,6 +231,10 @@ p.small {
 	background-color: transparent;
 }
 
+.account-masthead .account ul li {
+  border-left: none;
+}
+
 .promoted {
     font-style: normal;
     font-size:  18px;
@@ -645,3 +649,27 @@ a.tag:hover  {
     }
 }
 
+.masthead {
+  background: #FFFFFF;
+}
+
+.fluid-white-bar {
+    height: 0;
+    border-bottom: solid 0px #FFFFFF;
+}
+
+
+.list-unstyled {
+  padding-bottom:0;
+  margin: 0;
+  list-style: none;
+}
+
+
+.dataset-heading a{
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #990005;
+}
