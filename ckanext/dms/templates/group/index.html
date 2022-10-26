@@ -1,7 +1,7 @@
 {% ckan_extends %}
 
 {% block content %}
-    <div class="homepage layout-{{ homepage_style }}">
+    <div class="categories layout-{{ homepage_style }}">
         <div id="content" class="container">
             {{ self.flash() }}
         </div>
@@ -10,7 +10,7 @@
                 <div class="promoted">
                     <div class="container">
                         <p class="subtitle">Home / </p>
-                        <h1>Categories</h1>
+                        <h1 class="headline">Categories</h1>
                     </div>
                 </div>
             </div>
@@ -24,15 +24,10 @@
                     {% endblock %}
                 </div>
             </div>
-            <div class="subscribe">
-              {% if not g.userobj %}
-              <div class="spacer"></div>
-              {% endif %}
-                <div class="container">
-                    {% snippet 'home/snippets/subscribe_to_updates.html' %}
-                </div>
-              }
+            {% if not g.userobj %}
+            <div class="spacer">
             </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

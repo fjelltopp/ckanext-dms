@@ -17,7 +17,7 @@
                             {% for resource in h.dict_list_reduce(dataset.resources, 'format') %}
                                 <li class="tag">
                                   <a href="{{ h.url_for(dataset.type ~ '.read', id=dataset.name) }}"
-                                     class="label label-default"
+                                     class="label"
                                      data-format="{{ resource.lower() }}">{{ resource }}</a>
                                 </li>
                             {% endfor %}

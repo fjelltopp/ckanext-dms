@@ -8,8 +8,8 @@
         {% block footer_links %}
             <li><a href="{{ h.url_for('/organization') }}">{{ _('Organisations') }}</a></li>
               {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
-            <li><a href="{{ api_url }}">{{ _('DMS API') }}</a></li>
-            <li><a href="https://hiv.health.gov.mw/">Department of HIV & AIDS</a><br />
+            <li><a href="{{ api_url }}" target="_blank">{{ _('DMS API') }}</a></li>
+            <li><a href="https://hiv.health.gov.mw/" target="_blank">Department of HIV & AIDS</a><br />
         {% endblock %}
       </ul>
       {% block footer_links_ckan %}

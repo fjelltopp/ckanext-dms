@@ -26,16 +26,6 @@
 }
 
 
-.btn-primary {
-  background-color: #b30006;
-}
-
-
-.btn-primary:hover {
-  color: #fff;
-  background-color: #990005;
-  border-color: #ffffff;
-}
 
 
 .dataset-heading {
@@ -51,4 +41,3 @@
 	align-self: stretch;
 	flex-grow: 0;
 }
-

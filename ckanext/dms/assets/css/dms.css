@@ -11,26 +11,26 @@ body {
 	color: #000000;
 }
 
-H1 {
+H1.headline {
 	font-weight: 700;
 	font-size: 29px;
 	line-height: 36px;
 }
 
-H2 {
+H1 {
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 32px;
 }
 
-H3 {
+H2 {
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 28px;
 	letter-spacing: -0.01em;
 }
 
-H4 {
+H3 {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 24px;
@@ -49,25 +49,25 @@ p.small {
 
 
 @media only screen and (min-width: 992px) {
-	H1 {
+	H1.headline {
 		font-size: 48px;
 		line-height: 56px;
 		letter-spacing: -0.03em;
 	}
 
-	H2 {
+	H1 {
 		font-size: 36px;
 		line-height: 44px;
 		letter-spacing: -0.02em;
 	}
 
-	H3 {
+	H2 {
 		font-size: 28px;
 		line-height: 36px;
 		letter-spacing: -0.01em;
 	}
 
-	H4 {
+	H3 {
 		font-size: 18px;
 		line-height: 24px;
 	}
@@ -93,13 +93,6 @@ p.small {
 .homepage [role=main] {
 	padding: 0;
 }
-
-.main,
-.hero {
-	padding-top: 20px;
-	background: #e8ecee;
-}
-
 
 .promoted-background {
     width: 100%;
@@ -282,6 +275,7 @@ p.small {
 .promoted .big-search-form .lens-btn{
 	border-color: #FFF;
 	height:  50px;
+	padding:  10px 15px;
 }
 
 .promoted .big-search-form .fa-search{
@@ -357,7 +351,7 @@ p.small {
     height:  50px;
 }
 
-.tag {
+.tag{
     padding: 2px 6px;
     background: #E9F1ED;
     border-radius: 4px;
@@ -368,13 +362,30 @@ p.small {
     border:  none;
 }
 
-.tag a.label{
+.tag a.label {
 	background-color:  transparent;
 	color: #056839;
 	padding:  0px;
 }
 
+a.tag,
+a.tag:hover  {
+	padding: 2px 6px;
+    background: #E9F1ED;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border:  none;
+	color: #056839;
+	box-shadow:  none;
+}
 
+.tag-list{
+	background:  transparent;
+	border:  none;
+}
 .recently-updated H2 {
     font-weight: 700;
     font-size: 28px;
@@ -471,6 +482,7 @@ p.small {
     width:  100%;
 }
 
+
 .subscribe .login{
 	height: 48px;
 	display: inline-block;
@@ -481,7 +493,7 @@ p.small {
     text-align:  center;
 }
 
-.subscribe .spacer{
+.spacer{
 	height:  64px;
 }
 
@@ -515,9 +527,16 @@ p.small {
 }
 .main, .hero {
 	min-height: 80vh;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	padding-top: 20px;
+	padding-bottom: 64px;
     background: #FFFFFF;
+}
+
+.homepage .main,
+.homepage .hero,
+.categories .main,
+.categories .hero{
+	padding: 0px;
 }
 
 .site-footer .desc {
@@ -563,4 +582,66 @@ p.small {
 	margin-bottom: 32px;
 }
 
+
+.toolbar .breadcrumb a {
+    color: #505050;
+}
+
+.btn{
+  padding:  10px 40px;
+}
+
+.btn-primary,
+.btn-danger {
+  background-color: #990005;
+  border-color: #990005;
+  color: #fff;
+
+}
+
+
+.btn-primary:hover,
+.btn-danger:hover {
+  color: #fff;
+  background-color: #800004;
+  border-color: #ffffff;
+}
+
+.btn-xs{
+	padding:  3px 7px;
+}
+
+#content{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.promoted-breadcrumbs{
+	margin-bottom: 32px;
+}
+
+.promoted-breadcrumbs .toolbar{
+	height:  170px;
+}
+
+.promoted-breadcrumbs .breadcrumb li{
+	margin: 5px 0px;
+}
+
+.promoted-breadcrumbs .toolbar .breadcrumb a{
+	color: #FFF;
+
+}
+
+.promoted-breadcrumbs .toolbar .breadcrumb{
+	position: absolute;
+	bottom: 32px;
+	font-size: 16px;
+}
+
+@media only screen and (min-width: 992px) {
+    .promoted-breadcrumbs .toolbar .breadcrumb {
+        font-size: 24px;
+    }
+}
 
