@@ -737,8 +737,8 @@ a.tag:hover  {
 
 @media only screen and (max-width: 768px) {
     .masthead .navigation .nav-pills > .last-child {
-        border-bottom: 1px solid #DDDDDD !important;
-        padding-bottom: 20px !important;
+        border-bottom: 1px solid #DDDDDD;
+        padding-bottom: 20px;
         margin-bottom: 20px;
     }
 }
