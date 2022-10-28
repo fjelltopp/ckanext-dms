@@ -661,6 +661,8 @@ a.tag:hover  {
 }
 
 
+/*Edits*/
+
 .mobile-menu > .big-search-form > .search-form {
   border-bottom: 0;
     margin: 0;
@@ -716,61 +718,3 @@ a.tag:hover  {
 .mobile-ribbon {
     padding: 0;
 }
-
-/* top ribbon */
-.mobile-menu > .big-search-form > .search-form {
-  border-bottom: 0;
-    margin: 0;
-
-}
-
-.masthead .navigation .nav-pills > li {
-  border-bottom: 0px dotted #dddddd;
-    margin: 0;
-}
-
-.masthead .navigation .nav-pills > li {
-  border-bottom: 0;
-    margin: 0;
-
-}
-
-@media only screen and (max-width: 768px) {
-    .masthead .navigation .nav-pills > .last-child {
-        border-bottom: 1px solid #DDDDDD;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-    }
-}
-
-.mobile-ribbon-item, .mobile-ribbon-item:hover {
-    margin-bottom: 20px !important;
-}
-
-.mobile-ribbon-item a, .mobile-ribbon-item a:hover {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #990005 !important;
-    margin-bottom: 20px !important;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-#main-navigation-toggle {
-    padding-bottom: 0;
-
-}
-
-@media only screen and (max-width: 769px) {
-    .masthead .navigation .nav-pills > li > a {
-    margin-left: 0 !important;
-}
-}
-
-
-.mobile-ribbon {
-    padding: 0;
-}
-
