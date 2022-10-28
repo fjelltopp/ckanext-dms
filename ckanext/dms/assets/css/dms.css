@@ -682,14 +682,14 @@ a.tag:hover  {
 
 @media only screen and (max-width: 768px) {
     .masthead .navigation .nav-pills > .last-child {
-        border-bottom: 1px solid #DDDDDD !important;
-        padding-bottom: 20px !important;
+        border-bottom: 1px solid #DDDDDD;
+        padding-bottom: 20px;
         margin-bottom: 20px;
     }
 }
 
 .mobile-ribbon-item, .mobile-ribbon-item:hover {
-    margin-bottom: 20px !important;
+    margin-bottom: 20px;
 }
 
 .mobile-ribbon-item a, .mobile-ribbon-item a:hover {
@@ -697,8 +697,8 @@ a.tag:hover  {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #990005 !important;
-    margin-bottom: 20px !important;
+    color: #990005;
+    margin-bottom: 20px;
     margin-left: 0;
     padding-left: 0;
 }
@@ -710,11 +710,15 @@ a.tag:hover  {
 
 @media only screen and (max-width: 769px) {
     .masthead .navigation .nav-pills > li > a {
-    margin-left: 0 !important;
+    margin-left: 0;
 }
 }
 
 
 .mobile-ribbon {
     padding: 0;
+}
+
+.fa-search {
+    color: #990005;
 }
