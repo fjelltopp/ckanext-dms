@@ -519,6 +519,11 @@ a.tag:hover  {
 .footer-links{
 	margin: 32px 0px;
 }
+
+.footer-links img {
+	width:  100%;
+}
+
 .main, .hero {
 	min-height: 80vh;
 	padding-top: 32px;
