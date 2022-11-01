@@ -65,7 +65,7 @@ def _facet_sort_function(facet_name, facet_items):
     return facet_items
 
 
-def get_recently_updated():
+def get_featured_datasets():
     featured_datasets = logic.get_action('package_search')(
         data_dict={'fq': 'tags:featured', 'sort': 'metadata_modified desc', 'rows': 3})['results']
     recently_updated = logic.get_action('package_search')(
