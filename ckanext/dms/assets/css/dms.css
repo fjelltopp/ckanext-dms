@@ -664,3 +664,7 @@ a.tag:hover  {
 	line-height: 24px;
 	color: #990005;
 }
+
+.add-to-group button{
+	margin:  20px 0px;
+}
