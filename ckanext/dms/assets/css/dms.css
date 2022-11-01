@@ -668,3 +668,11 @@ a.tag:hover  {
 .add-to-group button{
 	margin:  20px 0px;
 }
+
+.resource-item .resource-detail{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 20px;
+    color: #212121;
+    margin-bottom: 0px;
+}
