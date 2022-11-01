@@ -31,7 +31,7 @@ class DmsPlugin(plugins.SingletonPlugin):
             'get_dataset_from_id': get_dataset_from_id,
             'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
             'get_facet_items_dict': get_facet_items_dict,
-            'get_recently_updated': ckanext.dms.helpers.get_recently_updated,
+            'get_featured_datasets': ckanext.dms.helpers.get_featured_datasets,
             'get_user_from_id': ckanext.dms.helpers.get_user_from_id,
             'get_all_groups': ckanext.dms.helpers.get_all_groups
         }

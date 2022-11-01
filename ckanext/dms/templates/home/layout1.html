@@ -9,7 +9,7 @@
         </div>
     <div class="document-categories">
         <div class="container">
-            <h2>Document categories</h2>
+            <h2>{{_('Document categories')}}</h2>
             {% block document_categories %}
                 {% snippet "group/snippets/group_list.html", groups=h.get_all_groups(), origin='homepage' %}
             {% endblock %}
@@ -17,9 +17,11 @@
     </div>
     <div class="recently-updated">
         <div class="container">
-            <h2>Recently updated</h2>
-            {% snippet 'home/snippets/recently_updated.html', packages=h.get_recently_updated(), origin='homepage' %}
+            <h2>{{_('Featured Datasets')}}</h2>
+            {% snippet 'home/snippets/recently_updated.html', packages=h.get_featured_datasets(), origin='homepage' %}
             <a class="view-all-btn" href="{{ h.url_for('/dataset') }}">View All</a>
+            <a class="view-featured-btn" href="{{ h.url_for('/dataset', tags='featured') }}">View Featured</a>
+
         </div>
     </div>
 </div>

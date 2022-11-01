@@ -443,7 +443,7 @@ a.tag:hover  {
     color: #FFFFFF;
     background: #212121;
     border-radius: 4px;
-    margin: 48px 0px 64px;
+    margin: 48px 20px 64px 0px;
 }
 
 .subscribe .highlight-box {
@@ -675,4 +675,8 @@ a.tag:hover  {
     line-height: 20px;
     color: #212121;
     margin-bottom: 0px;
+}
+
+.recently-updated .view-all-btn{
+	background-color: #990005;
 }
