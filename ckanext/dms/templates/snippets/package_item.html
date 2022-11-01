@@ -8,7 +8,7 @@
         {{_('Created by')}} {{ h.get_user_from_id(package.creator_user_id) }}
     </div>
     <div class="modified">
-        {{_('Modified')}} {{ h.time_ago_from_timestamp(package.resources[0].last_modified) }}
+        {{_('Modified')}} {{ h.time_ago_from_timestamp(package.metadata_modified) }}
     </div>
 
 {% endblock %}
