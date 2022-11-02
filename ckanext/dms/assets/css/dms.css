@@ -680,3 +680,13 @@ a.tag:hover  {
 .recently-updated .view-all-btn{
 	background-color: #990005;
 }
+
+.category-box .btn-delete {
+    background: transparent;
+    color: #990005;
+    font-size: 20px;
+    padding: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
