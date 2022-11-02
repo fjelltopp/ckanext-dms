@@ -11,9 +11,6 @@
                 <div class="title">
                     <a href="{{ url }}">{{ group.title }}</a>
                 </div>
-                {% if group.description %}
-                    <div class="desc">{{ h.markdown_extract(group.description, extract_length=80) }}</div>
-                {% endif %}
                 {% if group.package_count %}
                   <div class="desc">{{ ungettext('{num} Dataset', '{num} Datasets', group.package_count).format(num=group.package_count) }}</div>
                 {% endif %}

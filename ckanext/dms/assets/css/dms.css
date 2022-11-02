@@ -323,6 +323,7 @@ p.small {
     border-radius: 4px;
     margin-bottom: 24px;
     padding:  20px;
+    height:  110px;
 }
 
 .category-box .group-thumbnail {
@@ -353,6 +354,16 @@ p.small {
     color: #212121;
     overflow:  hidden;
     height:  50px;
+}
+
+.category-box .btn-delete {
+    background: transparent;
+    color: #990005;
+    font-size: 20px;
+    padding: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 .dataset-resources li{
@@ -681,12 +692,4 @@ a.tag:hover  {
 	background-color: #990005;
 }
 
-.category-box .btn-delete {
-    background: transparent;
-    color: #990005;
-    font-size: 20px;
-    padding: 20px;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-}
+
