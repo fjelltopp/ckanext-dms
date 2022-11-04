@@ -56,6 +56,7 @@ class DmsPlugin(plugins.SingletonPlugin):
     def before_create(self, context, resource):
         if _data_dict_is_resource(resource):
             _giftless_upload(context, resource)
+
             _update_resource_last_modified_date(resource)
         return resource
 
@@ -64,8 +65,6 @@ class DmsPlugin(plugins.SingletonPlugin):
             _giftless_upload(context, resource, current=current)
             _update_resource_last_modified_date(resource, current=current)
         return resource
-
-
 
 
 def _giftless_upload(context, resource, current=None):
