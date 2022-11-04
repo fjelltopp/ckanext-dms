@@ -339,7 +339,6 @@ p.small {
     width:  100%;
 }
 
-
 .category-box .group-text .title{
     font-weight: 700;
     font-size: 16px;
@@ -533,6 +532,7 @@ a.tag:hover  {
 
 .footer-links img {
 	width:  100%;
+    margin-bottom: 30px;
 }
 
 .main, .hero {
