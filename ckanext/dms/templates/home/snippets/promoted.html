@@ -3,14 +3,14 @@
 {% set stats = h.get_site_statistics() %}
 
 <div class="promoted" >
-    <p class="subtitle">HIV, AIDS & Viral Hepititis</p>
-    <h1 class="headline">Document Management System</h1>
-    <p>A platform for the MoH to share documentation and datasets with external partners.</p>
-    <h2>Search {{ h.SI_number_span(stats.dataset_count) }} datasets:</h2>
+    <p class="subtitle">{{_('Department of HIV, AIDS & Viral Hepititis (DHA)')}}</p>
+    <h1 class="headline">{{_('Document Management System')}}</h1>
+    <p>{{_('A platform for the DHA to share documentation and datasets with external partners.')}}</p>
+    <h2>{{ _('Search {0} datasets:').format(h.SI_number_span(stats.dataset_count)) }}</h2>
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-md-7 col-lg-6">
             {% snippet 'snippets/search_input.html' %}
         </div>
     </div>
-    <p>Or <a class="small" href="{{ h.url_for('/group/') }}">find data by category</a></p>
+    <p>{{_('Or')}} <a class="small" href="{{ h.url_for('/group/') }}">{{_('find data by category')}}</a></p>
 </div>
