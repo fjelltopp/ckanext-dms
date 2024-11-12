@@ -4133,7 +4133,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -9764,7 +9764,8 @@ h4 small {
   float: left;
   border-left: 1px solid #660003;
 }
-.account-masthead .account ul li a {
+.account-masthead .account ul li a,
+.account-masthead .account ul li button {
   display: block;
   color: #ecbfc1;
   font-size: 13px;
