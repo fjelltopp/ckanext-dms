@@ -695,3 +695,7 @@ a.tag:hover  {
 .module-narrow .nav-item > a, .module-narrow .nav-aside li a{
     font-size: 14px;
 }
+
+.form-control.form-select{
+    appearance: auto;
+}
