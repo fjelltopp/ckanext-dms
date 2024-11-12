@@ -1,5 +1,5 @@
-import ckan.logic as logic
 import ckan.model as model
+import ckan.logic as logic
 from ckan.common import c, request, is_flask_request
 
 # for datetime string conversion
@@ -84,3 +84,15 @@ def get_all_groups():
     return logic.get_action('group_list')(
             data_dict={'sort': 'title asc', 'all_fields': True})
 
+
+def get_site_statistics() -> dict[str, int]:
+    '''This function used be a core helper but it was removed in CKAN 2.11.0
+    We reproduce it here to templates can continue working as usual.
+    '''
+    stats = {}
+    stats['dataset_count'] = logic.get_action('package_search')(
+        {}, {"rows": 1})['count']
+    stats['group_count'] = len(logic.get_action('group_list')({}, {}))
+    stats['organization_count'] = len(
+        logic.get_action('organization_list')({}, {}))
+    return stats

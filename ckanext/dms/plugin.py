@@ -33,7 +33,8 @@ class DmsPlugin(plugins.SingletonPlugin):
             'get_facet_items_dict': get_facet_items_dict,
             'get_featured_datasets': ckanext.dms.helpers.get_featured_datasets,
             'get_user_from_id': ckanext.dms.helpers.get_user_from_id,
-            'get_all_groups': ckanext.dms.helpers.get_all_groups
+            'get_all_groups': ckanext.dms.helpers.get_all_groups,
+            'get_site_statistics': ckanext.dms.helpers.get_site_statistics,
         }
 
     # IConfigurer
