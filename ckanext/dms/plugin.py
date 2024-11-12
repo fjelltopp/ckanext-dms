@@ -54,14 +54,14 @@ class DmsPlugin(plugins.SingletonPlugin):
         return new_fd
 
     # IResourceController
-    def before_create(self, context, resource):
+    def before_resource_create(self, context, resource):
         if _data_dict_is_resource(resource):
             _giftless_upload(context, resource)
 
             _update_resource_last_modified_date(resource)
         return resource
 
-    def before_update(self, context, current, resource):
+    def before_resource_update(self, context, current, resource):
         if _data_dict_is_resource(resource):
             _giftless_upload(context, resource, current=current)
             _update_resource_last_modified_date(resource, current=current)
