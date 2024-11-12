@@ -376,8 +376,8 @@ p.small {
     border:  none;
 }
 
-.dataset-resources li a.label,
-.dataset-resources li a.label:hover{
+.dataset-resources li a.badge,
+.dataset-resources li a.badge:hover{
 	background-color:  transparent;
 	color: #056839;
 	padding:  0px;
@@ -535,7 +535,7 @@ a.tag:hover  {
     margin-bottom: 30px;
 }
 
-.main, .hero {
+.main, .homepage .hero {
 	min-height: 80vh;
 	padding-top: 32px;
 	padding-bottom: 64px;
@@ -692,3 +692,6 @@ a.tag:hover  {
 	background-color: #990005;
 }
 
+.module-narrow .nav-item > a, .module-narrow .nav-aside li a{
+    font-size: 14px;
+}
