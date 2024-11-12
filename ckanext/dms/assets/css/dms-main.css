@@ -7670,7 +7670,7 @@ select[data-module="autocomplete"] {
   width: 100%;
   height: auto;
 }
-.simple-input .field .btn-search {
+.site-search .btn{
   position: absolute;
   display: block;
   height: 17px;
@@ -7686,7 +7686,7 @@ select[data-module="autocomplete"] {
   -o-transition: color 0.2s ease-in;
   transition: color 0.2s ease-in;
 }
-.simple-input .field .btn-search:hover {
+.site-search .btn:hover {
   color: #000;
 }
 .editor textarea {
@@ -9936,10 +9936,13 @@ h4 small {
   margin-right: 0;
 }
 .masthead .debug {
-  position: absolute;
-  top: 37px;
-  left: 10px;
-  color: rgba(255, 255, 255, 0.5);
+  bottom: 0px;
+  right: 0px;
+  top: initial;
+  left: initial;
+  padding: 15px;
+  background-color: #990005;
+  border: none;
 }
 @media (min-width: 992px) {
   .masthead .navbar-collapse {

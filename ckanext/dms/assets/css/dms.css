@@ -160,7 +160,7 @@ p.small {
 	padding-top: 12px;
 }
 
-.masthead .navigation .nav-pills > li > a
+.masthead .navbar .navbar-nav > li > a
 {
     font-style: normal;
     font-weight: 700;
@@ -177,9 +177,9 @@ p.small {
 
 }
 
-.masthead .navigation .nav-pills li a:hover,
-.masthead .navigation .nav-pills li a:focus,
-.masthead .navigation .nav-pills li.active a
+.masthead .navbar .navbar-nav li:hover a,
+.masthead .navbar .navbar-nav li:focus a,
+.masthead .navbar .navbar-nav li.active a
 {
     color: #212121;
     background-color: transparent;
@@ -691,5 +691,4 @@ a.tag:hover  {
 .recently-updated .view-all-btn{
 	background-color: #990005;
 }
-
 
