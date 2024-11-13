@@ -730,3 +730,8 @@ a.tag:hover  {
 .form-control.form-select{
     appearance: auto;
 }
+
+.navbar-toggler .fa.fa-bars {
+    color: #990005 !important;
+    font-size: 22px;
+}
