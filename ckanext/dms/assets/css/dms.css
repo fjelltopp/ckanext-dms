@@ -157,7 +157,7 @@ p.small {
 }
 
 .masthead .navbar-collapse{
-	padding-top: 12px;
+	padding-top: 20px;
 }
 
 .masthead .navbar .navbar-nav > li > a
@@ -173,8 +173,20 @@ p.small {
     background-color: transparent;
     padding: 10px 0px;
     margin-left: 30px;
+}
 
+@media only screen and (max-width: 991px) {
+    .masthead .navbar .navbar-nav > li > a {
+        margin-left: 0;
+    }
+}
 
+.masthead .navbar .navbar-nav > li:first-child > a {
+    padding-top: 0;
+}
+
+.masthead .navbar .navbar-nav > li:last-child > a {
+    padding-bottom: 0;
 }
 
 .masthead .navbar .navbar-nav li:hover a,
@@ -190,6 +202,21 @@ p.small {
     margin: 5px 0px 5px 30px;
     display: inline-block  !important;
     position: relative;
+}
+
+@media (max-width: 991px) {
+    .masthead .main-navbar ul {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .masthead .site-search {
+        display: none !important;
+    }
+}
+
+@media (max-width: 769px) {
+    
 }
 
 .masthead .site-search input {
@@ -519,7 +546,7 @@ a.tag:hover  {
     text-decoration: underline;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 991px) {
     .mobile-menu {
         display: none;
     }
