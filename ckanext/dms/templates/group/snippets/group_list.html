@@ -2,9 +2,9 @@
 
 {% block group_list %}
     {% set groups = groups %}
-    <div class="row">
+        <ul class="topics">
         {% for group in groups %}
             {% snippet "group/snippets/group_item.html", group=group, position=loop.index %}
         {% endfor %}
-    </div>
+        </ul>
 {% endblock %}

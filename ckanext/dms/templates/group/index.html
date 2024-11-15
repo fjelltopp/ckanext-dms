@@ -1,33 +1,40 @@
 {% ckan_extends %}
 
-{% block content %}
-    <div class="categories layout-{{ homepage_style }}">
-        <div id="content" class="container">
-            {{ self.flash() }}
-        </div>
-        <div class="main hero">
-            <div class="promoted-background">
-                <div class="promoted">
-                    <div class="container">
-                        <p class="subtitle">Home / </p>
-                        <h1 class="headline">Categories</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="document-categories">
-                <div class="container">
-                    {% if h.check_access('group_create') %}
-                        {% link_for _('Add Categories'), named_route=group_type+'.new', class_='btn btn-primary add-category', icon='plus-square' %}
-                    {% endif %}
-                    {% block groups_list %}
-                      {{ super () }}
-                    {% endblock %}
-                </div>
-            </div>
-            {% if not g.userobj %}
-            <div class="spacer">
-            </div>
-            {% endif %}
-        </div>
-    </div>
+
+{% block subtitle %}{{ h.humanize_entity_type('group', group_type, 'page title') or _('Categories') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for h.humanize_entity_type('group', group_type, 'breadcrumb') or _('Categories'), named_route=group_type+'.index' %}</li>
+{% endblock %}
+
+{% block maintag %}<div class="main categories-page">{% endblock %}
+
+{% block page_primary_action %}
+  {% if h.check_access('group_create') %}
+    {% link_for h.humanize_entity_type('group', group_type, 'add link') or _('Add Category'), named_route=group_type+'.new', class_='btn btn-primary', icon='plus-square' %}
+  {% endif %}
+{% endblock %}
+
+
+{% block primary_content_inner %}
+  {% block groups_list %}
+    {% if page.items or request.args %}
+      {% if page.items %}
+        {% snippet "group/snippets/group_list.html", groups=page.items %}
+      {% endif %}
+    {% else %}
+      <p class="empty">
+        {{ h.humanize_entity_type('group', group_type, 'no any objects') or _('There are currently no categories for this site') }}.
+        {% if h.check_access('group_create') %}
+          {% link_for _('How about creating one?'), named_route=group_type+'.new' %}</a>.
+        {% endif %}
+      </p>
+    {% endif %}
+  {% endblock %}
+  {% block page_pagination %}
+    {{ page.pager(q=q or '', sort=sort_by_selected or '') }}
+  {% endblock %}
+{% endblock %}
+
+{% block secondary_content %}
 {% endblock %}

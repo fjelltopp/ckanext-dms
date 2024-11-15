@@ -2,10 +2,9 @@
 
 {% block content_primary_nav %}
     <ul class="nav nav-tabs">
-      {{ h.build_nav_icon('dashboard.index', _('News feed'), icon='list') }}
-      {{ h.build_nav_icon('dashboard.datasets', _('My Datasets'), icon='sitemap') }}
-      {{ h.build_nav_icon('dashboard.organizations', _('My Organizations'), icon='building-o') }}
-      {{ h.build_nav_icon('dashboard.groups', _('My Categories'), icon='users') }}
+    {{ h.build_nav_icon('activity.dashboard', _('Newsfeed')) }}
+    {{ h.build_nav_icon('dashboard.datasets', _('My Datasets')) }}
+    {{ h.build_nav_icon('dashboard.organizations', h.humanize_entity_type('organization', org_type, 'my label') or _('My organizations')) }}
+    {{ h.build_nav_icon('dashboard.groups', h.humanize_entity_type('group', group_type, 'my label') or _('My Categories'), icon='users') }}
     </ul>
  {% endblock %}
-

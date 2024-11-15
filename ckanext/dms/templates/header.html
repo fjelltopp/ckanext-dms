@@ -1,38 +1,27 @@
 {% ckan_extends %}
 
+
 {% block header_logo %}
-<div id="NavbarBrandingContainer">
-  <a href="{{ h.url_for('home.index') }}">
-      <img
-        id="NavbarLogo"
-        src="{{ h.url_for_static_or_external(g.site_logo) }}"
-        alt="{{ g.site_title }}"
-        title="{{ g.site_title }}"
-      />
-    <div id="NavbarHeadingContainer">
-        <div><h1 class="title">HIV, AIDS & Viral Hepititis</h1></div>
-        <div><h1 class="subtitle">Ministry of Health, Malawi</h1></div>
-    </div>
-  </a>
-</div>
+    {% snippet 'snippets/header_logo.html',
+        site_title = g.site_title,
+        logo='/images/logo.png',
+        header_title='<span class="title-top-element">HIV, AIDS & Viral Hepititis</span><br/>Ministry of Health, Malawi' | safe %}
 {% endblock %}
 
-
-{% block header_site_navigation_tabs %}
-
-    <div class="mobile-menu">
-        {% snippet 'snippets/search_input.html', placeholder='Search' %}
-    </div>
-
+{% block nav_items_signed %}
     {{ h.build_nav_main(
         ('dataset.search', _('Datasets')),
-        ('group.index', _('Categories'))
+        ('group.index', _('Categories')),
          ) }}
-        <li><a href="/pages/dhamis-analytics">DHAMIS Analytics Dashboard</a></li>
+    <li><a href="/pages/dhamis-analytics">DHAMIS Analytics Dashboard</a></li>
 {% endblock %}
 
-
-{% block header_wrapper %}
-  {{ super() }}
-  <div class="fluid-white-bar"></div>
+{% block nav_items_unsigned %}
+    {{ h.build_nav_main(
+        ('dataset.search', _('Datasets')),
+        ('group.index', _('Categories')),
+        ('user.login', _('Log in'))
+         ) }}
+    <li><a href="/pages/dhamis-analytics">DHAMIS Analytics Dashboard</a></li>
 {% endblock %}
+

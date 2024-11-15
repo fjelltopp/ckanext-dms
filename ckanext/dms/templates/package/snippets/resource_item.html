@@ -1,6 +1,8 @@
 {% ckan_extends %}
 
 {% block resource_item_description %}
+    {% if res.size is not none %}
     <p class="resource-detail file-size">{{h.localised_filesize(res.size)}} modified {{h.time_ago_from_timestamp(res.last_modified) }}</p>
+    {% endif %}
     {{ super() }}
 {% endblock %}

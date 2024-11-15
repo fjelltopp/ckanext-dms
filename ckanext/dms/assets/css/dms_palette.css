@@ -1,0 +1,54 @@
+:root {
+    /* theme*/
+    --theme: 'dms';
+    /* palette */
+    --primary: #000000;
+    --primary-rgb-red: 0;
+    --primary-rgb-green: 0;
+    --primary-rgb-blue: 0;
+    --secondary: #990005;
+    --background: #FFFFFF;
+    --tag: #056839;
+    --tag-dark: #E9F1ED;
+    --tag-light: #fb160e;
+    --tag-background: #E9F1ED;
+    --dark: #000000;
+    --light: #FFFFFF;
+    --categories: #f0ad4e;
+    --primary65: #C14043;
+    --primary25: #E5CCCD;
+    --primary10: #EDE8E8;
+    --neutral-light-grey: #e6e7e8;
+    --A11y: #757575;
+    --highlight-box-bgcolor: #8B0000;
+    /* fonts */
+    --default-font-weight: 700;
+    --default-font-size: 18px;
+    --default-line-height: 20px;
+    --default-font-family: 'Inter';
+    --default-font-color: #000000;
+    /* logo vertical bar (right) */
+    --logo-left-v-bar-display: none; /* or inline-block if shown */
+    --logo-left-v-bar-padding-right: 10px; /* set to 19px if visible */
+    /* promoted background color */
+    --promoted-background-color: #13240F;
+    /* insights */
+    --lower-container-display: flex;  /* set to flex to show */
+    --after-insights-min-height: 400px;
+    /* masthead */
+    --masthead-visibility: none;
+    --development-banner-visibility: none;
+    --locales-visibility: none;
+    /* recently updated */
+    --recently-updated-title-visibility: none;
+    /* footer */
+    --footer-search-section-padding-top: 64px;
+    --footer-search-section-padding-bottom: 0px;
+    /* badge */
+    --badge-font-size: 0.7em;
+    /* user profile */
+    --breadcrumbs-color: #FFFFFF;
+    /* breadcrumbs */
+    --breadcrumbs-text-decoration: none;
+    --breadcrumbs-font-weight: 700;
+}

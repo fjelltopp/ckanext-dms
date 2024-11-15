@@ -2,5 +2,7 @@
 
 {% block styles %}
     {{ super() }}
+    {% block fjelltopp_theme_palette %}{% asset 'dms/dms-theme-palette' %}{% endblock %}
+    {% block fjelltopp_theme_extended %}{% endblock %}
     {% asset 'dms/dms-theme' %}
 {% endblock %}

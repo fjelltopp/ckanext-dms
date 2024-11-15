@@ -9,11 +9,13 @@ export default function FileUploader({
     setUploadError
 }) {
 
-    const getAuthToken = () =>
-        axios.post(
+    const getAuthToken = () => {
+        const csrf_field = $('meta[name=csrf_field_name]').attr('content');
+        const csrf_token = $('meta[name='+ csrf_field +']').attr('content');
+        return axios.post(
             '/api/3/action/authz_authorize',
             { scopes: `obj:${orgId}/${datasetName}/*:write` },
-            { withCredentials: true }
+            { withCredentials: true, headers: {'X-CSRFToken': csrf_token} }
         )
             .then(res => res.data.result.token)
             .catch(error => {
@@ -23,6 +25,8 @@ export default function FileUploader({
                 });
                 throw error;
             });
+    }
+
     const uploadFile = (client, file) =>
         client.upload(file, orgId, datasetName, progress =>
             setUploadProgress({
@@ -43,6 +47,7 @@ export default function FileUploader({
         setUploadProgress({ loaded: 0, total: 1 });
         const file = data.open(inputFile);
         const authToken = await getAuthToken();
+        console.log(authToken);
         const client = new Client(lfsServer, authToken, ['basic']);
         await uploadFile(client, file);
         setUploadProgress({ loaded: 100, total: 100 });
