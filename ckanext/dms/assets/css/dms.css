@@ -5,17 +5,13 @@
 }
 
 .masthead .main-navbar .navbar-nav > li > a,
+.masthead .main-navbar .navbar-nav > li.active > a,
 .title-top-element
 {
-    color: var(--secondary);
+    color: var(--secondary) !important;
 }
 
 /* promoted */
-.homepage .promoted-background {
-    background: url("/images/web_piling_docs.png") no-repeat center center;
-    background-size: cover;
-}
-
 .promoted .subtitle {
     font-weight: 700;
     font-size: 18px;
@@ -64,6 +60,35 @@
     margin-top: 10px;
 }
 
+.promoted-background {
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/small_piling_documents.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+@media only screen and (min-width: 468px) {
+    .promoted-background {
+        background-size: cover;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)) url("/images/medium_piling_documents.png") no-repeat center;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .promoted-background {
+        background-size: cover;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)) url("/images/web_piling_docs.png") no-repeat center;
+    }
+}
+.promoted-background .show-categories {
+    margin-top: 24px;
+    a {
+        color: var(--secondary);
+    }
+}
+
 /* categories */
 .topics-background {
     padding-top: 48px;
@@ -77,4 +102,9 @@
 
 .main.hero {
     min-height: 0;
+}
+
+/* removes effect in promoted backgrounds */
+.dynamic-wave-background:before, .dynamic-wave-background:after {
+    background: none !important;
 }
