@@ -139,7 +139,7 @@
     margin-right: 0;
 }
 .topics li {
-    display: inline flex;
+    display: inline-block;
     margin-right: 21px;
     margin-top: 24px;
     width: 124px;
