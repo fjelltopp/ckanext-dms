@@ -10,7 +10,6 @@ FileInputComponentScripts:
     output: dms/%(version)s_FileInputComponent.js
 
 dms-theme:
-  filter: cssrewrite
   output: ckanext-dms/%(version)s-dms.css
   contents:
     - css/inter.css
