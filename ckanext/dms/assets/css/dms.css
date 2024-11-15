@@ -147,22 +147,20 @@
     border: none;
 }
 .topics li a {
-    margin: 16px;
+    /*margin: 16px;*/
     width: 92px;
     height: 64px;
 }
 
 .topics li a .topic-top-square {
-    background-color: var(--primary25);
-    width: 40px;
-    height: 40px;
-    margin-left: 26px;
-    margin-right: 26px;
-    margin-bottom: 6px;
+    background-color: #f0ad4e;
+    width: 60px;
+    height: 60px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
 }
 
 .topics li a .topic-top-square img {
@@ -172,6 +170,7 @@
 .topics li a .topic-link {
     text-align: center;
     font-size: 12px;
+    width: 60px;
     font-weight: 700;
     line-height: 16px;
     color: #13240F;
