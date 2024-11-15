@@ -2,28 +2,7 @@
 
 {% set type = group.type or 'group' %}
 {% set url = h.url_for(type ~ '.read', id=group.name) %}
+
 {% block item %}
-
-    <div class="col-lg-4 col-md-6 col-xs-12">
-        <div class="category-box">
-            <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="media-image group-thumbnail">
-            <div class="group-text">
-                <div class="title">
-                    <a href="{{ url }}">{{ group.title }}</a>
-                </div>
-                {% if group.package_count %}
-                  <div class="desc">{{ ungettext('{num} Dataset', '{num} Datasets', group.package_count).format(num=group.package_count) }}</div>
-                {% endif %}
-                {% if group.user_member %}
-                    <button name="group_remove.{{ group.id }}"
-                            type="submit"
-                            class="btn btn-delete btn-sm media-edit"
-                            title="{{_('Remove dataset from this group')}}"/>
-                      <i class="fa fa-remove"> </i>
-                    </button>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-
+    <li><a href="{{ url }}"><p class="topic-top-square"><img src="{{ group.image_display_url }}" width="36px"/></p><p class="topic-link">{{ _(group.title) }}</p></a></li>
 {% endblock %}
