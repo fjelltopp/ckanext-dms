@@ -75,10 +75,6 @@ dataset_fields:
 
 resource_fields:
 
-- field_name: url
-  label: URL
-  preset: resource_url_upload
-
 - field_name: name
   label: Name
   form_placeholder: eg. Malawi HTC Scale Up Plan

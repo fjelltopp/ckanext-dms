@@ -1,0 +1,86 @@
+{% ckan_extends %}
+
+{% block basic_fields %}
+
+  {% asset 'dms/FileInputComponentStyles' %}
+  {% set dataset = h.get_dataset_from_id(pkg_name) %}
+  <div
+      id="FileInputComponent"
+      data-lfsServer="{{ h.blob_storage_server_url() }}"
+      data-maxResourceSize="{{ h.max_resource_size() }}"
+      data-orgId="{{ dataset.organization.name }}"
+      data-datasetName="{{ dataset.name }}"
+      data-existingUrlType="{{ data.url_type if data else '' }}"
+      data-existingUrl="{{ data.url if data else '' }}"
+      data-existingSha256="{{ data.sha256 if data else '' }}"
+      data-existingFileName="{{ h.blob_storage_resource_filename(data) if data else '' }}"
+      data-existingSize="{{ data.size if data else '' }}"
+  >
+      {% if data.url %}
+          {% if data.url_type == 'upload' %}
+              <h3 class="text-muted">
+                  <span><i class="fa fa-spinner fa-spin"></i> {{ _('Loading') }}</span>
+              </h3>
+              <input name="url" data-testid="url" type="hidden" value="{{ data.url }}">
+              <input name="url_type" data-testid="url_type" type="hidden" value="{{ data.url_type }}">
+              <input name="lfs_prefix" data-testid="lfs_prefix" type="hidden" value="{{ data.lfs_prefix }}">
+              <input name="sha256" data-testid="sha256" type="hidden" value="{{ data.sha256 }}">
+              <input name="size" data-testid="size" type="hidden" value="{{ data.size }}">
+          {% else %}
+              <div>
+                  <label class="control-label">{{ _('URL')}}</label>
+                  <div class="input-group field-url-input-group">
+                      <input
+                          type="text"
+                          placeholder="{{ _('Loading') }}..."
+                          class="form-control"
+                      />
+                      <span class="input-group-btn">
+                          <button class="btn btn-danger" type="button">{{ _('Remove') }}</button>
+                      </span>
+                  </div>
+              </div>
+          {% endif %}
+      {% else %}
+          <div class="dropzone text-muted">
+              <h3><i class="fa fa-spinner fa-spin"></i> {{ _('Loading') }}</h3>
+          </div>
+      {% endif %}
+  </div>
+  {% asset 'dms/FileInputComponentScripts' %}
+
+    {%- if not dataset_type -%}
+    <p>
+    dataset_type not passed to template. your version of CKAN
+    might not be compatible with ckanext-scheming
+    </p>
+  {%- endif -%}
+  {%- set dataset = h.get_dataset_from_id(pkg_name) -%}
+  {%- set schema = h.scheming_get_dataset_schema(dataset_type) -%}
+  {%- for field in schema.resource_fields -%}
+    {%- if field.form_snippet is not none -%}
+      {%- if field.field_name not in data %}
+        {# Set the field default value before rendering but only if
+        it doesn't already exist in data which would mean the form
+        has been submitted. #}
+        {% if field.default_jinja2 %}
+          {% do data.__setitem__(
+            field.field_name,
+            h.scheming_render_from_string(field.default_jinja2)) %}
+        {% elif field.default %}
+          {% do data.__setitem__(field.field_name, field.default) %}
+        {% endif %}
+      {% endif -%}
+      {%- snippet 'scheming/snippets/form_field.html',
+        field=field,
+        data=data,
+        errors=errors,
+        licenses=c.licenses,
+        entity_type='dataset',
+        object_type=dataset_type,
+        dataset=dataset
+      -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+{% endblock %}
