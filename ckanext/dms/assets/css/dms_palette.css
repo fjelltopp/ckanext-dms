@@ -1,0 +1,136 @@
+:root {
+    /* theme*/
+    --theme: 'dms';
+    /* palette */
+    --primary: #000000;
+    --primary-rgb-red: 0;
+    --primary-rgb-green: 0;
+    --primary-rgb-blue: 0;
+    --secondary: #990005;
+    --background: #FFFFFF;
+    --tag: #056839;
+    --tag-dark: #056839;
+    --tag-light: #056839;
+    --tag-background: #E9F1ED;
+    --dark: #000000;
+    --light: #FFFFFF;
+    --primary65: #C14043;
+    --primary25: #E5CCCD;
+    --primary10: #EDE8E8;
+    --neutral-light-grey: #e6e7e8;
+    --A11y: #757575;
+    --highlight-box-bgcolor: #8B0000;
+    /* fonts */
+    --default-font-weight: 700;
+    --default-font-size: 18px;
+    --default-line-height: 20px;
+    --default-font-family: 'Inter';
+    --default-font-color: #000000;
+    /* logo vertical bar (right) */
+    --logo-left-v-bar-display: none; /* or inline-block if shown */
+    --logo-left-v-bar-padding-right: 10px; /* set to 19px if visible */
+    /* promoted background color */
+    --promoted-background-color: #13240F;
+    /* insights */
+    --lower-container-display: flex;  /* set to flex to show */
+    --after-insights-min-height: 400px;
+    /* masthead */
+    --masthead-visibility: none;
+    --development-banner-visibility: none;
+    --locales-visibility: none;
+    /* recently updated */
+    --recently-updated-title-visibility: none;
+    /* footer */
+    --footer-search-section-padding-top: 64px;
+    --footer-search-section-padding-bottom: 0px;
+    /* badge */
+    --badge-font-size: 0.7em;
+    /* user profile */
+    --breadcrumbs-color: #FFFFFF;
+    /* breadcrumbs */
+    --breadcrumbs-text-decoration: none;
+    --breadcrumbs-font-weight: 700;
+}
+
+.flag-vertical-bars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    gap: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+.flag-bar {
+    width: 30px;
+    height: 100%;
+}
+.flag-black {
+    background: #000000;
+}
+
+.flag-red {
+    background: #EF3340;
+}
+
+.flag-orange {
+    background: #FCAD56;
+}
+
+.flag-green {
+    background: #009E49;
+}
+
+.badge.resource-type-still_image {
+    background-color: #4682B4 !important; /* Steel Blue */
+}
+
+.badge.resource-type-moving_image {
+    background-color: #E67E22 !important; /* Carrot */
+}
+
+.badge.resource-type-sound {
+    background-color: #16A085 !important; /* Green Sea */
+}
+
+.badge.resource-type-collection {
+    background-color: #D35400 !important; /* Pumpkin */
+}
+
+.badge.resource-type-dataset {
+    background-color: #27AE60 !important; /* Nephritis */
+}
+
+.badge.resource-type-text {
+    background-color: #2980B9 !important; /* Belize Hole */
+}
+
+.badge.resource-type-event {
+    background-color: #C0392B !important; /* Pomegranate */
+}
+
+.badge.resource-type-interactive_resource {
+    background-color: #F39C12 !important; /* Orange */
+}
+
+.badge.resource-type-physical_object {
+    background-color: #7F8C8D !important; /* Asbestos */
+}
+
+.badge.resource-type-service {
+    background-color: #1ABC9C !important; /* Turquoise */
+}
+
+.badge.resource-type-software {
+    background-color: #34495E !important; /* Wet Asphalt */
+}
+
+.badge.resource-type-other {
+    background-color: #95A5A6 !important; /* Concrete */
+}
+
+/* Common styles for all resource type badges */
+.badge[class*="resource-type-"] {
+    color: var(--light) !important;
+}
