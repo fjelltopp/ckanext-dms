@@ -194,3 +194,7 @@
 .dataset-resources li a.badge, .dataset-resources li a.badge:hover {
     color: var(--primary);
 }
+
+.user-image {
+    object-fit: contain;
+}
