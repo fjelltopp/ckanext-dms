@@ -1,5 +1,5 @@
 import ckan.model as model
-import ckan.logic as logic
+from ckan.plugins import toolkit
 from ckan.common import c, request, is_flask_request
 
 # for datetime string conversion
@@ -11,7 +11,7 @@ def get_dataset_from_id(id):
         'model': model, 'ignore_auth': True,
         'validate': False, 'use_cache': False
     }
-    package_show_action = logic.get_action('package_show')
+    package_show_action = toolkit.get_action('package_show')
     return package_show_action(context, {'id': id})
 
 
@@ -66,22 +66,22 @@ def _facet_sort_function(facet_name, facet_items):
 
 
 def get_featured_datasets():
-    featured_datasets = logic.get_action('package_search')(
+    featured_datasets = toolkit.get_action('package_search')(
         data_dict={'fq': 'tags:featured', 'sort': 'metadata_modified desc', 'rows': 3})['results']
-    recently_updated = logic.get_action('package_search')(
+    recently_updated = toolkit.get_action('package_search')(
         data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
     datasets = featured_datasets + recently_updated
     return datasets[:3]
 
 
 def get_user_from_id(userid):
-    user_show_action = logic.get_action('user_show')
+    user_show_action = toolkit.get_action('user_show')
     user_info = user_show_action({}, {"id": userid})
     return user_info['fullname']
 
 
 def get_all_groups():
-    return logic.get_action('group_list')(
+    return toolkit.get_action('group_list')(
             data_dict={'sort': 'title asc', 'all_fields': True})
 
 
@@ -90,9 +90,9 @@ def get_site_statistics() -> dict[str, int]:
     We reproduce it here to templates can continue working as usual.
     '''
     stats = {}
-    stats['dataset_count'] = logic.get_action('package_search')(
+    stats['dataset_count'] = toolkit.get_action('package_search')(
         {}, {"rows": 1})['count']
-    stats['group_count'] = len(logic.get_action('group_list')({}, {}))
+    stats['group_count'] = len(toolkit.get_action('group_list')({}, {}))
     stats['organization_count'] = len(
-        logic.get_action('organization_list')({}, {}))
+        toolkit.get_action('organization_list')({}, {}))
     return stats

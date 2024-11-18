@@ -10,9 +10,6 @@ from giftless_client import LfsClient
 from werkzeug.datastructures import FileStorage as FlaskFileStorage
 
 import ckanext.dms.helpers
-from ckanext.dms.helpers import (
-    get_dataset_from_id, get_facet_items_dict
-)
 
 log = logging.getLogger(__name__)
 
@@ -28,13 +25,13 @@ class DmsPlugin(plugins.SingletonPlugin):
     def get_helpers(self):
         return {
             'max_resource_size': uploader.get_max_resource_size,
-            'get_dataset_from_id': get_dataset_from_id,
+            'get_dataset_from_id': helpers.get_dataset_from_id,
             'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
-            'get_facet_items_dict': get_facet_items_dict,
-            'get_featured_datasets': ckanext.dms.helpers.get_featured_datasets,
-            'get_user_from_id': ckanext.dms.helpers.get_user_from_id,
-            'get_all_groups': ckanext.dms.helpers.get_all_groups,
-            'get_site_statistics': ckanext.dms.helpers.get_site_statistics,
+            'get_facet_items_dict': helpers.get_facet_items_dict,
+            'get_featured_datasets': helpers.get_featured_datasets,
+            'get_user_from_id': helpers.get_user_from_id,
+            'get_all_groups': helpers.get_all_groups,
+            'get_site_statistics': helpers.get_site_statistics,
         }
 
     # IConfigurer
