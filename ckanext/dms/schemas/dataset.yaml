@@ -72,6 +72,18 @@ dataset_fields:
   display_snippet: email.html
   display_email_name_field: author
 
+- field_name: private
+  label: Visibility
+  help_text: Restrict access
+  help_inline: true
+  preset: select
+  choices:
+  - value: "false"
+    label: Public
+  - value: "true"
+    label: Private
+  validators: boolean_validator
+  output_validators: boolean_validator
 
 resource_fields:
 

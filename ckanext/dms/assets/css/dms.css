@@ -157,10 +157,10 @@ p.small {
 }
 
 .masthead .navbar-collapse{
-	padding-top: 12px;
+	padding-top: 20px;
 }
 
-.masthead .navigation .nav-pills > li > a
+.masthead .navbar .navbar-nav > li > a
 {
     font-style: normal;
     font-weight: 700;
@@ -173,13 +173,25 @@ p.small {
     background-color: transparent;
     padding: 10px 0px;
     margin-left: 30px;
-
-
 }
 
-.masthead .navigation .nav-pills li a:hover,
-.masthead .navigation .nav-pills li a:focus,
-.masthead .navigation .nav-pills li.active a
+@media only screen and (max-width: 991px) {
+    .masthead .navbar .navbar-nav > li > a {
+        margin-left: 0;
+    }
+}
+
+.masthead .navbar .navbar-nav > li:first-child > a {
+    padding-top: 0;
+}
+
+.masthead .navbar .navbar-nav > li:last-child > a {
+    padding-bottom: 0;
+}
+
+.masthead .navbar .navbar-nav li:hover a,
+.masthead .navbar .navbar-nav li:focus a,
+.masthead .navbar .navbar-nav li.active a
 {
     color: #212121;
     background-color: transparent;
@@ -188,6 +200,23 @@ p.small {
 
 .masthead .site-search {
     margin: 5px 0px 5px 30px;
+    display: inline-block  !important;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .masthead .main-navbar ul {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .masthead .site-search {
+        display: none !important;
+    }
+}
+
+@media (max-width: 769px) {
+    
 }
 
 .masthead .site-search input {
@@ -196,7 +225,7 @@ p.small {
     padding: 10px 14px;
 }
 
-.btn-search .fa-search {
+.masthead .site-search .fa-search {
     color: #990005;
     font-size: 20px;
     position:  absolute;
@@ -215,7 +244,8 @@ p.small {
   background: #EDE8E8;
 }
 
-.account-masthead .account ul li a {
+.account-masthead .account ul li a,
+.account-masthead .account ul li button {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -226,7 +256,8 @@ p.small {
     line-height: 40px;
 }
 
-.account-masthead .account ul li a:hover{
+.account-masthead .account ul li a:hover,
+.account-masthead .account ul li button:hover{
 	color: #212121;
 	background-color: transparent;
 }
@@ -376,8 +407,8 @@ p.small {
     border:  none;
 }
 
-.dataset-resources li a.label,
-.dataset-resources li a.label:hover{
+.dataset-resources li a.badge,
+.dataset-resources li a.badge:hover{
 	background-color:  transparent;
 	color: #056839;
 	padding:  0px;
@@ -515,7 +546,7 @@ a.tag:hover  {
     text-decoration: underline;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 991px) {
     .mobile-menu {
         display: none;
     }
@@ -535,7 +566,7 @@ a.tag:hover  {
     margin-bottom: 30px;
 }
 
-.main, .hero {
+.main, .homepage .hero {
 	min-height: 80vh;
 	padding-top: 32px;
 	padding-bottom: 64px;
@@ -692,4 +723,15 @@ a.tag:hover  {
 	background-color: #990005;
 }
 
+.module-narrow .nav-item > a, .module-narrow .nav-aside li a{
+    font-size: 14px;
+}
 
+.form-control.form-select{
+    appearance: auto;
+}
+
+.navbar-toggler .fa.fa-bars {
+    color: #990005 !important;
+    font-size: 22px;
+}

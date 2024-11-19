@@ -9,10 +9,7 @@ import ckanext.blob_storage.helpers as blobstorage_helpers
 from giftless_client import LfsClient
 from werkzeug.datastructures import FileStorage as FlaskFileStorage
 
-import ckanext.dms.helpers
-from ckanext.dms.helpers import (
-    get_dataset_from_id, get_facet_items_dict
-)
+import ckanext.dms.helpers as dms_helpers
 
 log = logging.getLogger(__name__)
 
@@ -28,12 +25,13 @@ class DmsPlugin(plugins.SingletonPlugin):
     def get_helpers(self):
         return {
             'max_resource_size': uploader.get_max_resource_size,
-            'get_dataset_from_id': get_dataset_from_id,
+            'get_dataset_from_id': dms_helpers.get_dataset_from_id,
             'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
-            'get_facet_items_dict': get_facet_items_dict,
-            'get_featured_datasets': ckanext.dms.helpers.get_featured_datasets,
-            'get_user_from_id': ckanext.dms.helpers.get_user_from_id,
-            'get_all_groups': ckanext.dms.helpers.get_all_groups
+            'get_facet_items_dict': dms_helpers.get_facet_items_dict,
+            'get_featured_datasets': dms_helpers.get_featured_datasets,
+            'get_user_from_id': dms_helpers.get_user_from_id,
+            'get_all_groups': dms_helpers.get_all_groups,
+            'get_site_statistics': dms_helpers.get_site_statistics,
         }
 
     # IConfigurer
@@ -53,14 +51,14 @@ class DmsPlugin(plugins.SingletonPlugin):
         return new_fd
 
     # IResourceController
-    def before_create(self, context, resource):
+    def before_resource_create(self, context, resource):
         if _data_dict_is_resource(resource):
             _giftless_upload(context, resource)
 
             _update_resource_last_modified_date(resource)
         return resource
 
-    def before_update(self, context, current, resource):
+    def before_resource_update(self, context, current, resource):
         if _data_dict_is_resource(resource):
             _giftless_upload(context, resource, current=current)
             _update_resource_last_modified_date(resource, current=current)

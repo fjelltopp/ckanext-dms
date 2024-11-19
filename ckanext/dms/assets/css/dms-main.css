@@ -4133,8 +4133,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   border: 1px solid transparent;
+  justify-content: flex-start;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4164,7 +4165,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     box-shadow: none;
   }
   .navbar-collapse.collapse {
-    display: block !important;
     height: auto !important;
     padding-bottom: 0;
     overflow: visible !important;
@@ -4256,17 +4256,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-left: -15px;
   }
 }
-.navbar-toggle {
-  position: relative;
-  float: right;
-  padding: 9px 10px;
-  margin-right: 15px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
+.navbar-light .navbar-toggler {
+  color: #990005;
+  margin-left: auto;
+  border-color: transparent;
+}
+.navbar-light .navbar-toggler:focus,
+.navbar-light .navbar-toggler:active {
+  box-shadow: none;
+}
+.navbar-light .navbar-toggler > .fa {
+  font-size: 14px;
 }
 .navbar-toggle:focus {
   outline: 0;
@@ -7670,7 +7670,7 @@ select[data-module="autocomplete"] {
   width: 100%;
   height: auto;
 }
-.simple-input .field .btn-search {
+.site-search .btn{
   position: absolute;
   display: block;
   height: 17px;
@@ -7686,7 +7686,7 @@ select[data-module="autocomplete"] {
   -o-transition: color 0.2s ease-in;
   transition: color 0.2s ease-in;
 }
-.simple-input .field .btn-search:hover {
+.site-search .btn:hover {
   color: #000;
 }
 .editor textarea {
@@ -8513,8 +8513,8 @@ td.diff_header {
   margin-bottom: 15px;
 }
 .search-form {
-  margin-bottom: 20px;
-  padding-bottom: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 35px;
   border-bottom: 1px dotted #dddddd;
 }
 .search-form .search-input {
@@ -9764,7 +9764,8 @@ h4 small {
   float: left;
   border-left: 1px solid #660003;
 }
-.account-masthead .account ul li a {
+.account-masthead .account ul li a,
+.account-masthead .account ul li button {
   display: block;
   color: #ecbfc1;
   font-size: 13px;
@@ -9936,10 +9937,13 @@ h4 small {
   margin-right: 0;
 }
 .masthead .debug {
-  position: absolute;
-  top: 37px;
-  left: 10px;
-  color: rgba(255, 255, 255, 0.5);
+  bottom: 0px;
+  right: 0px;
+  top: initial;
+  left: initial;
+  padding: 15px;
+  background-color: #990005;
+  border: none;
 }
 @media (min-width: 992px) {
   .masthead .navbar-collapse {
@@ -9961,8 +9965,9 @@ h4 small {
     padding-right: 15px;
   }
   .masthead .site-search {
-    display: none;
+    display: none !important;
   }
+
 }
 @media (max-width: 767px) {
   .masthead .navbar-collapse {
