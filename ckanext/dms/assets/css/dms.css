@@ -1,7 +1,7 @@
 /* This file overwrites css from the base ckan theme */
 
 :root {
-    --primary: black;
+    --primary: #212121;
     --secondary: #990005;
     --light: white;
     --neutralgray: #dddddd;
@@ -731,7 +731,7 @@ a.tag:hover  {
 }
 
 .recently-updated .view-all-btn{
-	background-color: #990005;
+	background-color: #212121;
 }
 
 .module-narrow .nav-item > a, .module-narrow .nav-aside li a{
