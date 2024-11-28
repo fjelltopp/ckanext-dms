@@ -825,7 +825,7 @@ a.tag:hover  {
     }
     /* end 12 */
 
-    /*start 10 - There is no separation between subscribe and footer, and they have no left and right margins as well */
+    /* start 10 - There is no separation between subscribe and footer, and they have no left and right margins as well */
     .subscribe {
         .container {
             padding: 0;
@@ -835,6 +835,32 @@ a.tag:hover  {
             margin-bottom: 0;
         }
     }
+    /* end 10 */
+
+    /* start 9 - Categories margin are a bit off */
+    .category-box {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
+        .media-image {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+        }
+
+        .group-text {
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .desc {
+                height: auto;
+            }
+        }
+
+    }
+    /* end 9 */
 
 
 }
