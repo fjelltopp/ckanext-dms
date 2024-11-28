@@ -825,6 +825,16 @@ a.tag:hover  {
     }
     /* end 12 */
 
+    /*start 10 - There is no separation between subscribe and footer, and they have no left and right margins as well */
+    .subscribe {
+        .container {
+            padding: 0;
+        }
+        .highlight-box {
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+    }
 
 
 }
