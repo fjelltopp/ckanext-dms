@@ -842,6 +842,7 @@ a.tag:hover  {
         display: flex;
         align-items: center;
         padding: 1rem;
+        margin-bottom: 10px; /* only the one needed */
 
         .media-image {
           width: 60px;
