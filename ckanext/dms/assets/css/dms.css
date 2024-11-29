@@ -931,7 +931,7 @@ a.tag:hover  {
 }
 
 /* start - 30 */
-#followee-filter .dropdown-toggle::after {
+.dropdown-toggle::after {
     content: none;
 }
 /* end 30 */
