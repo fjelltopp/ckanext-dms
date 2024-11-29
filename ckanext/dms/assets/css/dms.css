@@ -922,12 +922,11 @@ a.tag:hover  {
     /*end 26 */
 }
 @media only screen and (max-width: 991px) {
-    .main {
+    .main.resource-page-main  {
         aside.secondary, .wrapper::before {
             display: none;
         }
     }
-
 }
 
 /* start - 30 */
