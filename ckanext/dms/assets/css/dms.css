@@ -906,6 +906,20 @@ a.tag:hover  {
         }
     }
     /*end 22 */
+
+    /*start 26 - Resource buttons are off */
+    .module-resource .actions {
+        float: none;
+        top: 0;
+        right: 0;
+        ul {
+            padding: 0;
+            margin-bottom: 30px;
+            li { width: 100%; }
+            li a, li div.btn-group { width: 100% }
+        }
+    }
+    /*end 26 */
 }
 @media only screen and (max-width: 991px) {
     .main {
