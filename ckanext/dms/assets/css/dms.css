@@ -773,9 +773,14 @@ a.tag:hover  {
         padding-left: 12px;
         border-left: none;
     }
+    .control-order-by {
+        width: 100%;
+        text-align: center;
+    }
     #field-order-by {
         background-color: var(--neutralgray);
         color: var(--dark);
+        width: auto;
     }
     .show-filters {
         width: 100%;
@@ -789,11 +794,11 @@ a.tag:hover  {
         font-weight: 400;
         margin-top: 20px;
         margin-bottom: 0;
+        text-align: center;
     }
     .page_primary_action .btn.btn-primary {
-        padding-left: 15px;
-        padding-right: 15px;
         margin-bottom: 0;
+        width:100%;
     }
     /* end 13 */
 
