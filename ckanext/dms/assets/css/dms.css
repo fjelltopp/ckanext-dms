@@ -905,6 +905,13 @@ a.tag:hover  {
             border: none;
         }
     }
-
+    /*end 22 */
+}
+@media only screen and (max-width: 991px) {
+    .main {
+        aside.secondary, .wrapper::before {
+            display: none;
+        }
+    }
 
 }
