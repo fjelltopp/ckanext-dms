@@ -897,6 +897,14 @@ a.tag:hover  {
         }
     }
     /* end 19 */
+    /*start 22 - Resource description can be better */
+    .module-resource div.prose.notes {
+        text-align: justify;
+        blockquote {
+            padding: 0;
+            border: none;
+        }
+    }
 
 
 }
