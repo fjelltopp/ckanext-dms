@@ -868,5 +868,35 @@ a.tag:hover  {
     }
     /* end 9 */
 
+    /* start 19 - Dataset tabs and manage button look's messy */
+    .page-header {
+        padding: 0;
+        .content_action {
+                    float: none;
+                    width: 100%;
+                }
+        .nav-tabs {
+                margin: 0;
+                width: 100%;
+            }
+        a.btn:first-child {
+            width: 100%;
+            border: var(--neutralgray) thin solid;
+        }
+    }
+    .page-header.module-content {
+        padding: 0;
+    }
+    article .nav-tabs {
+        margin: 0;
+        li {
+            width: 100%;
+            a {
+                margin: 0;
+            }
+        }
+    }
+    /* end 19 */
+
 
 }
