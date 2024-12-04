@@ -213,10 +213,6 @@ p.small {
     }
 }
 
-@media (max-width: 769px) {
-    
-}
-
 .masthead .site-search input {
     width: 180px;
     height: 40px;
@@ -617,7 +613,7 @@ a.tag:hover  {
     color: #990005;
 }
 
-.add-category{
+.add-category {
 	margin-bottom: 32px;
 }
 
