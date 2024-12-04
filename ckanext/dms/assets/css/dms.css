@@ -1,17 +1,4 @@
 /* This file overwrites css from the base ckan theme */
-
-:root {
-    --primary: #212121;
-    --secondary: #990005;
-    --light: white;
-    --neutralgray: #dddddd;
-    --dark: black;
-    --primary65: #C14043;
-    --primary25: #E5CCCD;
-    --primary10: #EDE8E8;
-}
-
-
 body {
     background: #fff;
     font-family: 'Inter', serif;
@@ -748,9 +735,7 @@ a.tag:hover  {
 }
 
 
-/* DMS Work 2024 */
 @media only screen and (max-width: 767px) {
-    /* start 16 - The container's gray border takes unnecessary space */
     .primary {
         padding: 2%;
     }
@@ -762,13 +747,11 @@ a.tag:hover  {
         border: none;
         box-shadow: none;
     }
-    /* end 16 */
 
-    /* start 13 - The search bar, order by dropdown, number of datasets found, filters, and filter results button looks very messy.  A much neater layout is desired.*/
     .input-group-btn .btn.btn-default.btn-lg,
     .input-group-btn .btn.btn-default.btn-lg:hover {
-        background-color: var(--light);
-        color: var(--secondary);
+        background-color: white;
+        color: #990005;
         padding-right: 12px;
         padding-left: 12px;
         border-left: none;
@@ -778,8 +761,8 @@ a.tag:hover  {
         text-align: center;
     }
     #field-order-by {
-        background-color: var(--neutralgray);
-        color: var(--dark);
+        background-color: #dddddd;
+        color: black;
         width: auto;
     }
     .show-filters {
@@ -800,15 +783,11 @@ a.tag:hover  {
         margin-bottom: 0;
         width:100%;
     }
-    /* end 13 */
 
-    /* start 17 - Justify description text */
     .context-info .description {
         text-align: justify;
     }
-    /* end 17 */
 
-    /* start 12 - Datasets sections can be improved */
     .search-form {
         margin-bottom: 0;
     }
@@ -828,9 +807,7 @@ a.tag:hover  {
     .main {
 
     }
-    /* end 12 */
 
-    /* start 10 - There is no separation between subscribe and footer, and they have no left and right margins as well */
     .subscribe {
         .container {
             padding: 0;
@@ -840,14 +817,12 @@ a.tag:hover  {
             margin-bottom: 0;
         }
     }
-    /* end 10 */
 
-    /* start 9 - Categories margin are a bit off */
     .category-box {
         display: flex;
         align-items: center;
         padding: 1rem;
-        margin-bottom: 10px; /* only the one needed */
+        margin-bottom: 10px;
 
         .media-image {
           width: 60px;
@@ -866,9 +841,7 @@ a.tag:hover  {
         }
 
     }
-    /* end 9 */
 
-    /* start 19 - Dataset tabs and manage button look's messy */
     .page-header {
         padding: 0;
         .content_action {
@@ -881,7 +854,7 @@ a.tag:hover  {
             }
         a.btn:first-child {
             width: 100%;
-            border: var(--neutralgray) thin solid;
+            border: #dddddd thin solid;
         }
     }
     .page-header.module-content {
@@ -896,8 +869,7 @@ a.tag:hover  {
             }
         }
     }
-    /* end 19 */
-    /*start 22 - Resource description can be better */
+
     .module-resource div.prose.notes {
         text-align: justify;
         blockquote {
@@ -905,9 +877,7 @@ a.tag:hover  {
             border: none;
         }
     }
-    /*end 22 */
 
-    /*start 26 - Resource buttons are off */
     .module-resource .actions {
         float: none;
         top: 0;
@@ -919,12 +889,12 @@ a.tag:hover  {
             li a, li div.btn-group { width: 100% }
         }
     }
-    /*end 26 */
     .container {
         padding-right: 30px;
         padding-left: 30px;
     }
 }
+
 @media only screen and (max-width: 991px) {
     .main.resource-page-main  {
         aside.secondary, .wrapper::before {
@@ -933,9 +903,9 @@ a.tag:hover  {
     }
 }
 
-/* start - 30 */
+/* Fix dropdown with bootstrap 5 */
 .dropdown-toggle::after {
     content: none;
 }
-/* end 30 */
+
 
