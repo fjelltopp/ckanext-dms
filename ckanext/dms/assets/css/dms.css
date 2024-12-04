@@ -920,6 +920,10 @@ a.tag:hover  {
         }
     }
     /*end 26 */
+    .container {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
 }
 @media only screen and (max-width: 991px) {
     .main.resource-page-main  {
