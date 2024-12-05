@@ -94,25 +94,30 @@ p.small {
 
 .promoted-background {
     width: 100%;
-    background-image: url("/images/small_piling_documents.png");
+    background: linear-gradient(90deg, rgba(1, 1, 1, 0.7), rgba(0, 0, 0, 0.5)), url("/images/small_piling_documents.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     color: #FFFFFF;
 }
 
 @media only screen and (min-width: 468px) {
     .promoted-background {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/medium_piling_documents.png");
+        background: linear-gradient(90deg, rgba(1, 1, 1, 0.7), rgba(0, 0, 0, 0.5)), url("/images/medium_piling_documents.png");
         background-size: cover;
     	background-repeat: no-repeat;
+        background-position: center;
+
     }
 }
 
 @media only screen and (min-width: 992px) {
     .promoted-background {
-    	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/web_piling_docs.png");
+    	background: linear-gradient(90deg, rgba(1, 1, 1, 0.7), rgba(0, 0, 0, 0.5)), url("/images/web_piling_docs.png");
     	background-size: cover;
     	background-repeat: no-repeat;
+        background-position: center;
+
     }
 }
 
