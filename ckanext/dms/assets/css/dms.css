@@ -904,4 +904,11 @@ a.tag:hover  {
     content: none;
 }
 
+i.fa.icon.fa-windows {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
 
+i.fa.icon.fa-file-pdf-o::before {
+    content: "\f1c1";
+}
