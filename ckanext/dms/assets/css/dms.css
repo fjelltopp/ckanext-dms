@@ -736,6 +736,7 @@ a.tag:hover  {
 }
 
 
+/* updates*/
 @media only screen and (max-width: 767px) {
     .primary {
         padding: 2%;
@@ -965,4 +966,76 @@ i.fa.icon.fa-windows {
 
 i.fa.icon.fa-file-pdf-o::before {
     content: "\f1c1";
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main {
+        .wrapper::before {
+            display: none;
+        }
+        aside.secondary {
+            order: 0;
+            width: 100%;
+            padding: 30px;
+            .context-info .image img {
+                width: 20%;
+                height: 20%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+  .wrapper {
+    border-width: 0;
+    -webkit-box-shadow: 0;
+    box-shadow: 0;
+    border-radius: 0;
+  }
+  .js .main .secondary .filters {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    padding: 10px;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .js body.filters-modal .secondary .filters {
+    display: block;
+  }
+  .js .main .secondary .filters > div {
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .js .main .secondary .filters > div .module-footer {
+    display: none;
+  }
+  .js body.filters-modal .secondary .filters .hide-filters {
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    right: 17px;
+    opacity: 0.6;
+  }
+  .js body.filters-modal .secondary .filters .hide-filters i {
+    font-size: 18px;
+  }
+  .js .show-filters.btn {
+    display: inline-block;
+  }
+  .filter-list {
+      margin-top: 26px;
+  }
+  .module h1 {
+      margin-top: 26px;
+  }
 }
