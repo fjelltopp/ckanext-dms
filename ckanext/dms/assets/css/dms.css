@@ -896,7 +896,6 @@ a.tag:hover  {
     }
 
     .main.package-page-main .secondary {
-        -webkit-order: 0;
         order: 0;
         .context-info {
             .module-content h1.heading {
