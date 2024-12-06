@@ -895,7 +895,7 @@ a.tag:hover  {
         padding-left: 30px;
     }
 
-    .main .secondary {
+    .main.package-page-main .secondary {
         -webkit-order: 0;
         order: 0;
         .context-info {
@@ -909,6 +909,46 @@ a.tag:hover  {
         }
     }
 
+    .main.resource-page-main {
+        .module-narrow .nav-item.active > a:before {
+            content: none;
+        }
+        .wrapper {
+            flex-direction: column;
+        }
+        .primary {
+            order: 2;
+            width: 100%;
+        }
+        .module-resource {
+            order: 1;
+            width: 100%;
+        }
+        .secondary {
+            order: 3;
+            width: 100%;
+            padding-right: 30px;
+            padding-left: 30px;
+            .module-content {
+                margin-top: 16px;
+                padding: 0;
+                .btn.btn-light.btn-sm {
+                    width: 100%;
+                    border: #EDE8E8 thin solid;
+                }
+            }
+
+        }
+        .module-resource,
+        .primary,
+        .secondary {
+            margin-bottom: 1rem;
+        }
+    }
+
+
+
+
 
     /*end of the class */
 }
@@ -916,7 +956,7 @@ a.tag:hover  {
 @media only screen and (max-width: 991px) {
     .main.resource-page-main  {
         aside.secondary, .wrapper::before {
-            display: none;
+            /*display: none;*/
         }
     }
 }
