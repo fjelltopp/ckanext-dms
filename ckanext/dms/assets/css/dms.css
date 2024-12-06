@@ -924,14 +924,28 @@ a.tag:hover  {
         .secondary {
             order: 3;
             width: 100%;
-            padding-right: 30px;
-            padding-left: 30px;
+            padding-right: 15px;
+            padding-left: 15px;
             .module-content {
                 margin-top: 16px;
                 padding: 0;
                 .btn.btn-light.btn-sm {
                     width: 100%;
                     border: #EDE8E8 thin solid;
+                }
+            }
+
+            .context-info {
+                .module-content h1.heading {
+                    display: none;
+                }
+                .nums:before {
+                    display: none;
+                    content: none;
+                }
+                .nums {
+                    margin-top: 16px;
+                    margin-bottom: 16px;
                 }
             }
         }
@@ -1016,7 +1030,21 @@ i.fa.icon.fa-file-pdf-o::before {
                     display: none;
                     content: none;
                 }
+                .nums {
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                }
             }
+        }
+
+        .module-resource,
+        .primary,
+        .secondary
+        {
+            margin-bottom: 1rem;
+        }
+        #package-info {
+            margin-bottom: 2rem;
         }
     }
 }
