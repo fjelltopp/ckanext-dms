@@ -937,7 +937,6 @@ a.tag:hover  {
                     border: #EDE8E8 thin solid;
                 }
             }
-
         }
         .module-resource,
         .primary,
@@ -945,12 +944,6 @@ a.tag:hover  {
             margin-bottom: 1rem;
         }
     }
-
-
-
-
-
-    /*end of the class */
 }
 
 @media only screen and (max-width: 991px) {
