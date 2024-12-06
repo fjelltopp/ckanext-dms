@@ -983,16 +983,17 @@ i.fa.icon.fa-file-pdf-o::before {
             }
         }
     }
+
+    .main.package-page-search {
+        aside.secondary {
+            padding: 0;
+        }
+    }
 }
 
 
 @media (max-width: 991px) {
-  .wrapper {
-    border-width: 0;
-    -webkit-box-shadow: 0;
-    box-shadow: 0;
-    border-radius: 0;
-  }
+
   .js .main .secondary .filters {
     display: none;
     position: fixed;
