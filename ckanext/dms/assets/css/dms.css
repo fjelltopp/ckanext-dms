@@ -910,9 +910,6 @@ a.tag:hover  {
     }
 
     .main.resource-page-main {
-        .module-narrow .nav-item.active > a:before {
-            content: none;
-        }
         .wrapper {
             flex-direction: column;
         }
@@ -946,13 +943,6 @@ a.tag:hover  {
     }
 }
 
-@media only screen and (max-width: 991px) {
-    .main.resource-page-main  {
-        aside.secondary, .wrapper::before {
-            /*display: none;*/
-        }
-    }
-}
 
 /* Fix dropdown with bootstrap 5 */
 .dropdown-toggle::after {
@@ -968,6 +958,7 @@ i.fa.icon.fa-file-pdf-o::before {
     content: "\f1c1";
 }
 
+/* aside is buggy for > 768, < 992 */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .main {
         .wrapper::before {
@@ -989,9 +980,48 @@ i.fa.icon.fa-file-pdf-o::before {
             padding: 0;
         }
     }
+
+    .main.package-page-main, .main.resource-page-main {
+
+        .wrapper {
+            flex-direction: column;
+        }
+        .primary {
+            order: 2;
+            width: 100%;
+        }
+        .module-resource {
+            order: 1;
+            width: 100%;
+        }
+        .secondary {
+            order: 3;
+            width: 100%;
+            padding-right: 30px;
+            padding-left: 30px;
+            .module-content {
+                margin-top: 16px;
+                padding: 0;
+                .btn.btn-light.btn-sm {
+                    width: 100%;
+                    border: #EDE8E8 thin solid;
+                }
+            }
+
+            .context-info {
+                .module-content h1.heading {
+                    display: none;
+                }
+                .nums:before {
+                    display: none;
+                    content: none;
+                }
+            }
+        }
+    }
 }
 
-
+/* showing filters for the resolution (same as mobile) */
 @media (max-width: 991px) {
 
   .js .main .secondary .filters {
