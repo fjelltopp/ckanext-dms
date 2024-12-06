@@ -894,6 +894,23 @@ a.tag:hover  {
         padding-right: 30px;
         padding-left: 30px;
     }
+
+    .main .secondary {
+        -webkit-order: 0;
+        order: 0;
+        .context-info {
+            .module-content h1.heading {
+                display: none;
+            }
+            .nums:before {
+                display: none;
+                content: none;
+            }
+        }
+    }
+
+
+    /*end of the class */
 }
 
 @media only screen and (max-width: 991px) {
