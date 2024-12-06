@@ -1,0 +1,15 @@
+{%  ckan_extends %}
+
+{% block search_title %}
+{% endblock %}
+
+{% block search_facets %}
+    {{ super() }}
+    <h1>
+    {% if not error %}
+      {% snippet 'snippets/search_result_text.html', query=query, count=count, type=type %}
+    {% else %}
+      Error
+    {% endif %}
+    </h1>
+{% endblock %}

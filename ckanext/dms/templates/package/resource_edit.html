@@ -1,5 +1,7 @@
 {% extends "package/resource_edit_base.html" %}
 
+{% block maintag %}<div class="main resource-page-main">{% endblock %}
+
 {% block subtitle %}{{ _('Edit') }} {{ g.template_title_delimiter }} {{ h.resource_display_name(res) }} {{ g.template_title_delimiter }} {{ h.dataset_display_name(pkg) }}{% endblock %}
 
 {% block form %}
