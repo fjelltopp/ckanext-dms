@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import ProgressBar from './ProgressBar';
 import DisplayUploadedFile from './DisplayUploadedFile';
 import UrlUploader from './UrlUploader';

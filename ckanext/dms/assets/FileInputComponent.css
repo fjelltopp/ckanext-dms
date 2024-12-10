@@ -16,3 +16,7 @@
 #FileInputComponent .field-url-input-group{
     margin-bottom: 30px;
 }
+
+#FileInputComponent .btn.btn-danger {
+    padding: 6px 12px;
+}

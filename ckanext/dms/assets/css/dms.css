@@ -1,6 +1,4 @@
 /* This file overwrites css from the base ckan theme */
-
-
 body {
     background: #fff;
     font-family: 'Inter', serif;
@@ -96,25 +94,30 @@ p.small {
 
 .promoted-background {
     width: 100%;
-    background-image: url("/images/small_piling_documents.png");
+    background: linear-gradient(90deg, rgba(1, 1, 1, 0.7), rgba(0, 0, 0, 0.5)), url("/images/small_piling_documents.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     color: #FFFFFF;
 }
 
 @media only screen and (min-width: 468px) {
     .promoted-background {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/medium_piling_documents.png");
+        background: linear-gradient(90deg, rgba(1, 1, 1, 0.7), rgba(0, 0, 0, 0.5)), url("/images/medium_piling_documents.png");
         background-size: cover;
     	background-repeat: no-repeat;
+        background-position: center;
+
     }
 }
 
 @media only screen and (min-width: 992px) {
     .promoted-background {
-    	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/web_piling_docs.png");
+    	background: linear-gradient(90deg, rgba(1, 1, 1, 0.7), rgba(0, 0, 0, 0.5)), url("/images/web_piling_docs.png");
     	background-size: cover;
     	background-repeat: no-repeat;
+        background-position: center;
+
     }
 }
 
@@ -213,10 +216,6 @@ p.small {
     .masthead .site-search {
         display: none !important;
     }
-}
-
-@media (max-width: 769px) {
-    
 }
 
 .masthead .site-search input {
@@ -619,7 +618,7 @@ a.tag:hover  {
     color: #990005;
 }
 
-.add-category{
+.add-category {
 	margin-bottom: 32px;
 }
 
@@ -628,8 +627,9 @@ a.tag:hover  {
     color: #505050;
 }
 
-.btn{
-  padding:  10px 40px;
+.btn.btn-primary,
+.btn.btn-danger{
+    padding:  10px 40px;
 }
 
 .btn-primary,
@@ -720,7 +720,7 @@ a.tag:hover  {
 }
 
 .recently-updated .view-all-btn{
-	background-color: #990005;
+	background-color: #212121;
 }
 
 .module-narrow .nav-item > a, .module-narrow .nav-aside li a{
@@ -734,4 +734,374 @@ a.tag:hover  {
 .navbar-toggler .fa.fa-bars {
     color: #990005 !important;
     font-size: 22px;
+}
+
+.select2-container {
+    border: none;
+    box-shadow: none;
+    padding: 7px 0px;
+}
+
+
+/* updates*/
+@media only screen and (max-width: 767px) {
+    .primary {
+        padding: 2%;
+    }
+    .module-content {
+        padding: 2%;
+    }
+    .box .wrapper,
+    .wrapper {
+        border: none;
+        box-shadow: none;
+    }
+
+    .input-group-btn .btn.btn-default.btn-lg,
+    .input-group-btn .btn.btn-default.btn-lg:hover {
+        background-color: white;
+        color: #990005;
+        padding-right: 12px;
+        padding-left: 12px;
+        border-left: none;
+    }
+    .control-order-by {
+        width: 100%;
+        text-align: center;
+    }
+    #field-order-by {
+        background-color: #dddddd;
+        color: black;
+        width: auto;
+    }
+    .show-filters {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .search-form .search-input-group,
+    .form-group {
+        margin-bottom: 20px;
+    }
+    #dataset-search-form h1 {
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .page_primary_action .btn.btn-primary {
+        margin-bottom: 0;
+        width:100%;
+    }
+
+    .context-info .description {
+        text-align: justify;
+    }
+
+    .search-form {
+        margin-bottom: 0;
+    }
+    .dataset-item {
+        margin-top: 30px;
+        .dataset-content div:last-child {
+            text-align: justify;
+        }
+    }
+    .dataset-item .modified {
+        font-weight: 700;
+    }
+    .dataset-resources .badge.badge-default {
+        font-weight: 400;
+        padding: 4px;
+    }
+    .main {
+
+    }
+
+    .subscribe {
+        .container {
+            padding: 0;
+        }
+        .highlight-box {
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .category-box {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 10px;
+
+        .media-image {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+        }
+
+        .group-text {
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .desc {
+                height: auto;
+            }
+        }
+
+    }
+
+    .page-header {
+        padding: 0;
+        .content_action {
+                    float: none;
+                    width: 100%;
+                }
+        .nav-tabs {
+                margin: 0;
+                width: 100%;
+            }
+        a.btn:first-child {
+            width: 100%;
+            border: #dddddd thin solid;
+        }
+    }
+    .page-header.module-content {
+        padding: 0;
+    }
+    article .nav-tabs {
+        margin: 0;
+        li {
+            width: 100%;
+            a {
+                margin: 0;
+            }
+        }
+    }
+
+    .module-resource div.prose.notes {
+        text-align: justify;
+        blockquote {
+            padding: 0;
+            border: none;
+        }
+    }
+
+    .module-resource .actions {
+        float: none;
+        top: 0;
+        right: 0;
+        ul {
+            padding: 0;
+            margin-bottom: 30px;
+            li { width: 100%; }
+            li a, li div.btn-group { width: 100% }
+        }
+    }
+    .container {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .main.package-page-main .secondary {
+        order: 0;
+        .context-info {
+            .module-content h1.heading {
+                display: none;
+            }
+            .nums:before {
+                display: none;
+                content: none;
+            }
+        }
+    }
+
+    .main.resource-page-main {
+        .wrapper {
+            flex-direction: column;
+        }
+        .primary {
+            order: 2;
+            width: 100%;
+        }
+        .module-resource {
+            order: 1;
+            width: 100%;
+        }
+        .secondary {
+            order: 3;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            .module-content {
+                margin-top: 16px;
+                padding: 0;
+                .btn.btn-light.btn-sm {
+                    width: 100%;
+                    border: #EDE8E8 thin solid;
+                }
+            }
+
+            .context-info {
+                .module-content h1.heading {
+                    display: none;
+                }
+                .nums:before {
+                    display: none;
+                    content: none;
+                }
+                .nums {
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+        .module-resource,
+        .primary,
+        .secondary {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+/* Fix dropdown with bootstrap 5 */
+.dropdown-toggle::after {
+    content: none;
+}
+
+i.fa.icon.fa-windows {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+i.fa.icon.fa-file-pdf-o::before {
+    content: "\f1c1";
+}
+
+/* aside is buggy for > 768, < 992 */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main {
+        .wrapper::before {
+            display: none;
+        }
+        aside.secondary {
+            order: 0;
+            width: 100%;
+            padding: 30px;
+            .context-info .image img {
+                width: 20%;
+                height: 20%;
+            }
+        }
+    }
+
+    .main.package-page-search {
+        aside.secondary {
+            padding: 0;
+        }
+    }
+
+    .main.package-page-main, .main.resource-page-main {
+
+        .wrapper {
+            flex-direction: column;
+        }
+        .primary {
+            order: 2;
+            width: 100%;
+        }
+        .module-resource {
+            order: 1;
+            width: 100%;
+        }
+        .secondary {
+            order: 3;
+            width: 100%;
+            padding-right: 30px;
+            padding-left: 30px;
+            .module-content {
+                margin-top: 16px;
+                padding: 0;
+                .btn.btn-light.btn-sm {
+                    width: 100%;
+                    border: #EDE8E8 thin solid;
+                }
+            }
+
+            .context-info {
+                .module-content h1.heading {
+                    display: none;
+                }
+                .nums:before {
+                    display: none;
+                    content: none;
+                }
+                .nums {
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        .module-resource,
+        .primary,
+        .secondary
+        {
+            margin-bottom: 1rem;
+        }
+        #package-info {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+/* showing filters for the resolution (same as mobile) */
+@media (max-width: 991px) {
+
+  .js .main .secondary .filters {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    padding: 10px;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .js body.filters-modal .secondary .filters {
+    display: block;
+  }
+  .js .main .secondary .filters > div {
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .js .main .secondary .filters > div .module-footer {
+    display: none;
+  }
+  .js body.filters-modal .secondary .filters .hide-filters {
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    right: 17px;
+    opacity: 0.6;
+  }
+  .js body.filters-modal .secondary .filters .hide-filters i {
+    font-size: 18px;
+  }
+  .js .show-filters.btn {
+    display: inline-block;
+  }
+  .filter-list {
+      margin-top: 26px;
+  }
+  .module h1 {
+      margin-top: 26px;
+  }
 }
