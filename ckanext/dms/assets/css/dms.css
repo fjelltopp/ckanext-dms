@@ -627,8 +627,9 @@ a.tag:hover  {
     color: #505050;
 }
 
-.btn{
-  padding:  10px 40px;
+.btn.btn-primary,
+.btn.btn-danger{
+    padding:  10px 40px;
 }
 
 .btn-primary,
