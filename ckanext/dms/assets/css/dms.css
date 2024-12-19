@@ -560,8 +560,14 @@ a.tag:hover  {
 	margin: 32px 0px;
 }
 
-.footer-links img {
-	width:  100%;
+.footer-logos{
+    margin: 32px 0px;
+    text-align: center;
+}
+
+.footer-logos img {
+    max-height: 50px;
+	max-width:  100%;
     margin-bottom: 30px;
 }
 
