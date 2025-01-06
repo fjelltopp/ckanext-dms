@@ -1141,3 +1141,28 @@ i.fa.icon.fa-file-pdf-o::before {
 .popover.fade{
     transition: none;
 }
+
+.activity .item span.fa-stack {
+    margin-right: 30px;
+}
+
+@media (max-width: 540px) {
+    #followee-filter{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #followee-popover {
+        width: 100%;
+    }
+    .activity .item span.fa-stack{
+        display: none;
+    }
+    .activity {
+        border-left: none;
+    }
+}
+@media (min-width: 541px) {
+    .activity .item .date {
+        margin: 5px 0 0 80px;
+    }
+}
