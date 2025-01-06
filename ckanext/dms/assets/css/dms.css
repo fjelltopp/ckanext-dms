@@ -1110,3 +1110,34 @@ i.fa.icon.fa-file-pdf-o::before {
       margin-top: 26px;
   }
 }
+
+.popover-followee li.nav-item a,
+.popover-followee li.active a,
+.popover-followee li a {
+    margin: 0px;
+    font-size: 12px;
+}
+
+.popover-followee li:hover{
+    background-color: #fff;
+}
+
+.popover-followee li a:hover{
+    color: #187794
+}
+
+.popover-followee h3.popover-header{
+    margin-top: 0px;
+}
+
+.popover-followee .popover-header .input-group-text{
+    display: none;
+}
+
+.popover-followee .followee-container{
+    overflow-x: hidden;
+}
+
+.popover.fade{
+    transition: none;
+}
