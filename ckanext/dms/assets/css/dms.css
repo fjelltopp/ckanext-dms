@@ -239,7 +239,6 @@ p.small {
 }
 
 .account-masthead {
-  height: 40px;
   background: #EDE8E8;
 }
 
@@ -1110,4 +1109,60 @@ i.fa.icon.fa-file-pdf-o::before {
   .module h1 {
       margin-top: 26px;
   }
+}
+
+.popover-followee li.nav-item a,
+.popover-followee li.active a,
+.popover-followee li a {
+    margin: 0px;
+    font-size: 12px;
+}
+
+.popover-followee li:hover{
+    background-color: #fff;
+}
+
+.popover-followee li a:hover{
+    color: #187794
+}
+
+.popover-followee h3.popover-header{
+    margin-top: 0px;
+}
+
+.popover-followee .popover-header .input-group-text{
+    display: none;
+}
+
+.popover-followee .followee-container{
+    overflow-x: hidden;
+}
+
+.popover.fade{
+    transition: none;
+}
+
+.activity .item span.fa-stack {
+    margin-right: 30px;
+}
+
+@media (max-width: 540px) {
+    #followee-filter{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #followee-popover {
+        width: 100%;
+    }
+    .activity .item span.fa-stack{
+        display: none;
+    }
+    .activity {
+        border-left: none;
+    }
+}
+@media (min-width: 541px) {
+    .activity .item .date {
+        margin: 5px 0 0 80px;
+    }
 }
