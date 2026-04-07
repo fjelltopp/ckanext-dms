@@ -11,7 +11,7 @@ from datetime import datetime
 
 log = logging.getLogger(__name__)
 
-_CACHE_TTL = 60  # seconds
+_CACHE_TTL = 300  # seconds
 
 
 def _cached(key, fn):
