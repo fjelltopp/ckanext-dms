@@ -1,9 +1,33 @@
+import json
+import logging
+
+import ckan.lib.redis as cache_redis
 import ckan.model as model
 from ckan.plugins import toolkit
 from ckan.common import c, request, is_flask_request
 
 # for datetime string conversion
 from datetime import datetime
+
+log = logging.getLogger(__name__)
+
+_CACHE_TTL = 60  # seconds
+
+
+def _cached(key, fn):
+    """Return cached value from Redis, or call fn(), cache and return its result.
+    Falls back to calling fn() directly if Redis is unavailable."""
+    try:
+        conn = cache_redis.connect_to_redis()
+        cached = conn.get(key)
+        if cached:
+            return json.loads(cached)
+        result = fn()
+        conn.setex(key, _CACHE_TTL, json.dumps(result))
+        return result
+    except Exception:
+        log.warning('Redis cache miss/unavailable for key %s, fetching live', key)
+        return fn()
 
 
 def get_dataset_from_id(id):
@@ -65,12 +89,14 @@ def _facet_sort_function(facet_name, facet_items):
 
 
 def get_featured_datasets():
-    featured_datasets = toolkit.get_action('package_search')(
-        data_dict={'fq': 'tags:featured', 'sort': 'metadata_modified desc', 'rows': 3})['results']
-    recently_updated = toolkit.get_action('package_search')(
-        data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
-    datasets = featured_datasets + recently_updated
-    return datasets[:3]
+    def _fetch():
+        featured_datasets = toolkit.get_action('package_search')(
+            data_dict={'fq': 'tags:featured', 'sort': 'metadata_modified desc', 'rows': 3})['results']
+        recently_updated = toolkit.get_action('package_search')(
+            data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
+        datasets = featured_datasets + recently_updated
+        return datasets[:3]
+    return _cached('dms:featured_datasets', _fetch)
 
 
 def get_user_from_id(userid):
@@ -88,10 +114,12 @@ def get_site_statistics() -> dict[str, int]:
     '''This function used be a core helper but it was removed in CKAN 2.11.0
     We reproduce it here to templates can continue working as usual.
     '''
-    stats = {}
-    stats['dataset_count'] = toolkit.get_action('package_search')(
-        {}, {"rows": 1})['count']
-    stats['group_count'] = len(toolkit.get_action('group_list')({}, {}))
-    stats['organization_count'] = len(
-        toolkit.get_action('organization_list')({}, {}))
-    return stats
+    def _fetch():
+        stats = {}
+        stats['dataset_count'] = toolkit.get_action('package_search')(
+            {}, {"rows": 1})['count']
+        stats['group_count'] = len(toolkit.get_action('group_list')({}, {}))
+        stats['organization_count'] = len(
+            toolkit.get_action('organization_list')({}, {}))
+        return stats
+    return _cached('dms:site_statistics', _fetch)
