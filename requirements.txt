@@ -1,4 +1,4 @@
-git+https://github.com/fjelltopp/ckanext-blob-storage@184327db22a9e74319acda29986bbfcfe069ced9#egg=ckanext-blob-storage
+git+https://github.com/fjelltopp/ckanext-blob-storage@e1ed29fd671d631c9e31944d104e13d2026010a7#egg=ckanext-blob-storage
 git+https://github.com/datopian/ckanext-authz-service@3d52c13cce5152f1a75f89a21e88c319b6c2ea82#egg=ckanext-authz-service
 git+https://github.com/ckan/ckanext-scheming@5ce30cf2856aee97fa7b49de46847f8119dad355#egg=ckanext-scheming
 giftless-client==0.1.1
