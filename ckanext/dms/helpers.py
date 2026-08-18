@@ -101,7 +101,14 @@ def get_featured_datasets():
 
 def get_user_from_id(userid):
     user_show_action = toolkit.get_action('user_show')
-    user_info = user_show_action({}, {"id": userid})
+    try:
+        user_info = user_show_action({}, {"id": userid})
+    except toolkit.ObjectNotFound:
+        # creator_user_id is a plain string, not an enforced foreign key, so
+        # it can point at a since-deleted user (e.g. a purged account whose
+        # datasets weren't reassigned). Don't take down the whole page over it.
+        log.warning('get_user_from_id: no user found for id %s', userid)
+        return 'Unknown user'
     return user_info['fullname']
 
 
