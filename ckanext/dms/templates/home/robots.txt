@@ -1,0 +1,17 @@
+{% ckan_extends %}
+
+{% block additional_user_agents -%}
+{# Faceted-search query-string views (tags/groups/res_format/program_area/
+   year filters) generate a combinatorial explosion of near-duplicate,
+   crawlable URLs from a small underlying dataset. Bare listing/detail
+   pages (no query string) stay crawlable; only the filtered variants
+   are disallowed. Well-behaved crawlers only — this doesn't stop
+   robots.txt-ignoring scrapers, see the ingress-level rate limiting for
+   that. #}
+Disallow: /dataset/?*
+Disallow: /en/dataset/?*
+Disallow: /organization/*?*
+Disallow: /en/organization/*?*
+Disallow: /group/*?*
+Disallow: /en/group/*?*
+{%- endblock %}
